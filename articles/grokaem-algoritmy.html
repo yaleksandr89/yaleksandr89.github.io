@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ru" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="all">
+    <meta name="author" content="Александр Юрченко, y.aleksandr89@gmail.com">
+    <meta name="publisher" content="Александр Юрченко, y.aleksandr89@gmail.com">
+    <meta name="Publisher-Email" Content="y.aleksandr89@gmail.com">
+    <meta name="Publisher-URL" Content="https://yaleksandr89.github.io./">
+    <meta name="Generator" Content="phpStorm">
+    <meta name="copyright" lang="ru" content="2018-2019, Александр Юрченко">
+    <meta name="yandex-verification" content="2460cb2e96b2ca3f"/>
+    <meta name="google-site-verification" content="AowmK4sBl_zZN1ezqGsVv3FjB4C6_l25b_zSMFw6pLM"/>
+    <link rel="canonical" href="https://yaleksandr89.github.io/grokaem-algoritmy.html">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/baguetteBox.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <!--OpenGraph-->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="https://yaleksandr89.github.io/">
+    <meta property="og:title" content="Грокаем алгоритмы • реализация на PHP">
+    <meta property="og:description"
+          content="Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком объяснит, что такое алгоритмы.">
+    <meta property="og:url" content="https://yaleksandr89.github.io/">
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:image"
+          content="https://alexanderyurchenko.ru/NeedImg_notDel/opangraph-yaleksandr89-github-grokaem-algoritmy.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt"
+          content="Cover for page yaleksandr89.github.io">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <!--TwitterCard-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yaleksandr89">
+    <meta name="twitter:title" content="Грокаем алгоритмы • реализация на PHP">
+    <meta name="twitter:description"
+          content="Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком объяснит, что такое алгоритмы.">
+    <meta name="twitter:image:src"
+          content="https://alexanderyurchenko.ru/NeedImg_notDel/opangraph-yaleksandr89-github-grokaem-algoritmy.jpg">
+    <!--Schema.org-->
+    <script type='application/ld+json'>
+        {
+            "@context": "http://www.schema.org",
+            "@type": "Person",
+            "name": "Aleksandr Yurchenko",
+            "jobTitle": "web developer",
+            "url": "alexanderyurchenko.ru",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": " ",
+                "addressLocality": "Saint Petersburg",
+                "addressRegion": "Leningradskaya",
+                "postalCode": " ",
+                "addressCountry": "Russia"
+            },
+            "email": "y.aleksandr89@gmail.com",
+            "telephone": "+79816884845",
+            "birthDate": "1989-11-28"
+        }
+    </script>
+    <script type='application/ld+json'>
+        {
+            "@context": "http://www.schema.org",
+            "@type": "WebSite",
+            "name": "yaleksandr89.github.io",
+            "alternateName": "yaleksandr89.github.io/articles/grokaem-algoritmy.html",
+            "url": "https://yaleksandr89.github.io/articles/grokaem-algoritmy.html"
+        }</script>
+    <title>Грокаем алгоритмы • реализация на PHP</title>
+    <meta name="description"
+          content="Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком объяснит, что такое алгоритмы.
+          После прочтения вы поймете, что алгоритмы это не нудно, а увлекательно и весело.">
+    <meta name="keywords"
+          content="Грокаем алгоритмы,Адитья Бхаргава,Aditya Bhargava,линейный поиск,бинарный поиск,выборочная сортировка,php,github">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript"> (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true}); </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140006640-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140006640-1');
+    </script>
+</head>
+<body class="d-flex flex-column h-100">
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/53631874" style="position:absolute; left:-9999px;" alt="Yandex.Metrika"/>
+    </div>
+</noscript>
+<!-- Yandex.Metrika counter -->
+
+<div class="preloader d-flex justify-content-center align-items-center">
+    <div class="spinner-grow text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- /.preloader -->
+
+<button class="scrollToTop">
+    <i class="fas fa-angle-up"></i>
+</button>
+<!-- /.scrollToTop-->
+
+<header class="header-content">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand blog-logotype" href="/">
+            <img src="../img/logotype.png" alt="logotype Aleksandr Yurchenko">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="/catalogue.html">Каталог репозиториев GitHub</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Обо мне</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- /.main-header -->
+
+<section class="single-article">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="/catalogue.html">Каталог репозиториев GitHub</a></li>
+                        <li class="breadcrumb-item"><a href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы</a></li>
+                    </ol>
+                </nav>
+                <article>
+                    <header>
+                        <h1 class="text-center">Грокаем алгоритмы</h1>
+                        <p class="article-header-p">
+                            <span class="single-article-date"><i class="far fa-calendar-alt"></i><span class="date">16.05.2019</span></span>
+                        </p>
+                        <img class="img-header" src="grokaem-algoritmy/grokaem-algoritmy-img.jpg"
+                             alt="Обложка книги: Грокаем алгоритмы">
+                    </header>
+                    <div class="article-text">
+                        <p class="txt">
+                            С данным изданием познакомился случайно, при поиске информации про методы сортировки, какие
+                            алгоритмы применяются в той или иной ситуации. Я и раньше слышал про алгоритмы, рекурсию, но
+                            как-то не ставил себе целью прочитать про них подробнее. Тем более попытаться реализовать
+                            часть изложенного материала на практике.
+                        </p>
+                        <div class="alert alert-secondary single-article-blockquote text-center">
+                            Репозиторий где реализованы практические задания на PHP → <a
+                                href="https://github.com/yaleksandr89/grokking_algorithms" target="_blank"
+                                rel="nofollow noopener">Грокаем алгоритмы</a>
+                        </div>
+                        <p class="txt">
+                            Сам материал структурировано от простого к сложному и слова автора сказанные в предисловье
+                            подтверждаются по ходу чтения:
+                        </p>
+                        <blockquote class="blockquote text-right single-article-blockquote">
+                            <p class="mb-0">Я прежде всего стремился к тому, чтобы книга легко читалась. Я избегаю u
+                                неожиданных поворотов; каждыи раз, когда в книге упоминается новая концепция, я либо
+                                объясняю ее сразу, либо говорю, где буду объяснять.</p>
+                            <footer class="blockquote-footer">Aditya Bhargava in <cite title="Source Title">Grokking
+                                Algorithms</cite></footer>
+                        </blockquote>
+                        <!-- /.blockquote -->
+
+                        <p class="txt">
+                            В книге большое количество иллюстраций и в купе с простотой изложения материала, книга
+                            читается очень легко и не вызывает трудностей с восприятием.
+                        </p>
+                        <figure class="figure single-article-figure">
+                            <div class="row gallery text-center">
+                                <div class="col-sm-12 gallery-item">
+                                    <a href="grokaem-algoritmy/gallery/grouped.jpg">
+                                        <img src="grokaem-algoritmy/gallery/thumbnail/thumb-grouped.jpg"
+                                             alt="Картинка из книги Грокаем алгоритмы - grouped">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 gallery-item">
+                                    <a href="grokaem-algoritmy/gallery/caching.jpg">
+                                        <img src="grokaem-algoritmy/gallery/thumbnail/thumb-caching.jpg"
+                                             alt="Картинка из книги Грокаем алгоритмы - caching">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 gallery-item">
+                                    <a href="grokaem-algoritmy/gallery/qsort_pivot_3.jpg">
+                                        <img src="grokaem-algoritmy/gallery/thumbnail/thumb-qsort_pivot_3.jpg"
+                                             alt="Картинка из книги Грокаем алгоритмы - qsort_pivot">
+                                    </a>
+                                </div>
+
+                                <div class="col-sm-4 gallery-item">
+                                    <a href="grokaem-algoritmy/gallery/binary_search.jpg">
+                                        <img src="grokaem-algoritmy/gallery/thumbnail/thumb-binary_search.jpg"
+                                             alt="Картинка из книги Грокаем алгоритмы - binary_search">
+                                    </a>
+                                </div>
+                                <div class="col-sm-4 gallery-item">
+                                    <a href="grokaem-algoritmy/gallery/guy_on_computer.jpg">
+                                        <img src="grokaem-algoritmy/gallery/thumbnail/thumb-guy_on_computer.jpg"
+                                             alt="Картинка из книги Грокаем алгоритмы - guy_on_computer">
+                                    </a>
+                                </div>
+                                <div class="col-sm-4 gallery-item">
+                                    <a href="grokaem-algoritmy/gallery/phone_book.jpg">
+                                        <img src="grokaem-algoritmy/gallery/thumbnail/thumb-phone_book.jpg"
+                                             alt="Картинка из книги Грокаем алгоритмы - /phone_book">
+                                    </a>
+                                </div>
+                            </div>
+                            <figcaption class="figure-caption text-right single-article-figcaption">Изображение из книги
+                                «Грокаем алгоритмы»
+                            </figcaption>
+                        </figure>
+                        <!-- /.gallery -->
+
+                        <p class="txt">
+                            Все практические задания в «Грокаем алгоритмы» выполнены на python и это факт изначально
+                            меня огорчил, так как я сейчас изучаю php и мне не хотелось переключаться на питон.</p>
+                        <p class="txt">Однако найдя профиль <strong>автора книги Адитья Бхаргава</strong> на GitHub
+                            вздохнул с
+                            облегчением – в репозитории
+                            посвященной этой книге у него собраны реализации алгоритмов на многих популярных языках:
+                            <code>php, javascript, puthon, kotlin, swift</code> и многие другие.
+                        </p>
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <figure class="figure">
+                                    <ul class="single-article-ul text-left">
+                                        <li class="single-article-list-item blog"><a href="http://adit.io/"
+                                                                                     target="_blank"
+                                                                                     rel="nofollow noopener">Блог</a>
+                                        </li>
+                                        <li class="single-article-list-item profile-man"><a
+                                                href="https://github.com/egonSchiele"
+                                                target="_blank" rel="nofollow noopener">Профиль
+                                            на
+                                            GitHub</a></li>
+                                        <li class="single-article-list-item storage"><a
+                                                href="https://github.com/egonSchiele/grokking_algorithms"
+                                                target="_blank"
+                                                rel="nofollow noopener">Репозиторий</a></li>
+                                    </ul>
+                                    <figcaption class="figure-caption text-center single-article-figcaption">Информация
+                                        об авторе книги
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <p class="txt">
+                            На данный момент я заканчиваю чтения этой книги (<em>параллельно выполняя задания</em>) и
+                            могу
+                            сказать, что книга подойдёт программистам-самоучкам, к коим я отношусь. Здесь изложена
+                            «база», которая я уверен, в дальнейшем обязательно пригодиться.
+                        </p>
+                        <div class="tags-title">:<a
+                                class="badge badge-primary single-article-tag-php"
+                                href="/php-category.html" data-toggle="tooltip" data-placement="bottom"
+                                title="PHP: Hypertext Preprocessor"><span>PHP</span></a></div>
+                    </div>
+                </article>
+            </div>
+            <!-- /.col-md-8 -->
+            <div class="col-md-4">
+                <div class="sidebar-widget widget-categories">
+                    <h3 class="widget-title">Категории</h3>
+                    <ul>
+                        <li><a href="/php-category.html">PHP</a></li>
+                        <li><a href="/javascript-category.html">JavaScript</a></li>
+                        <li><a href="/wordpress-category.html">Wordpress</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+    </div>
+</section>
+
+<div class="copyright mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav">
+                    <li class="nav-item"><span class="nav-link github-span">2019</span></li>
+                    <li class="nav-item">
+                        <span class="nav-link"><a class="github-link" href="https://github.com/yaleksandr89"
+                                                  target="_blank" rel="noopener"
+                                                  title="Репозиторий на GitHub"> yaleksandr89.Github.io</a></span>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/privacy-policy.html">Политика конфиденциальности</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.copyright -->
+
+<!--LiveInternet counter-->
+<script type="text/javascript">
+    document.write('<a href="//www.liveinternet.ru/click" ' +
+        'target="_blank"><img src="//counter.yadro.ru/hit?t52.2;r' +
+        escape(document.referrer) + ((typeof (screen) == 'undefined') ? '' :
+            ';s' + screen.width + '*' + screen.height + '*' + (screen.colorDepth ?
+            screen.colorDepth : screen.pixelDepth)) + ';u' + escape(document.URL) +
+        ';h' + escape(document.title.substring(0, 150)) + ';' + Math.random() +
+        '" alt="" title="LiveInternet: показано число просмотров и' +
+        ' посетителей за 24 часа" ' +
+        'border="0" width="88" height="31"><\/a>')
+</script>
+<!--/LiveInternet-->
+
+<!-- Stat.MegaIndex.ru Start -->
+<script type="text/javascript">var mi = document.createElement('script');
+mi.type = 'text/javascript';
+mi.async = true;
+mi.src = (document.location.protocol == 'https:' ? 'https' : 'http') + '://counter.megaindex.ru/core.js?t;' + escape(document.referrer) + ((typeof (screen) == 'undefined') ? '' : ';' + screen.width + '*' + screen.height) + ';' + escape(document.URL) + ';' + document.title.substring(0, 256) + ';1469627';
+document.getElementsByTagName('head')[0].appendChild(mi);</script>
+<!-- Stat.MegaIndex.ru End -->
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/baguetteBox.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>
