@@ -1822,13 +1822,14 @@ a.github-link {
 .about-me mark span {
     font-weight: 600;
 }
+
 .about-me .img-header {
     margin-top: 0;
     margin-bottom: 15px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.22);
 }
 
 .about-me .single-article-blockquote {
@@ -2365,5 +2366,166 @@ a.github-link {
 
     .sitemap-html .section .article-sitemap:before {
         content: "";
+    }
+}
+
+/*===============================================@ /.sitemap-html ===============================================*/
+@media only screen and (max-width: 1199px) {
+    .about-me .exclamation-text-1,
+    .about-me .exclamation-text-2 {
+        top: -5px;
+    }
+
+    .single-article-ul .single-article-list-item.exclamation-mark:last-child {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .about-me .exclamation-text-1,
+    .about-me .exclamation-text-2 {
+        top: -20px;
+    }
+
+    .single-article .article-text .faculty a:hover::after,
+    .single-article .article-text .specialty a:hover::after {
+        content: "";
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+
+    .about-me .single-article-blockquote-type2 {
+        color: #1d1d1d;
+        padding: 10px 10px 10px 5px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+        -moz-box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+        box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .single-article-ul .single-article-list-item.exclamation-mark:last-child {
+        margin-top: 70px;
+    }
+
+    .about-me .article-text .single-article-ul .single-article-list-item.faculty,
+    .about-me .article-text .single-article-ul .single-article-list-item.specialty {
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .about-me .article-text .single-article-ul .single-article-list-item::before {
+        margin-bottom: -12px;
+        margin-right: 12px;
+    }
+
+    .about-me .article-text .single-article-ul .single-article-list-item.faculty::before {
+        background: url("../img/ico/faculty.svg") no-repeat;
+        -webkit-background-size: 40px 40px;
+        background-size: 40px 40px;
+    }
+
+    .about-me .article-text .single-article-ul .single-article-list-item.specialty::before {
+        background: url("../img/ico/specialty.svg") no-repeat;
+        -webkit-background-size: 40px 40px;
+        background-size: 40px 40px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .about-me h1 {
+        font-size: 50px;
+    }
+
+    .about-me h2 {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+    .about-me .article-text .single-article-ul .single-article-list-item.exclamation-mark:first-child {
+        margin-top: 75px;
+    }
+
+    .single-article-ul .single-article-list-item.exclamation-mark:last-child {
+        margin-top: 125px;
+        margin-bottom: 50px;
+    }
+
+    .single-article .article-text .single-article-ul .single-article-list-item.specialty {
+        padding-bottom: 15px;
+    }
+
+    .about-me .exclamation-text-1 {
+        top: -80px;
+    }
+
+    .about-me .exclamation-text-2 {
+        top: -50px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .about-me .article-text .single-article-ul .single-article-list-item.faculty::before,
+    .about-me .article-text .single-article-ul .single-article-list-item.specialty::before {
+        background: none;
+        width: 0;
+        height: 0;
+        margin-right: 0;
+    }
+
+    .about-me .single-article-ul {
+        padding-left: 0;
+    }
+
+    .about-me .exclamation-text-1,
+    .about-me .exclamation-text-2 {
+        position: relative;
+    }
+
+    .about-me .exclamation-text-1 {
+        padding-bottom: 0;
+    }
+
+    .about-me .article-text .single-article-ul .single-article-list-item.exclamation-mark::before {
+        background: none;
+        width: 0;
+        height: 0;
+        margin-right: 0;
+    }
+
+    .about-me .article-text .single-article-ul .single-article-list-item.exclamation-mark:first-child {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 0
+    }
+
+    .about-me .single-article-ul .single-article-list-item.exclamation-mark:last-child {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
+
+    .about-me .exclamation-text-1 {
+        top: 0;
+    }
+
+    .about-me .exclamation-text-2 {
+        top: 10px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .about-me h1 {
+        font-size: 40px;
+    }
+
+    .about-me h2 {
+        font-size: 20px;
+        padding-bottom: 10px;
     }
 }
