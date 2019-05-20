@@ -1803,6 +1803,94 @@ a.github-link {
     content: "\2014\2014\2014";
 }
 
+/*==================================================.about-me ==================================================*/
+.about-me h1 {
+    font-size: 60px;
+}
+
+.about-me h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.about-me mark {
+    background-color: rgba(254, 140, 45, .5);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.about-me mark span {
+    font-weight: 600;
+}
+.about-me .img-header {
+    margin-top: 0;
+    margin-bottom: 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
+}
+
+.about-me .single-article-blockquote {
+    padding: 15px 5px 15px 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.about-me .single-article-blockquote-type2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+    -23px 0 20px -23px rgba(0, 0, 0, .8),
+    23px 0 20px -23px rgba(0, 0, 0, .8),
+    0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.about-me .article-text .single-article-ul .single-article-list-item {
+    position: relative;
+}
+
+.about-me .article-text .single-article-ul .single-article-list-item::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: -12px;
+    margin-right: 12px;
+}
+
+.about-me .article-text .single-article-ul .single-article-list-item.faculty::before {
+    background: url("../img/ico/faculty.svg") no-repeat;
+    -webkit-background-size: 50px 50px;
+    background-size: 50px 50px;
+}
+
+.about-me .article-text .single-article-ul .single-article-list-item.specialty::before {
+    background: url("../img/ico/specialty.svg") no-repeat;
+    -webkit-background-size: 50px 50px;
+    background-size: 50px 50px;
+}
+
+.about-me .article-text .single-article-ul .single-article-list-item.exclamation-mark::before {
+    background: url("../img/ico/exclamation.svg") no-repeat;
+    -webkit-background-size: 50px 50px;
+    background-size: 50px 50px;
+}
+
+.about-me .article-text .single-article-ul .single-article-list-item.exclamation-mark:first-child {
+    margin-bottom: 20px;
+}
+
+.about-me .exclamation-text-1 {
+    position: absolute;
+    bottom: 12px;
+}
+
+.about-me .exclamation-text-2 {
+    position: absolute;
+}
+
 /*==================================================@media .main-header==================================================*/
 @media only screen and (max-width: 991px) {
     section {
@@ -2255,12 +2343,14 @@ a.github-link {
         font-size: 12px;
     }
 }
+
 /*===============================================@ /.sitemap-html ===============================================*/
 @media only screen and (max-width: 425px) {
     .sitemap-html h1 {
         margin-bottom: 50px;
         text-align: center;
     }
+
     .sitemap-html div.section {
         border-left: none;
     }
@@ -2272,6 +2362,7 @@ a.github-link {
     .sitemap-html div.section p:before {
         content: "";
     }
+
     .sitemap-html .section .article-sitemap:before {
         content: "";
     }
