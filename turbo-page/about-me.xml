@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:yandex="http://news.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:turbo="http://turbo.yandex.ru" version="2.0">
+    <channel>
+        <title>Александр Юрченко – веб-разработчик, контент-менеджер</title>
+        <link>https://yaleksandr89.github.io/</link>
+        <description>Занимаюсь веб разработкой, также имею многолетний опыт работы контент-менеджером. По всем вопросам
+            пишите на почту или соц сети. Have a nice day!
+        </description>
+        <language>ru</language>
+        <turbo:analytics
+                type="Yandex"
+                id="53631874">
+        </turbo:analytics>
+        <turbo:analytics
+                type="Google"
+                id="UA-140006640-1">
+        </turbo:analytics>
+        <item turbo="true">
+            <link>https://yaleksandr89.github.io/articles/grokaem-algoritmy.html</link>
+            <turbo:source>https://yaleksandr89.github.io/articles/grokaem-algoritmy.html</turbo:source>
+            <turbo:topic>Грокаем алгоритмы • реализация на PHP</turbo:topic>
+            <pubDate>Thu, 16 May 19 14:30:12 +0300</pubDate>
+            <author>Александр Юрченко</author>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Грокаем алгоритмы</h1>
+                        <p class="article-header-p">
+                            <span class="single-article-date">
+                            <i class="far fa-calendar-alt"></i>
+                            <span class="date">16.05.2019</span>
+                            </span>
+                        </p>
+                        <figure>
+                            <img class="img-header" src="https://yaleksandr89.github.io/articles/grokaem-algoritmy/grokaem-algoritmy-img.jpg"
+                            alt="Обложка книги: Грокаем алгоритмы" />
+                        </figure>
+                    </header>
+                        <p class="txt">
+                            С данным изданием познакомился случайно, при поиске информации про методы сортировки, какие
+                            алгоритмы применяются в той или иной ситуации.
+                        </p>
+                        <p>
+                            Я и раньше слышал про алгоритмы, рекурсию, но как-то не ставил себе целью прочитать про них подробнее.
+                            Тем более попытаться реализовать часть изложенного материала на практике.
+                        </p>
+                        <blockquote class="article-blockquote">
+                            <p> Репозиторий где реализованы практические задания на PHP: <a
+                                href="https://github.com/yaleksandr89/grokking_algorithms" data-turbo="false">
+                                Грокаем алгоритмы</a>
+                            </p>
+                        </blockquote>
+                        <p class="txt">
+                            Сам материал структурировано от простого к сложному и слова автора сказанные в предисловье
+                            подтверждаются по ходу чтения:
+                        </p>
+                        <blockquote class="article-blockquote">
+                            <p>
+                                «Я прежде всего стремился к тому, чтобы книга легко читалась. Я избегаю u
+                                неожиданных поворотов; каждыи раз, когда в книге упоминается новая концепция, я либо
+                                объясняю ее сразу, либо говорю, где буду объяснять.»
+                            </p>
+                           <p class="article-blockquote-footer">
+                                Aditya Bhargava in the book «Grokking Algorithms»
+                           </p>
+                        </blockquote>
+                        <p class="txt">
+                            В книге большое количество иллюстраций и в купе с простотой изложения материала, книга
+                            читается очень легко и не вызывает трудностей с восприятием.
+                        </p>
+                        <div data-block="gallery">
+                            <header>Изображение из книги «Грокаем алгоритмы»</header>
+                            <img src="grokaem-algoritmy/gallery/grouped.jpg"/>
+                            <img src="grokaem-algoritmy/gallery/caching.jpg"/>
+                            <img src="grokaem-algoritmy/gallery/qsort_pivot_3.jpg"/>
+                            <img src="grokaem-algoritmy/gallery/binary_search.jpg"/>
+                            <img src="grokaem-algoritmy/gallery/guy_on_computer.jpg"/>
+                            <img src="grokaem-algoritmy/gallery/phone_book.jpg"/>
+                        </div>
+                        <p class="txt">
+                            Все практические задания в «Грокаем алгоритмы» выполнены на python и это факт изначально
+                            меня огорчил, так как я сейчас изучаю php и мне не хотелось переключаться на питон.</p>
+                        <p class="txt">Однако найдя профиль <strong>
+                            автора книги Адитья Бхаргава</strong> на GitHub
+                            вздохнул с облегчением – в репозитории посвященной этой книге у него собраны реализации
+                            алгоритмов на многих популярных языках: <code class="code">php, javascript, puthon, kotlin,
+                            swift</code> и многие другие.
+                        </p>
+                        <div data-block="slider" data-view="landscape" data-item-view="contain">
+                            <header>Изображение из книги «Грокаем алгоритмы»</header>
+                                <figure>
+                                        <img src="grokaem-algoritmy/gallery/grouped.jpg"/>
+                                </figure>
+                                    <figure>
+                                        <img src="grokaem-algoritmy/gallery/caching.jpg"/>
+                                </figure>
+                                <figure>
+                                        <img src="grokaem-algoritmy/gallery/qsort_pivot_3.jpg"/>
+                                </figure>
+                                    <figure>
+                                        <img src="grokaem-algoritmy/gallery/binary_search.jpg"/>
+                                </figure>
+                                <figure>
+                                        <img src="grokaem-algoritmy/gallery/guy_on_computer.jpg"/>
+                                </figure>
+                                <figure>
+                                        <img src="grokaem-algoritmy/gallery/phone_book.jpg"/>
+                                </figure>
+                        </div>
+                        <div data-block="accordion">
+                           <div data-block="item" data-title="Блог автора">
+                           <a href="http://adit.io/" data-turbo="false">Перейти в блог</a>
+                           </div>
+                           <div data-block="item" data-title="Профиль автора на GitHub">
+                           <a href="href="https://github.com/egonSchiele" data-turbo="false">Перейти в профиль
+                                на GitHub</a>
+                           </div>
+                           <div data-block="item" data-title="Репозиторий">
+                           <a href="https://github.com/egonSchiele/grokking_algorithms" data-turbo="false">Репозиторий
+                                    посвященный книге</a>
+                           </div>
+                        </div>
+                        <p class="txt">
+                            На данный момент я заканчиваю чтения этой книги (<em>параллельно выполняя задания</em>) и
+                            могу сказать, что книга подойдёт программистам-самоучкам, к коим я отношусь.
+                        <p class="txt">
+                            Здесь изложена «база», которая я уверен, в дальнейшем обязательно пригодиться.
+                        </p>
+                        <p class="header-footer">Поделиться в социальных сетях</p>
+                        <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
+                ]]>
+            </turbo:content>
+            <!--<yandex:related></yandex:related>
+            Вы можете разместить ссылки на другие
+            ресурсы или настроить отображение бесконечной ленты статей.
+            *https://yandex.ru/dev/turbo/doc/rss/markup-docpage/#item
+            -->
+        </item>
+    </channel>
+</rss>
