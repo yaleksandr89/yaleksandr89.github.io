@@ -1,10 +1,10 @@
-User-agent: Yandex
+User-agent: *
 Allow: /
 
 User-agent: Googlebot
 Allow: /
 
-User-agent: *
+User-agent: Yandex
 Allow: /
 
 Host: yaleksandr89.github.io
