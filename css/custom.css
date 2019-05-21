@@ -1577,7 +1577,7 @@ a.github-link {
 
 .single-article .article-text .txt::first-letter {
     font-size: 40px;
-    padding: 5px;
+    padding: 0 2px 0 0;
     color: #FE8C2D;
     float: left;
     line-height: 10px;
@@ -1666,6 +1666,10 @@ a.github-link {
     box-shadow: 0 0 4px rgba(0, 0, 0, .3);
     font-size: 14px;
     font-weight: 400;
+}
+
+.single-article .single-article-blockquote {
+    margin-bottom: 25px;
 }
 
 .single-article .single-article-blockquote .blockquote-footer {
@@ -1890,6 +1894,10 @@ a.github-link {
 
 .about-me .exclamation-text-2 {
     position: absolute;
+}
+
+.about-me.single-article .article-text .txt {
+    position: relative;
 }
 
 /*==================================================@media .main-header==================================================*/
