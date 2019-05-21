@@ -1,6 +1,19 @@
+$(document).ready(function () {
+    $(function () {
+        $('.lazy').Lazy({
+            scrollDirection: 'vertical',
+            effect: 'fadeIn',
+            visibleOnly: true,
+            onError: function (element) {
+                console.log('error loading ' + element.data('src'));
+            }
+        });
+    })
+});
+
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
-})
+});
 
 $(function () {
     baguetteBox.run('.gallery');

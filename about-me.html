@@ -149,7 +149,7 @@
 <header class="header-content">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand blog-logotype" href="/">
-            <img src="./img/logotype.png" alt="logotype Aleksandr Yurchenko">
+            <img class="lazy" data-src="./img/logotype.png" alt="logotype Aleksandr Yurchenko">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -182,7 +182,7 @@
                         <p class="article-header-p">
                             <span class="single-article-date"><i class="far fa-calendar-alt"></i><span class="date">20.05.2019</span></span>
                         </p>
-                        <img class="img-header" src="./img/alexander-yurchenko.jpg"
+                        <img class="img-header lazy" data-src="./img/alexander-yurchenko.jpg"
                              alt="Александр Юрченко – веб-разработчик, контент-менеджер">
                     </header>
                     <div class="article-text">
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                         <figure class="figure single-article-figure">
-                            <img class="img-header rounded" src="./img/alexander-yurchenko-study.jpg"
+                            <img class="img-header rounded lazy" data-src="./img/alexander-yurchenko-study.jpg"
                                  alt="Александр Юрченко, защита диплома в САФУ">
                             <figcaption class="figure-caption single-article-figcaption text-center">
                                 Защита диплома
@@ -284,7 +284,7 @@
                             моё</strike>» и полностью ушёл в фриланс.
                         </p>
                         <figure class="figure single-article-figure">
-                            <img class="img-header rounded" src="./img/alexander-yurchenko-work.jpg"
+                            <img class="img-header rounded lazy" data-src="./img/alexander-yurchenko-work.jpg"
                                  alt="Александр Юрченко, первое место работы работник склада в сервисном
                                          центре Формоза">
                             <figcaption class="figure-caption single-article-figcaption text-center">
@@ -378,6 +378,7 @@ document.getElementsByTagName('head')[0].appendChild(mi);</script>
 <!-- Stat.MegaIndex.ru End -->
 
 <script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/lazy/jquery.lazy.min.js"></script>
 <script src="./js/popper.min.js"></script>
 <script src="./js/baguetteBox.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>

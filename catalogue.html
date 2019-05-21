@@ -148,7 +148,7 @@
 <header class="header-content">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand blog-logotype" href="/">
-            <img src="./img/logotype.png" alt="logotype Aleksandr Yurchenko">
+            <img class="lazy" data-src="./img/logotype.png" alt="logotype Aleksandr Yurchenko">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -185,7 +185,7 @@
                     </span></p>
                     <div class="article-excerpt">
                         <a href="articles/grokaem-algoritmy.html">
-                            <img class="thumb" src="./articles/grokaem-algoritmy/thumb-grokaem-algoritmy-img.jpg"
+                            <img class="thumb lazy" data-src="./articles/grokaem-algoritmy/thumb-grokaem-algoritmy-img.jpg"
                                  alt="Обложка книги: Грокаем алгоритмы">
                         </a>
                         <p>
@@ -340,19 +340,19 @@
             <div class="col-md-6 footer-images">
                 <div class="row">
                     <div class="col-6">
-                        <img src="./img/footer-img/img-1.jpg" alt="footer image 1">
+                        <img class="lazy" data-src="./img/footer-img/img-1.jpg" alt="footer image 1">
                     </div>
                     <!-- /.com-sm-6 -->
                     <div class="col-6">
-                        <img src="./img/footer-img/img-2.jpg" alt="footer image 2">
+                        <img class="lazy" data-src="./img/footer-img/img-2.jpg" alt="footer image 2">
                     </div>
                     <!-- /.com-sm-6 -->
                     <div class="col-6">
-                        <img src="./img/footer-img/img-3.jpg" alt="footer image 3">
+                        <img class="lazy" data-src="./img/footer-img/img-3.jpg" alt="footer image 3">
                     </div>
                     <!-- /.com-sm-6 -->
                     <div class="col-6">
-                        <img src="./img/footer-img/img-4.jpg" alt="footer image 4">
+                        <img class="lazy" data-src="./img/footer-img/img-4.jpg" alt="footer image 4">
                     </div>
                     <!-- /.com-sm-6 -->
                 </div>
@@ -393,6 +393,7 @@ document.getElementsByTagName('head')[0].appendChild(mi);</script>
 <!-- Stat.MegaIndex.ru End -->
 
 <script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/lazy/jquery.lazy.min.js"></script>
 <script src="./js/popper.min.js"></script>
 <script src="./js/baguetteBox.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
