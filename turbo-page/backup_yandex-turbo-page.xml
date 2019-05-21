@@ -131,6 +131,11 @@
                         <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
                 ]]>
             </turbo:content>
+            <!--<yandex:related></yandex:related>
+            Вы можете разместить ссылки на другие
+            ресурсы или настроить отображение бесконечной ленты статей.
+            *https://yandex.ru/dev/turbo/doc/rss/markup-docpage/#item
+            -->
         </item>
     </channel>
 </rss>
