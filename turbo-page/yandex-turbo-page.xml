@@ -69,24 +69,6 @@
                             В книге большое количество иллюстраций и в купе с простотой изложения материала, книга
                             читается очень легко и не вызывает трудностей с восприятием.
                         </p>
-                        <div data-block="gallery">
-                            <header>Изображение из книги «Грокаем алгоритмы»</header>
-                            <img src="grokaem-algoritmy/gallery/grouped.jpg"/>
-                            <img src="grokaem-algoritmy/gallery/caching.jpg"/>
-                            <img src="grokaem-algoritmy/gallery/qsort_pivot_3.jpg"/>
-                            <img src="grokaem-algoritmy/gallery/binary_search.jpg"/>
-                            <img src="grokaem-algoritmy/gallery/guy_on_computer.jpg"/>
-                            <img src="grokaem-algoritmy/gallery/phone_book.jpg"/>
-                        </div>
-                        <p class="txt">
-                            Все практические задания в «Грокаем алгоритмы» выполнены на python и это факт изначально
-                            меня огорчил, так как я сейчас изучаю php и мне не хотелось переключаться на питон.</p>
-                        <p class="txt">Однако найдя профиль <strong>
-                            автора книги Адитья Бхаргава</strong> на GitHub
-                            вздохнул с облегчением – в репозитории посвященной этой книге у него собраны реализации
-                            алгоритмов на многих популярных языках: <code class="code">php, javascript, puthon, kotlin,
-                            swift</code> и многие другие.
-                        </p>
                         <div data-block="slider" data-view="landscape" data-item-view="contain">
                             <header>Изображение из книги «Грокаем алгоритмы»</header>
                                 <figure>
@@ -108,6 +90,15 @@
                                         <img src="grokaem-algoritmy/gallery/phone_book.jpg"/>
                                 </figure>
                         </div>
+                        <p class="txt">
+                            Все практические задания в «Грокаем алгоритмы» выполнены на python и это факт изначально
+                            меня огорчил, так как я сейчас изучаю php и мне не хотелось переключаться на питон.</p>
+                        <p class="txt">Однако найдя профиль <strong>
+                            автора книги Адитья Бхаргава</strong> на GitHub
+                            вздохнул с облегчением – в репозитории посвященной этой книге у него собраны реализации
+                            алгоритмов на многих популярных языках: <code class="code">php, javascript, puthon, kotlin,
+                            swift</code> и многие другие.
+                        </p>
                         <div data-block="accordion">
                            <div data-block="item" data-title="Блог автора">
                            <a href="http://adit.io/" data-turbo="false">Перейти в блог</a>
