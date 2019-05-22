@@ -104,3 +104,7 @@
 .footer_theme_dark .footer__divider, .footer_theme_dark .footer__paragraph.paragraph {
     color: #ffffff;
 }
+
+.categories {
+    list-style: none;
+}

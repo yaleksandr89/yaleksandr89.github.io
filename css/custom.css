@@ -1440,8 +1440,10 @@ a.github-link {
     color: #fff;
     letter-spacing: 2px;
 }
-
-/*=================/.tags ======================*/
+.article-preview .article-excerpt-txt {
+    padding-bottom: 10px;
+}
+    /*=================/.tags ======================*/
 .section-content .tags-article {
     margin-bottom: 0;
     display: block;

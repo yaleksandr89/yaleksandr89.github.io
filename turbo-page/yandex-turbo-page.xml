@@ -66,22 +66,22 @@
                         <div data-block="slider" data-view="landscape" data-item-view="contain">
                             <header>Изображение из книги «Грокаем алгоритмы»</header>
                                 <figure>
-                                        <img src="./articles/grokaem-algoritmy/gallery/grouped.jpg"/>
+                                        <img src="../articles/grokaem-algoritmy/gallery/grouped.jpg"/>
                                 </figure>
                                     <figure>
-                                        <img src="./articles/grokaem-algoritmy/gallery/caching.jpg"/>
+                                        <img src="../articles/grokaem-algoritmy/gallery/caching.jpg"/>
                                 </figure>
                                 <figure>
-                                        <img src="./articles/grokaem-algoritmy/gallery/qsort_pivot_3.jpg"/>
+                                        <img src="../articles/grokaem-algoritmy/gallery/qsort_pivot_3.jpg"/>
                                 </figure>
                                     <figure>
-                                        <img src="./articles/grokaem-algoritmy/gallery/binary_search.jpg"/>
+                                        <img src="../articles/grokaem-algoritmy/gallery/binary_search.jpg"/>
                                 </figure>
                                 <figure>
-                                        <img src="./articles/grokaem-algoritmy/gallery/guy_on_computer.jpg"/>
+                                        <img src="../articles/grokaem-algoritmy/gallery/guy_on_computer.jpg"/>
                                 </figure>
                                 <figure>
-                                        <img src="./articles/grokaem-algoritmy/gallery/phone_book.jpg"/>
+                                        <img src="../articles/grokaem-algoritmy/gallery/phone_book.jpg"/>
                                 </figure>
                         </div>
                         <p class="txt">
@@ -928,6 +928,151 @@
                                     </div>
                                </div>
                             </div>
+                    <p class="header-footer">Поделиться в социальных сетях</p>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
+                ]]>
+            </turbo:content>
+        </item>
+        <item turbo="true">
+            <link>https://yaleksandr89.github.io/catalogue.html</link>
+            <turbo:source>https://yaleksandr89.github.io/catalogue.html</turbo:source>
+            <turbo:topic>Каталог репозиториев GitHub</turbo:topic>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Каталог репозиториев GitHub</h1>
+                        <figure>
+                            <img class="img-header" src="./img/letsgrow-bg.jpg"
+                            alt="Каталог репозиториев GitHub" />
+                        </figure>
+                    </header>
+                    <table data-invisible="true">
+                        <tr>
+                            <th colspan="2"><a href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы – реализация на PHP</a></th>
+                            <th>Категории</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><small>16.05.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="./articles/grokaem-algoritmy/thumb-grokaem-algoritmy-img.jpg"
+                                    alt="Каталог репозиториев GitHub" />
+                                </figure>
+                                <p>
+                                Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком
+                                объяснит, что
+                                такое алгоритмы.
+                                После прочтения вы поймете, что алгоритмы это не нудно, а увлекательно и весело.
+                                </p>
+                                <p>
+                                    Сам материал структурировано от простого к сложному и слова автора сказанные в предисловье подтверждаются по ходу чтения.
+                                </p>
+                            </td>
+                            <td>
+                            <ul>
+                            <li><a href="/php-category.html">PHP</a></li>
+                            <li><a href="/javascript-category.html">JavaScript</a></li>
+                            <li><a href="/wordpress-category.html">Wordpress</a></li>
+                            </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Тэги: <a href="/php-category.html">PHP</a></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="header-footer">Поделиться в социальных сетях</p>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
+                ]]>
+            </turbo:content>
+        </item>
+        <item turbo="true">
+            <link>https://yaleksandr89.github.io/php-category.html</link>
+            <turbo:source>https://yaleksandr89.github.io/php-category.html</turbo:source>
+            <turbo:topic>Репозитории Github – категория PHP</turbo:topic>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Репозитории Github – категория PHP</h1>
+                        <figure>
+                            <img class="img-header" src="./img/php-bg.jpg"
+                            alt="Репозитории Github – категория PHP" />
+                        </figure>
+                    </header>
+                    <table data-invisible="true">
+                        <tr>
+                            <th colspan="2"><a href="./articles/grokaem-algoritmy.html">Грокаем алгоритмы – реализация на PHP</a></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><small>16.05.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="../articles/grokaem-algoritmy/thumb-grokaem-algoritmy-img.jpg"
+                                    alt="Каталог репозиториев GitHub" />
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком
+                                объяснит, что
+                                такое алгоритмы.
+                                После прочтения вы поймете, что алгоритмы это не нудно, а увлекательно и весело.
+                                </p>
+                                <p>
+                                    Сам материал структурировано от простого к сложному и слова автора сказанные в предисловье подтверждаются по ходу чтения.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Тэги: <a href="/php-category.html">PHP</a></td>
+                        </tr>
+                    </table>
+                    <p class="header-footer">Поделиться в социальных сетях</p>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
+                ]]>
+            </turbo:content>
+        </item>
+        <item turbo="true">
+            <link>https://yaleksandr89.github.io/javascript-category.html</link>
+            <turbo:source>https://yaleksandr89.github.io/javascript-category.html</turbo:source>
+            <turbo:topic>Репозитории Github – категория JavaScript</turbo:topic>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Репозитории Github – категория JavaScript</h1>
+                        <figure>
+                            <img class="img-header" src="./img/javascript-bg.jpg"
+                            alt="Репозитории Github – категория JavaScript" />
+                        </figure>
+                    </header>
+                    <blockquote>
+                    Пока ничего нет :(
+                    </blockquote>
+                    <p class="header-footer">Поделиться в социальных сетях</p>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
+                ]]>
+            </turbo:content>
+        </item>
+        <item turbo="true">
+            <link>https://yaleksandr89.github.io/wordpress-category.html</link>
+            <turbo:source>https://yaleksandr89.github.io/wordpress-category.html</turbo:source>
+            <turbo:topic>Репозитории Github – категория WordPress</turbo:topic>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Репозитории Github – категория WordPress</h1>
+                        <figure>
+                            <img class="img-header" src="./img/wordpress-bg.jpg"
+                            alt="Репозитории Github – категория WordPress" />
+                        </figure>
+                    </header>
+                    <blockquote>
+                    Пока ничего нет :(
+                    </blockquote>
+                    <p class="header-footer">Поделиться в социальных сетях</p>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
                 ]]>
             </turbo:content>
         </item>
