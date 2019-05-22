@@ -1431,7 +1431,7 @@ a.github-link {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    margin: 0 20px 20px 0;
+    margin: 0 20px 10px 0;
     float: left;
 }
 
@@ -1575,14 +1575,6 @@ a.github-link {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
     font-size: 50px;
-}
-
-.single-article .article-text .txt::first-letter {
-    font-size: 40px;
-    padding: 0 2px 0 0;
-    color: #FE8C2D;
-    float: left;
-    line-height: 10px;
 }
 
 .single-article .article-text .txt {
@@ -2259,14 +2251,6 @@ a.github-link {
 @media only screen and (max-width: 767px) {
     .single-article .breadcrumb {
         font-size: 14px;
-    }
-
-    .single-article .article-text .txt::first-letter {
-        padding: inherit;
-        color: inherit;
-        line-height: inherit;
-        font-size: inherit;
-        float: inherit;
     }
 
     .single-article .article-text p {
