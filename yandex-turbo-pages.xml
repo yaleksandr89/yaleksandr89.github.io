@@ -1219,6 +1219,9 @@
                 <![CDATA[
                     <header>
                         <h1>Политика конфиденциальности</h1>
+                        <figure>
+                        <img class="img-header" src="privacy-policy-bg.jpg" alt="Политика конфиденциальности" />
+                        </figure>
                     </header>
                 <p>Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности)
                     действует в
@@ -1435,6 +1438,9 @@
                 <![CDATA[
                     <header>
                         <h1>Карта сайта</h1>
+                        <figure>
+                        <img class="img-header" src="https://yaleksandr89.github.io/img/sitemap-html-bg.jpg" alt="Карта сайта в формате html" />
+                        </figure>
                     </header>
                     <table data-invisible="false">
                         <tr>
