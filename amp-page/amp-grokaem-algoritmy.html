@@ -26,7 +26,7 @@
     <meta name="publisher_location" content="RU" />
     <meta name="application-name" content="yAleksandr89.Github.io" />
     <meta name="application-name" lang="en" content="yAleksandr89.Github.io" />
-    <meta name="publisher_url" content="https://yaleksandr89.github.io/articles/grokaem-algoritmy.html" />
+    <meta name="publisher_url" content="https://yaleksandr89.github.io/amp-page/amp-grokaem-algoritmy.html" />
     <meta name="generator" content="phpStorm" />
     <link rel="help" href="mailto:y.aleksandr89@gmail.com" />
     <!--Favicon-->
@@ -45,13 +45,13 @@
     <meta property="og:description"
           content="Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком объяснит, что такое
                    алгоритмы. После прочтения вы поймете, что алгоритмы это не нудно, а увлекательно и весело">
-    <meta property="og:url" content="https://yaleksandr89.github.io/articles/grokaem-algoritmy.html">
+    <meta property="og:url" content="https://yaleksandr89.github.io/amp-page/amp-grokaem-algoritmy.html">
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:image"
-          content="https://alexanderyurchenko.ru/NeedImg_notDel/opangraph-yaleksandr89-github-about-me.jpg">
+          content="https://alexanderyurchenko.ru/NeedImg_notDel/opangraph-yaleksandr89-github-grokaem-algoritmy.jpg">
     <meta property="og:image:secure_url"
-          content="https://alexanderyurchenko.ru/NeedImg_notDel/opangraph-yaleksandr89-github-about-me.jpg">
+          content="https://alexanderyurchenko.ru/NeedImg_notDel/opangraph-yaleksandr89-github-grokaem-algoritmy.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt"
           content="Cover for page yaleksandr89.github.io">
@@ -65,7 +65,7 @@
           content="Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком объяснит, что такое
                    алгоритмы. После прочтения вы поймете, что алгоритмы это не нудно, а увлекательно и весело">
     <meta name="twitter:image:src"
-          content="https://alexanderyurchenko.ru/NeedImg_notDel/opangraph-yaleksandr89-github-about-me.jpg">
+          content="https://alexanderyurchenko.ru/NeedImg_notDel/opangraph-yaleksandr89-github-grokaem-algoritmy.jpg">
     <!--Schema.org-->
     <title>Грокаем алгоритмы • реализация на PHP</title>
     <meta name="description"
@@ -129,9 +129,10 @@
             "@context": "http://www.schema.org",
             "@type": "WebSite",
             "name": "yaleksandr89.github.io",
-            "alternateName": "yaleksandr89.github.io/articles/grokaem-algoritmy.html",
-            "url": "https://yaleksandr89.github.io/articles/grokaem-algoritmy.html"
-        }</script>
+            "alternateName": "yaleksandr89.github.io/amp-page/amp-grokaem-algoritmy.html",
+            "url": "https://yaleksandr89.github.io/amp-page/amp-grokaem-algoritmy.html"
+        }
+    </script>
     <style amp-boilerplate>body {
         -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
         -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -197,6 +198,12 @@
         h1, h2, h3 {
             text-align: center;
             margin-top: 30px;
+        }
+
+        h5 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .custom-h2 {
@@ -406,7 +413,7 @@
             background-color: rgba(0, 0, 0, 0.60);
             display: block;
             position: relative;
-            z-index: 1;
+            /*z-index: 1;*/
             margin-top: 20px;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -418,12 +425,49 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, .5);
         }
 
-        .styleGithub h2,
-        .styleGithub p {
-            text-align: center;
+        .ffffff {
             color: #ffffff;
         }
 
+        .txt-center {
+            vertical-align: center;
+            text-align: center;
+        }
+
+        .alert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
+
+        .alert-dark {
+            color: #1b1e21;
+            background-color: #d6d8d9;
+            border-color: #c6c8ca;
+        }
+
+        .w90_m0-auto {
+            width: 100%;
+            max-width: 94%;
+            margin: 15px auto;
+        }
+
+        .styleGithub h2,
+        .styleGithub.cover-img-txt p {
+            text-align: center;
+            color: #ffffff;
+        }
+        .styleGithub.portfolio-style-bg {
+            padding-top: 0;
+            background-color: rgba(255, 255, 255, 1);
+            padding-left: 20px;
+        }
+        .styleGithub.portfolio-style-bg p{
+            text-align: left;
+            color: #000000;
+        }
         .wrap-bth {
             width: 100%;
             text-align: center;
@@ -463,6 +507,248 @@
         mark {
             padding: .2em;
             background-color: #fcf8e3;
+        }
+        /*начало блока уменя навыки (из главной страницы)*/
+        .skill-hard,
+        .skill-hard-award {
+            list-style: none;
+        }
+
+        .skill-hard .skill-hard-item {
+            padding-bottom: 30px;
+        }
+
+        .skill-hard .skill-hard-item:last-child {
+            padding-bottom: 10px;
+        }
+
+        .skill-hard .skill-hard-item:before {
+            content: "";
+            display: inline-block;
+            background: url("../img/ico/cms.svg") no-repeat;
+            -webkit-background-size: 40px 40px;
+            background-size: 40px 40px;
+            width: 40px;
+            height: 40px;
+            margin-bottom: -15px;
+            margin-right: 10px;
+        }
+
+        .skill-hard .skill-hard-item.php-skill-hard:before {
+            content: "";
+            display: inline-block;
+            background: url("../img/ico/php.svg") no-repeat;
+            -webkit-background-size: 40px 40px;
+            background-size: 40px 40px;
+        }
+
+        .skill-hard .skill-hard-item.mysql-skill-hard:before {
+            content: "";
+            display: inline-block;
+            background: url("../img/ico/mysql.svg") no-repeat;
+            -webkit-background-size: 40px 40px;
+            background-size: 40px 40px;
+        }
+
+        .skill-hard .skill-hard-item.js-skill-hard:before {
+            content: "";
+            display: inline-block;
+            background: url("../img/ico/java.svg") no-repeat;
+            -webkit-background-size: 40px 40px;
+            background-size: 40px 40px;
+        }
+
+        .skill-hard-award .skill-hard-item-award {
+            padding-bottom: 25px;
+        }
+
+        .skill-hard-award .skill-hard-item-award:last-child {
+            padding-bottom: 0;
+        }
+
+        .skill-hard-award .skill-hard-item-award::before {
+            content: "";
+            display: inline-block;
+            background: url("../img/ico/diploma.svg") no-repeat;
+            -webkit-background-size: 30px 30px;
+            background-size: 30px 30px;
+            width: 30px;
+            height: 30px;
+            margin-bottom: -12px;
+            margin-right: 10px;
+        }
+
+        .skill-hard-award .skill-hard-item-award a {
+            color: #e9e9e9;
+            font-weight: 600;
+            text-decoration: none;
+            -webkit-transition: all 1.0s;
+            -moz-transition: all 1.0s;
+            -ms-transition: all 1.0s;
+            -o-transition: all 1.0s;
+            transition: all 1.0s;
+        }
+
+        .skill-hard-award .skill-hard-item-award a:hover {
+            color: #FF8C36;
+        }
+        /*конец блока уменя навыки (из главной страницы)*/
+        /*Начало блока портфолио (из главной страницы)*/
+        .portfolio-ul {
+            padding: 0;
+            margin: 10px 10px;
+        }
+
+        .portfolio-ul li {
+            text-align: left;
+            list-style: none;
+            margin-left: 10px;
+            padding-bottom: 12px;
+        }
+
+        .work-portfolio {
+            position: relative;
+            top: 10px;
+        }
+
+        .portfolio-ul li:before {
+            content: "";
+            display: inline-block;
+            position: relative;
+        }
+
+        .portfolio-ul.check li:before {
+            background-image: url("../img/ico/mark-for-list.svg");
+            -webkit-background-size: 20px 20px;
+            background-size: 20px 20px;
+            width: 20px;
+            height: 20px;
+            top: 3px;
+            margin-right: 10px;
+        }
+
+        .portfolio-ul.check li {
+            padding-bottom: 10px;
+        }
+
+        .portfolio-ul .cms-portfolio:before {
+            background: url("../img/ico/cms.svg") no-repeat;
+            -webkit-background-size: 50px 50px;
+            background-size: 50px 50px;
+            width: 50px;
+            height: 50px;
+            top: 18px;
+            margin-right: 15px;
+            margin-bottom: -2px;
+        }
+
+        .portfolio-ul .work-portfolio:before {
+            background: url("../img/ico/work.svg") no-repeat;
+            -webkit-background-size: 50px 50px;
+            background-size: 50px 50px;
+            width: 50px;
+            height: 50px;
+            top: 8px;
+            margin-right: 15px;
+            margin-bottom: -2px;
+        }
+
+        .portfolio-ul .www-portfolio:before {
+            background: url("../img/ico/www.svg") no-repeat;
+            -webkit-background-size: 50px 50px;
+            background-size: 50px 50px;
+            width: 50px;
+            height: 50px;
+            top: 18px;
+            margin-right: 15px;
+            margin-bottom: -2px;
+        }
+
+        .portfolio-ul li a {
+            font-weight: 600;
+            color: #171717;
+            text-decoration: none;
+            display: inline-block
+        }
+
+        .portfolio-ul li a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #171717;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: all 0.6s;
+            -moz-transition: all 0.6s;
+            -ms-transition: all 0.6s;
+            -o-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+
+        .portfolio-ul li a:hover::after {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+        }
+
+        /*Конец блока портфолио  (из главной страницы)*/
+
+        /*Стилизация аккардеона*/
+        .hard-skill .customize-accordion,
+        .portfolio .customize-accordion-outer,
+        .portfolio .customize-accordion-inner {
+            font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            padding: 5px 20px;
+            display: block;
+            height: 30px;
+            cursor: pointer;
+            color: #777;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+            line-height: 33px;
+            font-size: 19px;
+            background: linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+            box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3),
+            1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset,
+            0px 2px 2px rgba(0, 0, 0, 0.1);
+            transition: all .7s;
+            outline: none;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .portfolio .customize-accordion-outer {
+            margin-bottom: 15px;
+        }
+
+        .portfolio .customize-accordion-inner {
+            margin-bottom: 5px;
+        }
+
+        .hard-skill > section:last-child > .customize-accordion,
+        .portfolio > section:last-child > .customize-accordion-outer,
+        .portfolio > section:last-child > .customize-accordion-inner {
+            margin-bottom: 0;
+        }
+
+        .portfolio > section:last-child > .customize-accordion-outer {
+            margin-bottom: 15px;
+        }
+
+        .portfolio {
+            margin-bottom: 35px;
+        }
+
+        .hard-skill .customize-accordion:hover,
+        .portfolio .customize-accordion-outer:hover,
+        .portfolio .customize-accordion-inner:hover {
+            background: #fff;
         }
     </style>
 </head>
@@ -505,17 +791,14 @@
 </amp-img>
 <div class="breadcrumb">
     <hr/>
-    <a href="/" rel="tag" class="tag">Главная</a>
-    <a href="/catalogue.html" rel="tag" class="tag">Каталог репозиториев GitHub</a>
-    <a href="/articles/grokaem-algoritmy.html" rel="tag" class="tag active">Грокаем алгоритмы</a>
+    <a href="/amp-page/amp-main-page.html" rel="tag" class="tag">Главная</a>
+    <a href="/amp-page/apm-catalogue.html" rel="tag" class="tag">Каталог репозиториев GitHub</a>
+    <a href="/amp-page/amp-grokaem-algoritmy.html" rel="tag" class="tag active">Грокаем алгоритмы</a>
     <hr/>
 </div>
 <article>
     <header>
         <h1 class="text-center">Грокаем алгоритмы</h1>
-        <p class="article-p">
-            <span class="article-calendar">🗓</span><span class="article-date">16.05.2019</span>
-        </p>
     </header>
     <div class="article-text">
         <p>
