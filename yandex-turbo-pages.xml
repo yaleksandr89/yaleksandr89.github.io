@@ -1106,7 +1106,7 @@
                     Пока ничего нет :(
                     </blockquote>
                     <p class="header-footer">Поделиться в социальных сетях</p>
-                    <div data-block="share" data-network="vkontakte, facebook,ш twitter, telegram"></div>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
                 ]]>
             </turbo:content>
         </item>
