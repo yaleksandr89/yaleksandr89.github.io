@@ -1,10 +1,29 @@
 User-agent: *
 Allow: /
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /favicon-32x32.png
+Allow: /favicon-16x16.png
+Allow: /favicon.png
+Allow: /safari-pinned-tab.svg
 
 User-agent: Googlebot
 Allow: /
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /favicon-32x32.png
+Allow: /favicon-16x16.png
+Allow: /favicon.png
+Allow: /safari-pinned-tab.svg
 
 User-agent: Yandex
 Allow: /
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /favicon-32x32.png
+Allow: /favicon-16x16.png
+Allow: /favicon.png
+Allow: /safari-pinned-tab.svg
 
-Host: yaleksandr89.github.io
+Sitemap: https://yaleksandr89.github.io/sitemap.xml
+Host: https://yaleksandr89.github.io/
