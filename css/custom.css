@@ -241,6 +241,10 @@ h3 {
     text-transform: uppercase;
 }
 
+.strike {
+    text-decoration:line-through;
+}
+
 .main-header-buttons .btn {
     height: 60px;
     padding-top: 18px;
@@ -838,6 +842,12 @@ h3 {
     background: url("../img/social-network.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+    padding: 75px 0;
+}
+
+.section-social h2 {
+    color: #fff;
+    margin-bottom: 30px;
 }
 
 .section-social .nav {
@@ -1328,7 +1338,6 @@ a.github-link {
     font-style: italic;
     font-size: 35px;
     font-weight: 600;
-    margin-bottom: 50px;
 }
 
 /*=================/.breadcrumb ======================*/
@@ -1440,10 +1449,12 @@ a.github-link {
     color: #fff;
     letter-spacing: 2px;
 }
+
 .article-preview .article-excerpt-txt {
     padding-bottom: 10px;
 }
-    /*=================/.tags ======================*/
+
+/*=================/.tags ======================*/
 .section-content .tags-article {
     margin-bottom: 0;
     display: block;
@@ -1575,6 +1586,11 @@ a.github-link {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
     font-size: 50px;
+}
+
+.single-article h2 {
+    color: #484848;
+    font-size: 35px;
 }
 
 .single-article .article-text .txt {
@@ -1767,7 +1783,6 @@ a.github-link {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
     font-size: 50px;
-    margin-bottom: 100px;
 }
 
 .sitemap-html div.section {
