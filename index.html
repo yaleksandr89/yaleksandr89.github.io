@@ -338,13 +338,14 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                 <p>
                     В этом разделе <strong>работа с контентом</strong> я разместил наиболее интересные кейсы, которые
                     были выполненны в период, когда я работал контент-менеджером. За три года с лишним я поработал с
-                    наиболее популярными CMS:<mark>WordPress</mark>,<mark>OpenCart</mark>,<mark>ModX</mark>. Также в
-                    работу попадали малоизвестные системы управления контентом:<mark>Contao</mark>,<mark>Jimbo</mark>
+                    наиболее популярными CMS: <code>WordPress</code>, <code>OpenCart</code>, <code>ModX</code>. Также в
+                    работу попадали малоизвестные системы управления контентом: <code>Contao</code>, <code>Jimbo</code>
                     .Работал и с самописными джиками сайта.
                 </p>
                 <p>
                     В этом разделе <strong>веб разработка</strong> буду размещать выполненные проекты связанные с
-                    версткой, написаниес скриптом, работой с CMS.
+                    версткой, проектами на <code>javascript</code>, <code>php</code>, а также работой с
+                    <code>CMS</code>.
                 </p>
             </div>
             <!-- /.col-md-8 -->
@@ -352,17 +353,104 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
             <div class="col-md-12">
                 <ul class="nav nav-pills justify-content-center" id="myTab-gallery" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link rounded-pill active" id="content-tab" data-toggle="tab" href="#content"
-                           role="tab" aria-controls="content-tab" aria-selected="false">Работа с контентом</a>
+                        <a class="nav-link rounded-pill active" id="develop-tab" data-toggle="tab" href="#develop"
+                           role="tab" aria-controls="develop" aria-selected="true">Веб разработка</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded-pill" id="develop-tab" data-toggle="tab" href="#develop"
-                           role="tab" aria-controls="develop" aria-selected="true">Веб разработка</a>
+                        <a class="nav-link rounded-pill " id="content-tab" data-toggle="tab" href="#content"
+                           role="tab" aria-controls="content-tab" aria-selected="false">Работа с контентом</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent-case">
-                    <div class="tab-pane fade show active" id="content" role="tabpanel"
-                         aria-labelledby="content-tab">
+                    <div class="tab-pane fade show active" id="develop" role="tabpanel" aria-labelledby="content-tab">
+                        <div class="row text-center">
+                            <div class="col-lg-4 col-md-6 text-left">
+                                <!-- Элемент для кейса (превью + модалка)-->
+                                <div class="card">
+                                    <img src="/img/ico/preloader.svg" data-src="./img/portfolio/js/js/thumbnail-game-is-in-javascript.jpg"
+                                         class="card-img-top portfolio-img lazy"
+                                         alt="Игра на JavaScript «Click me»">
+                                    <div class="card-body">
+                                        <h3 class="card-title portfolio-h3">Игра на JS «Click me»</h3>
+                                        <ul class="portfolio-ul">
+                                            <li class="cms-portfolio-js">Нативный JavaScript</li>
+                                            <li class="work-portfolio">Реализация мини-игры на js с возможностью
+                                                самостоятельно установить время.
+                                            </li>
+                                        </ul>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-portfolio btn-shadow-portfolio"
+                                                data-toggle="modal" data-target="#modal-js-game">
+                                            Читать подробно
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modal-js-game" tabindex="-1" role="dialog"
+                                     aria-labelledby="js-gameTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="js-gameTitle">Создание мини-игры на нативном javascript</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <img src="img/portfolio/js/js/game-is-in-javascript.jpg"
+                                                                 class="card-img-top portfolio-img"
+                                                                 alt="Александр Юрченко – наполение сайта aboutbody.ru контентом">
+                                                            <p>
+                                                                Этот проект я выполнил в рамках изучения <code>js</code>.
+                                                                В нем реализовал: методы работы с DOM деревом, обработкой
+                                                                событий, а также наиболее часто используемые методы и свойства объектов.
+                                                            </p>
+                                                            <ul class="portfolio-ul">
+                                                                <li class="cms-portfolio-js">Нативный JavaScript</li>
+                                                                <li class="work-portfolio">Реализация мини-игры на js с возможностью
+                                                                    самостоятельно установить время.
+                                                                </li>
+                                                            </ul>
+                                                            <div class="alert alert-info" role="alert">
+                                                                Более подробно прочитать, а так же сыграть ;) можно >>
+                                                                <a class="alert-info-link" href="/articles/js-game.html" target="_blank">«Click me»</a>
+                                                            </div>
+                                                            <h5>Исходные данные</h5>
+                                                            <ul class="portfolio-ul check">
+                                                                <li class="portfolio-item-li">
+                                                                    Возможно задавать время
+                                                                    (<mark><em>по умолчанию выставленно 5 секунд</em></mark>).
+                                                                </li>
+                                                                <li class="portfolio-item-li">
+                                                                    За указанный промежуток времени необходимо кликнуть по
+                                                                    максимальному количеству генерируемых квадратов.
+                                                                </li>
+                                                                <li class="portfolio-item-li">
+                                                                    В процессе игры необходимо заблокировать <code>input</code>,
+                                                                    для того что не было возможность сбить запущенный таймер.
+                                                                </li>
+                                                                <li class="portfolio-item-li">
+                                                                    Генерируемые <code>div</code> должны быть разного размера, цвета и
+                                                                    появляться в заданной области.
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--1 кейс-->
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="develop-tab">
                         <div class="row text-center">
                             <div class="col-lg-4 col-md-6 text-left">
                                 <!-- Элемент для кейса (превью + модалка)-->
@@ -647,7 +735,7 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                                                 </li>
                                                                 <li class="portfolio-item-li">оптимизация графического
                                                                     контента (<em><mark>сжатие, стандартизация, цвет. коррекция
-                                                                        </mark></em>);
+                                                                    </mark></em>);
                                                                 </li>
                                                                 <li class="portfolio-item-li">заполнение служебной
                                                                     информации изображений(<em> <mark>title, description</mark> </em>);
@@ -667,7 +755,7 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                                                 <li class="portfolio-item-li">
                                                                     публикация или создание
                                                                     графика публикаций контента(<em>
-                                                                        <mark>при наличии такого функционала</mark></em>).
+                                                                    <mark>при наличии такого функционала</mark></em>).
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -845,7 +933,7 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                                                 <li class="portfolio-item-li">
                                                                     работа с изображениями (
                                                                     <em> <mark>уменьшение размера, приведение к единому
-                                                                            стилю, цветовая коррекция </mark></em>);
+                                                                        стилю, цветовая коррекция </mark></em>);
                                                                 </li>
                                                                 <li class="portfolio-item-li">заполнение title, alt у
                                                                     изображений;
@@ -963,13 +1051,13 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                                                 <li class="portfolio-item-li">
                                                                     оптимизация статьи
                                                                     (<em>
-                                                                        <mark>создание оглавления
-                                                                            <sup>опционально</sup>, анкорная
-                                                                            перелинковка, выделение блоков внимания,
-                                                                            выделение
-                                                                            главных мыслей, размещение рекламных блоков
-                                                                            <sup>опционально</sup></mark>
-                                                                    </em>);
+                                                                    <mark>создание оглавления
+                                                                        <sup>опционально</sup>, анкорная
+                                                                        перелинковка, выделение блоков внимания,
+                                                                        выделение
+                                                                        главных мыслей, размещение рекламных блоков
+                                                                        <sup>опционально</sup></mark>
+                                                                </em>);
                                                                 </li>
                                                                 <li class="portfolio-item-li">передача материала для
                                                                     дальнейшей публикации.
@@ -1279,8 +1367,8 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                                                 <li class="portfolio-item-li">
                                                                     работа с графическим
                                                                     контентом (<em>
-                                                                        <mark>оптимизация, цвет. коррекция, приведение к
-                                                                            единому стилю</mark></em>);
+                                                                    <mark>оптимизация, цвет. коррекция, приведение к
+                                                                        единому стилю</mark></em>);
                                                                 </li>
                                                                 <li class="portfolio-item-li">написание
                                                                     <mark>title, description</mark>
@@ -1303,7 +1391,7 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                                                 <li class="portfolio-item-li">
                                                                     публикация или создание
                                                                     графика публикаций контента (<em>
-                                                                        <mark>при наличии такого функционала</mark></em>).
+                                                                    <mark>при наличии такого функционала</mark></em>).
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -1482,9 +1570,9 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                                                 <li class="portfolio-item-li">
                                                                     корректировка найденного
                                                                     графического контента (<em>
-                                                                        <mark>уменьшение размера, приведение к единому
-                                                                            стилю, цветовая коррекция
-                                                                        </mark></em>);
+                                                                    <mark>уменьшение размера, приведение к единому
+                                                                        стилю, цветовая коррекция
+                                                                    </mark></em>);
                                                                 </li>
                                                                 <li class="portfolio-item-li">передача обработанного
                                                                     материала для последующей публикации на сайте.
@@ -1905,16 +1993,6 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                             </div>
                             <!--15 кейс-->
                         </div>
-                        <!-- /.gallery -->
-                    </div>
-                    <div class="tab-pane fade" id="develop" role="tabpanel" aria-labelledby="develop-tab">
-                        <div class="row text-center">
-                            <!--1 кейс-->
-                            <div class="alert alert-primary" role="alert">
-                                В ближайшее время оформлю.
-                            </div>
-                        </div>
-                        <!-- /.gallery -->
                     </div>
                 </div>
             </div>

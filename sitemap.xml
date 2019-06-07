@@ -7,92 +7,97 @@
     <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
     <url>
         <loc>https://yaleksandr89.github.io</loc>
-        <lastmod>2019-05-31T15:21:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:21:54+03:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/catalogue.html</loc>
-        <lastmod>2019-05-31T09:21:54+03:00</lastmod>
+        <lastmod>2019-06-07T09:21:54+03:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/about-me.html</loc>
-        <lastmod>2019-05-31T08:21:54+03:00</lastmod>
+        <lastmod>2019-06-07T08:21:54+03:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/articles/grokaem-algoritmy.html</loc>
-        <lastmod>2019-05-31T09:21:54+03:00</lastmod>
+        <lastmod>2019-06-07T09:21:54+03:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/sitemap.html</loc>
-        <lastmod>2019-05-31T10:21:54+03:00</lastmod>
+        <lastmod>2019-06-07T10:21:54+03:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/main-page.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/about-me.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/catalogue.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/grokaem-algoritmy.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
+        <priority>0.80</priority>
+    </url>    
+    <url>
+        <loc>https://yaleksandr89.github.io/amp-pages/js-game.html</loc>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/sitemap.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/privacy-policy.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/php-category.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/javascript-category.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/amp-pages/wordpress-category.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/php-category.html</loc>
-        <lastmod>2019-05-31T15:08:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:08:54+03:00</lastmod>
         <priority>0.64</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/javascript-category.html</loc>
-        <lastmod>2019-05-31T15:11:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:11:54+03:00</lastmod>
         <priority>0.64</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/wordpress-category.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.64</priority>
     </url>
     <url>
         <loc>https://yaleksandr89.github.io/privacy-policy.html</loc>
-        <lastmod>2019-05-31T15:09:54+03:00</lastmod>
+        <lastmod>2019-06-07T15:09:54+03:00</lastmod>
         <priority>0.64</priority>
     </url>
 </urlset>

@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/baguetteBox.min.css">
     <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/style_for_js-game.css">
     <!--OpenGraph-->
     <meta property="og:type" content="article"/>
     <meta property="og:site_name" content="https://yaleksandr89.github.io">
@@ -197,136 +198,113 @@ document.getElementsByTagName('head')[0].appendChild(mi);</script>
                     <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a href="/">Главная</a></li>
                         <li class="breadcrumb-item"><a href="/catalogue.html">Каталог репозиториев GitHub</a></li>
-                        <li class="breadcrumb-item"><a href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы</a></li>
+                        <li class="breadcrumb-item"><a href="/articles/js-game.html">Игра на JavaScript «Click me»</a></li>
                     </ol>
                 </nav>
                 <article>
                     <header>
-                        <h2 class="text-center">Aлгоритмы – это не сложно</h2>
+                        <h2 class="text-center">Игра на JavaScript «Click me»</h2>
                         <p class="article-header-p">
-                            <span class="single-article-date"><i class="far fa-calendar-alt"></i><span class="date">16.05.2019</span></span>
+                            <span class="single-article-date"><i class="far fa-calendar-alt"></i><span class="date">07.06.2019</span></span>
                         </p>
-                        <img class="img-header lazy" src="/img/ico/preloader.svg" data-src="grokaem-algoritmy/grokaem-algoritmy-img.jpg"
-                             alt="Обложка книги: Грокаем алгоритмы">
+                        <img class="img-header lazy" src="/img/ico/preloader.svg" data-src="/img/portfolio/js/js/game-is-in-javascript.jpg"
+                             alt="Игра на JavaScript «Click me»">
                     </header>
                     <div class="article-text">
                         <p class="txt">
-                            С данным изданием познакомился случайно, при поиске информации про методы сортировки, какие
-                            алгоритмы применяются в той или иной ситуации. Я и раньше слышал про алгоритмы, рекурсию, но
-                            как-то не ставил себе целью прочитать про них подробнее. Тем более попытаться реализовать
-                            часть изложенного материала на практике.
+                            Начал покорять основы нативного <code>javascript</code>, достаточно интересный язык, хоть
+                            иногда у меня случался когнитивный диссонанс, так как все же упор я делаю на
+                            <code>php</code>, но если откинуть эти мелочи – языки достаточно похожи.
                         </p>
+                        <p class="txt">
+                            Эта небольшая мини-игра фактически это мое первое приложение написанное
+                            на <code>js</code> в рамках его изучения. Исходные данные следующие:
+                        </p>
+                        <ul class="portfolio-ul check">
+                            <li class="portfolio-item-li">Возможно задавать время
+                                (<mark><em>по умолчанию выставленно 5 секунд</em></mark>).</li>
+                            <li class="portfolio-item-li">За указанный промежуток времени необходимо кликнуть по
+                                максимальному количеству генерируемых квадратов.</li>
+                            <li class="portfolio-item-li">В процессе игры необходимо заблокировать <code>input</code>,
+                                для того что не было возможность сбить запущенный таймер.</li>
+                            <li class="portfolio-item-li">Генерируемые <code>div</code> должны быть разного размера, цвета и
+                                появляться в заданной области.</li>
+                        </ul>
                         <div class="alert alert-secondary single-article-blockquote text-center">
-                            Репозиторий где реализованы практические задания на PHP → <a
-                                href="https://github.com/yaleksandr89/grokking_algorithms" target="_blank"
+                            Репозиторий с исходиками игры, если лень ковыряться в исходном коде этой страницы: <a
+                                href="https://github.com/yaleksandr89/learning-javascript/tree/master/js/creating_js_game" target="_blank"
                                 rel="nofollow noopener">Грокаем алгоритмы</a>
                         </div>
                         <p class="txt">
-                            Сам материал структурировано от простого к сложному и слова автора сказанные в предисловье
-                            подтверждаются по ходу чтения:
+                            Сам <a href="https://github.com/yaleksandr89/learning-javascript/blob/master/js/creating_js_game/script.js"
+                            target="_blank" rel="nofollow noopener">скрипт</a> отвечающий за функционал игры достаточно прост,
+                            хотя при его написание мне так не казалось :). Если разбить  на последовательность действий, то это:
                         </p>
-                        <blockquote class="blockquote text-right single-article-blockquote">
-                            <p class="mb-0">Я прежде всего стремился к тому, чтобы книга легко читалась. Я избегаю u
-                                неожиданных поворотов; каждыи раз, когда в книге упоминается новая концепция, я либо
-                                объясняю ее сразу, либо говорю, где буду объяснять.</p>
-                            <footer class="blockquote-footer">Aditya Bhargava in <cite title="Source Title">Grokking
-                                Algorithms</cite></footer>
-                        </blockquote>
-                        <!-- /.blockquote -->
-
+                        <ol>
+                            <li>Забираю необходимые нам DOM элементы через <code>querySelector('...');</code>.</li>
+                            <li>После чего вешаю прослушку событий <code>addEventListener</code> (
+                                <mark><em>два <code>'click'</code> и одно <code>'input'</code></em></mark>).</li>
+                            <li>И описываю функционал мини-игры.</li>
+                        </ol>
                         <p class="txt">
-                            В книге большое количество иллюстраций и в купе с простотой изложения материала, книга
-                            читается очень легко и не вызывает трудностей с восприятием.
+                            Если отбросить мелкие функции – скрыть/показать кнопку запуска, рандома (<mark>
+                            <em>для генерации элементов различного цвета и размера</em></mark>) и двух
+                            небольших функций, которые работают с заголовком (скрывают выставленое время, а после окончания
+                            возвращают в него полученный результа
+                            получилось 3 основные функции.
                         </p>
-                        <figure class="figure single-article-figure">
-                            <div class="row gallery text-center">
-                                <div class="col-sm-12 gallery-item">
-                                    <a href="grokaem-algoritmy/gallery/grouped.jpg">
-                                        <img class="lazy" src="/img/ico/preloader.svg" data-src="grokaem-algoritmy/gallery/thumbnail/thumb-grouped.jpg"
-                                             alt="Картинка из книги Грокаем алгоритмы - grouped">
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 gallery-item">
-                                    <a href="grokaem-algoritmy/gallery/caching.jpg">
-                                        <img class="lazy" src="/img/ico/preloader.svg" data-src="grokaem-algoritmy/gallery/thumbnail/thumb-caching.jpg"
-                                             alt="Картинка из книги Грокаем алгоритмы - caching">
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 gallery-item">
-                                    <a href="grokaem-algoritmy/gallery/qsort_pivot_3.jpg">
-                                        <img class="lazy" src="/img/ico/preloader.svg" data-src="grokaem-algoritmy/gallery/thumbnail/thumb-qsort_pivot_3.jpg"
-                                             alt="Картинка из книги Грокаем алгоритмы - qsort_pivot">
-                                    </a>
-                                </div>
-
-                                <div class="col-sm-4 gallery-item">
-                                    <a href="grokaem-algoritmy/gallery/binary_search.jpg">
-                                        <img class="lazy" src="/img/ico/preloader.svg" data-src="grokaem-algoritmy/gallery/thumbnail/thumb-binary_search.jpg"
-                                             alt="Картинка из книги Грокаем алгоритмы - binary_search">
-                                    </a>
-                                </div>
-                                <div class="col-sm-4 gallery-item">
-                                    <a href="grokaem-algoritmy/gallery/guy_on_computer.jpg">
-                                        <img class="lazy" src="/img/ico/preloader.svg" data-src="grokaem-algoritmy/gallery/thumbnail/thumb-guy_on_computer.jpg"
-                                             alt="Картинка из книги Грокаем алгоритмы - guy_on_computer">
-                                    </a>
-                                </div>
-                                <div class="col-sm-4 gallery-item">
-                                    <a href="grokaem-algoritmy/gallery/phone_book.jpg">
-                                        <img class="lazy" src="/img/ico/preloader.svg" data-src="grokaem-algoritmy/gallery/thumbnail/thumb-phone_book.jpg"
-                                             alt="Картинка из книги Грокаем алгоритмы - /phone_book">
-                                    </a>
-                                </div>
+                        <p class="txt">
+                            <code>function startGame() {...}</code> – в который указаны параметры для начала игры: задано
+                            начальное значение для счетчика, скрытие кнопки, блокировка <code>input</code> и старт таймера.
+                        </p>
+                        <p class="txt">
+                            <code>function renderBox() {...}</code> – отвечает за генерацию элементов в нужной области. В
+                            функции указываем тип создаваемого элемента (<code>div</code>), с помощью <code>function
+                            getRandom() {...}</code> реализованно случайная генерация размера блока, а так же место его появления.
+                            Сначала цвет я хотел реализовать через рандом:
+                            <code class="code">
+                                <span>let randomColor = getRandom(100000, 999999);</span>
+                                <span>box.style.background = '#' + randomColor;</span>
+                            </code>
+                            но в последствие отказался, создав массив с красивыми линейными градиентами.
+                        </p>
+                        <p class="txt">
+                            <code>function endGame() {...}</code> – в ней до безобразия все просто. Останавливаем таймер,
+                            передаем результат игры в заголовок, разблокируем <code>input</code>.
+                        </p>
+                        <p class="txt">
+                            И как я мог не дать сыграть в созданную игрулю ;).
+                        </p>
+                        <div class="app m-auto">
+                            <div class="app__header">
+                                <h3 id="time-header">Время игры: <span id="time">5.0</span> с.</h3>
+                                <h3 id="result-header" class="hide">Ваш результат: <span id="result"></span></h3>
                             </div>
-                            <figcaption class="figure-caption text-right single-article-figcaption">Изображение из книги
-                                «Грокаем алгоритмы»
-                            </figcaption>
-                        </figure>
-                        <!-- /.gallery -->
-
-                        <p class="txt">
-                            Все практические задания в «Грокаем алгоритмы» выполнены на python и это факт изначально
-                            меня огорчил, так как я сейчас изучаю php и мне не хотелось переключаться на питон.</p>
-                        <p class="txt">Однако найдя профиль <strong>автора книги Адитья Бхаргава</strong> на GitHub
-                            вздохнул с
-                            облегчением – в репозитории
-                            посвященной этой книге у него собраны реализации алгоритмов на многих популярных языках:
-                            <code>php, javascript, puthon, kotlin, swift</code> и многие другие.
-                        </p>
-                        <div class="row text-center">
-                            <div class="col-md-12">
-                                <figure class="figure">
-                                    <ul class="single-article-ul text-left">
-                                        <li class="single-article-list-item blog"><a href="http://adit.io/"
-                                                                                     target="_blank"
-                                                                                     rel="nofollow noopener">Блог</a>
-                                        </li>
-                                        <li class="single-article-list-item profile-man"><a
-                                                href="https://github.com/egonSchiele"
-                                                target="_blank" rel="nofollow noopener">Профиль
-                                            на
-                                            GitHub</a></li>
-                                        <li class="single-article-list-item storage"><a
-                                                href="https://github.com/egonSchiele/grokking_algorithms"
-                                                target="_blank"
-                                                rel="nofollow noopener">Репозиторий</a></li>
-                                    </ul>
-                                    <figcaption class="figure-caption text-center single-article-figcaption">Информация
-                                        об авторе книги
-                                    </figcaption>
-                                </figure>
+                            <div class="app__content">
+                                <button class="btn-game" id="start">Начать</button>
+                                <div class="game" id="game"></div>
+                            </div>
+                            <div class="app__footer">
+                                <div class="input">
+                                    <label for="game-time">Время игры, (сек)</label>
+                                    <input type="number" id="game-time" min="5" step="1" value="5">
+                                </div>
                             </div>
                         </div>
-                        <p class="txt">
-                            На данный момент я заканчиваю чтения этой книги (<em>параллельно выполняя задания</em>) и
-                            могу
-                            сказать, что книга подойдёт программистам-самоучкам, к коим я отношусь. Здесь изложена
-                            «база», которая я уверен, в дальнейшем обязательно пригодиться.
+                        <p class="txt mt1rem">
+                            Так как это моя первая попытка реализоваться приложение на нативном <code>js</code> я не стал
+                            навешивать на неё ещё больше функционала. В дальнейшем я хочу эту игру проапгрейдить :) и
+                            привязать к ней таблицу, в которой будет указанно: имя - результат.
+                        </p>
+                        <p class="txt mt1rem">
+                            Для этого уже потребуется не только <code>javascript</code>, но и <code>php, mysql</code>. А
+                            так как они не доступны на github pages модернизацию этой игры буду делать у себя на хостинге,
+                            а ссылку обязательно размещу здесь.
                         </p>
                         <div class="tags-title">:<a
-                                class="badge badge-primary single-article-tag-php"
-                                href="/php-category.html" data-toggle="tooltip" data-placement="bottom"
-                                title="PHP: Hypertext Preprocessor"><span>PHP</span></a></div>
+                                class="badge badge-primary single-article-tag-js"
+                                href="/javascript-category.html" data-toggle="tooltip" data-placement="bottom"
+                                title="JavaScript - multi-paradigm programming language"><span>JavaScript</span></a></div>
                     </div>
                 </article>
             </div>
@@ -367,6 +345,7 @@ document.getElementsByTagName('head')[0].appendChild(mi);</script>
 <!-- /.copyright -->
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/lazy/jquery.lazy.min.js"></script>
+<script src="../js/script_for_js-game.css.js"></script>
 <script src="../js/popper.min.js"></script>
 <script src="../js/baguetteBox.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
