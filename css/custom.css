@@ -106,6 +106,16 @@ h2 {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
+.custom-hr {
+    border: 0;
+    height: 1px;
+    background: #000;
+    background-image: -webkit-linear-gradient(left, #fff, #000, #fff);
+    background-image: -moz-linear-gradient(left, #fff, #000, #fff);
+    background-image: -ms-linear-gradient(left, #fff, #000, #fff);
+    background-image: -o-linear-gradient(left, #fff, #000, #fff);
+}
+
 .code {
     display: block;
     margin: 10px auto;
@@ -149,6 +159,10 @@ h2 {
 h3 {
     font-size: 34px;
     margin-bottom: 20px;
+}
+
+.single-article-ol {
+    margin-top: 1rem;
 }
 
 .pseudo-h2 {
@@ -705,6 +719,7 @@ h3 {
     margin-right: 15px;
     margin-bottom: -2px;
 }
+
 .section-work .portfolio-ul .work-portfolio:before {
     background: url("../img/ico/work.svg") no-repeat;
     -webkit-background-size: 50px 50px;

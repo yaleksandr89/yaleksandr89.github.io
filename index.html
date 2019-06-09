@@ -367,7 +367,7 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                             <div class="col-lg-4 col-md-6 text-left">
                                 <!-- Элемент для кейса (превью + модалка)-->
                                 <div class="card">
-                                    <img src="/img/ico/preloader.svg" data-src="./img/portfolio/js/js/thumbnail-game-is-in-javascript.jpg"
+                                    <img src="/img/ico/preloader.svg" data-src="./img/portfolio/js/js-game/thumbnail-game-is-in-javascript.jpg"
                                          class="card-img-top portfolio-img lazy"
                                          alt="Игра на JavaScript «Click me»">
                                     <div class="card-body">
@@ -401,9 +401,9 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <img src="img/portfolio/js/js/game-is-in-javascript.jpg"
+                                                            <img src="img/portfolio/js/js-game/game-is-in-javascript.jpg"
                                                                  class="card-img-top portfolio-img"
-                                                                 alt="Александр Юрченко – наполение сайта aboutbody.ru контентом">
+                                                                 alt="Александр Юрченко – создание мини-игры на javascript">
                                                             <p>
                                                                 Этот проект я выполнил в рамках изучения <code>js</code>.
                                                                 В нем реализовал: методы работы с DOM деревом, обработкой
@@ -447,8 +447,93 @@ ym(53631874, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: tru
                                 </div>
                             </div>
                             <!--1 кейс-->
+                            <div class="col-lg-4 col-md-6 text-left">
+                                <!-- Элемент для кейса (превью + модалка)-->
+                                <div class="card">
+                                    <img src="/img/ico/preloader.svg" data-src="./img/portfolio/js/js-plugin/thumbnail-plugin-is-in-javascript.jpg"
+                                         class="card-img-top portfolio-img lazy"
+                                         alt="Выпадающий список на ванильном JavaScript">
+                                    <div class="card-body">
+                                        <h3 class="card-title portfolio-h3">Выпадающий список на JS</h3>
+                                        <ul class="portfolio-ul">
+                                            <li class="cms-portfolio-js">
+                                                Нативный JavaScript
+                                            </li>
+                                            <li class="work-portfolio">
+                                                Реализация выпадающего списка на js, с возможностью гибкой кастомизации.
+                                            </li>
+                                        </ul>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-portfolio btn-shadow-portfolio"
+                                                data-toggle="modal" data-target="#modal-js-plugin">
+                                            Читать подробно
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modal-js-plugin" tabindex="-1" role="dialog"
+                                     aria-labelledby="js-pluginTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="js-pluginTitle">Создание выпадающего списка на нативном javascript</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <img src="img/portfolio/js/js-plugin/plugin-in-javascript_1.jpg"
+                                                                 class="card-img-top portfolio-img"
+                                                                 alt="Александр Юрченко – создание выпадающего списка на javascript">
+                                                            <p>
+                                                                В данном проекте я реализовал выпадающий список на <code>js</code>, который
+                                                                похож на разметку <code>html</code>: <code>section</code> > <code>option</code>.
+                                                                Плюсом данного подхода является полная кастомизация и возможость адаптации под
+                                                                различные задачи.
+                                                            </p>
+                                                            <ul class="portfolio-ul">
+                                                                <li class="cms-portfolio-js">
+                                                                    Нативный JavaScript
+                                                                </li>
+                                                                <li class="work-portfolio">
+                                                                    Реализация выпадающего списка на js, с возможностью гибкой кастомизации.
+                                                                </li>
+                                                            </ul>
+                                                            <div class="alert alert-info" role="alert">
+                                                                Подробно прочитать, а также посмотреть на реализацию можно >>
+                                                                <a class="alert-info-link" href="/articles/js-plugin.html" target="_blank">Dropdown on js</a>
+                                                            </div>
+                                                            <h5>Исходные данные</h5>
+                                                            <ul class="portfolio-ul check">
+                                                                <li class="portfolio-item-li">
+                                                                    Работа с данными. Список городов, в данном случае, храниться в массиве
+                                                                    (<em>для примера взял города миллионики</em>), но возможно подгружать данные динамически.
+                                                                </li>
+                                                                <li class="portfolio-item-li">
+                                                                    Данные из массивов, при формировании элементов списка (<code>&lt;li&gt;...&lt;/li&gt;</code>)
+                                                                    забираются по <code>data-id="..."</code>. Это оказалось очень удобно, при дальнейшем выводе
+                                                                    блока со ссылкой на выбранный город.
+                                                                </li>
+                                                                <li class="portfolio-item-li">
+                                                                    Скрытие всплывающего списка реализовал различными способами: по нажатию клавиши "Escape",
+                                                                    клику вне области списка и повторному клику по тегу с классом dropdown__label (<em>в
+                                                                    него передается выбранный город</em>).
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--2 кейс-->
                         </div>
-
                     </div>
                     <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="develop-tab">
                         <div class="row text-center">

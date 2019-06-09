@@ -6,7 +6,6 @@ let $timeHeader = document.querySelector('#time-header');
 let $resultHeader = document.querySelector('#result-header');
 let $gameTime = document.querySelector('#game-time');
 let $app = document.querySelector('.app');
-let $body = document.querySelector('body');
 let $result = document.querySelector('#result');
 let arrColor = [
     'linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)',
@@ -80,7 +79,7 @@ function renderBox() {
     // box.style.background = '#' + randomColor;
 
     //2ый вариант, в начале создаем  массив
-    var randomColorIndex = getRandom(0, arrColor.length);
+    let randomColorIndex = getRandom(0, arrColor.length);
     box.style.backgroundImage = arrColor[randomColorIndex];
 }
 
