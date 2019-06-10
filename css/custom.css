@@ -1729,6 +1729,7 @@ a.github-link {
 }
 
 .single-article .single-article-figure {
+    width: 100%;
     padding: 10px;
     box-shadow: -20px 20px 0 -17px #fff,
     20px -20px 0 -17px #fff,
@@ -2572,6 +2573,18 @@ a.github-link {
 
 /*===============================================@ /.sitemap-html ===============================================*/
 @media only screen and (max-width: 1199px) {
+    h1.html-template-h1 {
+        font-size: 40px;
+    }
+
+    h2.html-template-h2 {
+        font-size: 30px;
+    }
+
+    .html-template-breadcrumb {
+        font-size: 13px;
+    }
+
     .about-me .exclamation-text-1,
     .about-me .exclamation-text-2 {
         top: -5px;
@@ -2635,6 +2648,14 @@ a.github-link {
         background: url("../img/ico/specialty.svg") no-repeat;
         -webkit-background-size: 40px 40px;
         background-size: 40px 40px;
+    }
+
+    h1.html-template-h1 {
+        font-size: 30px;
+    }
+
+    h2.html-template-h2 {
+        font-size: 25px;
     }
 }
 

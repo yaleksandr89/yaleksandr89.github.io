@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:yandex="http://news.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/"
-     xmlns:turbo="http://turbo.yandex.ru" version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" xmlns:yandex="http://news.yandex.ru" version="2.0">
     <channel>
         <title>Александр Юрченко – веб-разработчик, контент-менеджер</title>
         <link>https://yaleksandr89.github.io/</link>
         <description>Занимаюсь веб разработкой, также имею многолетний опыт работы контент-менеджером. По всем вопросам
-            пишите на почту или соц сети. Have a nice day!
-        </description>
+            пишите на почту или соц сети. Have a nice day!</description>
         <language>ru</language>
-        <turbo:analytics
-                type="Yandex"
-                id="53631874">
-        </turbo:analytics>
-        <turbo:analytics
-                type="Google"
-                id="UA-140006640-1">
-        </turbo:analytics>
+        <turbo:analytics type="Yandex" id="53631874" />
+        <turbo:analytics type="Google" id="UA-140006640-1" />
         <item turbo="true">
             <link>https://yaleksandr89.github.io</link>
             <turbo:source>https://yaleksandr89.github.io</turbo:source>
             <turbo:topic>Александр Юрченко – веб-разработчик, контент-менеджер</turbo:topic>
             <pubDate>Sun, 12 May 19 12:58:01 +0300</pubDate>
             <author>Александр Юрченко</author>
-            <turbo:content>
-                <![CDATA[
-                    <header>
+            <turbo:content><![CDATA[<header>
                         <h1>Александр Юрченко</h1>
                         <figure>
                             <img class="img-header" src="https://yaleksandr89.github.io/img/header-bg.jpg"
@@ -152,6 +142,87 @@
                                 версткой, написаниес скриптом, работой с CMS.
                             </p>
                             <div data-block="accordion">
+                            <div data-block="item" data-title="Веб разработка">
+                               <div data-block="accordion">
+                                  <div data-block="item" data-title="Создание мини-игры на нативном javascript">
+                                     <figure>
+                                        <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-game/game-is-in-javascript.jpg" alt="Александр Юрченко – создание мини-игры на нативном javascript" />
+                                     </figure>
+                                     <p>Этот проект я выполнил в рамках изучения js. В нем реализовал: методы работы с DOM деревом, обработкой событий, а также наиболее часто используемые методы и свойства объектов.</p>
+                                     <h5>Исходные данные</h5>
+                                     <ul>
+                                        <li>Возможно задавать время (по умолчанию выставленно 5 секунд).</li>
+                                        <li>За указанный промежуток времени необходимо кликнуть по максимальному количеству генерируемых квадратов.</li>
+                                        <li>В процессе игры необходимо заблокировать input, для того что не было возможность сбить запущенный таймер.</li>
+                                        <li>Генерируемые div должны быть разного размера, цвета и появляться в заданной области.</li>
+                                     </ul>
+                                     <blockquote class="article-blockquote">
+                                        Так как турбо страницы не поддерживают javascript я оставлю ссылку на мобильную версию сайта (
+                                        <em>она так же адаптирована для мобильных устройств</em>
+                                        ), единственное, может грузиться чуть дольше турбо страниц. Ссылка →
+                                        <a href="https://yaleksandr89.github.io/articles/js-game.html" data-turbo="false">JS game «Click me»</a>
+                                        .статье более детальное описание кейса, также можете посмотреть на работу скрипта.
+                                     </blockquote>
+                                  </div>
+                                  <div data-block="item" data-title="Создание выпадающего списка на нативном javascript">
+                                     <figure>
+                                        <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-plugin/plugin-in-javascript_1.jpg" alt="Александр Юрченко – выпадающего списка на нативном javascript" />
+                                     </figure>
+                                     <p>В данном проекте я реализовал выпадающий список на js, который похож на разметку html: section &gt; option. Плюсом данного подхода является полная кастомизация и возможость адаптации под различные задачи.</p>
+                                     <h5>Исходные данные</h5>
+                                     <ul>
+                                        <li>Работа с данными. Список городов, в данном случае, храниться в массиве (для примера взял города миллионики), но возможно подгружать данные динамически.</li>
+                                        <li>Данные из массивов, при формировании элементов списка (li.../li) забираются по data-id="...". Это оказалось очень удобно, при дальнейшем выводе блока со ссылкой на выбранный город.</li>
+                                        <li>Скрытие всплывающего списка реализовал различными способами: по нажатию клавиши "Escape", клику вне области списка и повторному клику по тегу с классом dropdown__label (в него передается выбранный город).</li>
+                                     </ul>
+                                     <blockquote class="article-blockquote">
+                                        Так как турбо страницы не поддерживают javascript я оставлю ссылку на мобильную версию сайта (
+                                        <em>она так же адаптирована для мобильных устройств</em>
+                                        ), единственное, может грузиться чуть дольше турбо страниц. Ссылка →
+                                        <a href="https://yaleksandr89.github.io/articles/js-plugin.html" data-turbo="false">Dropdown on js</a>
+                                        .статье более детальное описание кейса, также можете посмотреть на работу скрипта.
+                                     </blockquote>
+                                  </div>
+                                  <div data-block="item" data-title="Верстка Bootstrap шаблона">
+                                     <figure>
+                                        <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/front-end/bootstrap-bluerex/thumbnail-html-template-bootstrap-main-page.jpg" alt="Александр Юрченко – верстка Bootstrap 4 шаблона" />
+                                     </figure>
+                                     <p>В этом кейсе я сверстал html шаблон для сайта с помощью фреймворка бутстрап 4 версии. Хотя изначально psd макет не предполагал наличие страницы для ведения блога, в большей степени он был заточен под одностраничный сайт.</p>
+                                     <blockquote class="article-blockquote">
+                                        Сам макет вы можете скачать &gt;&gt; psd layout →
+                                        <a href="https://psdfreebies.com/psd/creative-agency-web-design-free-psd/" data-turbo="false">psd layout</a>
+                                        .
+                                     </blockquote>
+                                     <p>Я сделал дополнительно три страницы:</p>
+                                     <ol>
+                                        <li>
+                                           <u>Страница блога</u>
+                                           – является каталогом с ссылками на статьи.
+                                        </li>
+                                        <li>
+                                           <u>Страница статьи</u>
+                                           – непосредственно шаблон для написания и публикации материала.
+                                        </li>
+                                        <li>
+                                           <u>Карта сайта в формате html</u>
+                                           – главная цель этой страницы, облегчить поиск необходимой информации.
+                                        </li>
+                                     </ol>
+                                     <p>На мой взгляд, в 2019 году мало сделать сайт, его необходимо продвигать. И если у вас нет "чемодана денег" на контекстную и таргетированную рекламу – продвижение за счет контента идеальное решение.</p>
+                                     <h5>Исходные данные</h5>
+                                     <ul>
+                                        <li>Верстка html template из psd макета с использованием css framework Bootstrap 4.3.1.</li>
+                                        <li>Создание двух дополнительных страниц для ведения блога в данном шаблоне.</li>
+                                        <li>Реализация адаптивного дизайна для оптимизации просмотра с мобильных устройств.</li>
+                                     </ul>
+                                     <blockquote class="article-blockquote">
+                                        Более подробную информацию можно прочитать в статье. Ссылка →
+                                        <a href="https://yaleksandr89.github.io/articles/html-template.html" data-turbo="false">Верстка шаблона</a>
+                                        .Там же находятся ссылки на сверстанные страницы.
+                                     </blockquote>
+                                  </div>
+                               </div>
+                            </div>
                                <div data-block="item" data-title="Работа с контентом">
                                     <div data-block="accordion">
                                         <div data-block="item" data-title="[WordPress] Наполнение сайта Aboutbody.ru">
@@ -819,18 +890,9 @@
                                         </div>
                                     </div>
                                </div>
-                               <div data-block="item" data-title="Веб разработка">
-                                    <div data-block="accordion">
-                                        <div data-block="item" data-title="Формируется в данный момент :)">
-                                            В процессе
-                                        </div>
-                                    </div>
-                               </div>
                             </div>
                     <p class="header-footer">Поделиться в социальных сетях</p>
-                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
-                ]]>
-            </turbo:content>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
         </item>
         <item turbo="true">
             <link>https://yaleksandr89.github.io/about-me.html</link>
@@ -838,9 +900,7 @@
             <turbo:topic>Обо мне</turbo:topic>
             <pubDate>Mon, 20 May 19 08:52:59 +0300</pubDate>
             <author>Александр Юрченко</author>
-            <turbo:content>
-                <![CDATA[
-                    <header>
+            <turbo:content><![CDATA[<header>
                         <h1>Обо мне</h1>
                         <figure>
                             <img class="img-header" src="https://yaleksandr89.github.io/img/alexander-yurchenko.jpg"
@@ -963,17 +1023,13 @@
                             так и долгосрочного сотрудничества. Пишите удобным для вас способом!
                         </blockquote>
                         <p class="header-footer">Поделиться в социальных сетях</p>
-                        <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
-                ]]>
-            </turbo:content>
+                        <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
         </item>
         <item turbo="true">
             <link>https://yaleksandr89.github.io/catalogue.html</link>
             <turbo:source>https://yaleksandr89.github.io/catalogue.html</turbo:source>
             <turbo:topic>Каталог репозиториев GitHub</turbo:topic>
-            <turbo:content>
-                <![CDATA[
-                    <header>
+            <turbo:content><![CDATA[<header>
                         <h1>Каталог репозиториев GitHub</h1>
                         <figure>
                             <img class="img-header" src="https://yaleksandr89.github.io/img/letsgrow-bg.jpg"
@@ -1016,17 +1072,13 @@
                         </tr>
                     </table>
                     <p class="header-footer">Поделиться в социальных сетях</p>
-                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
-                ]]>
-            </turbo:content>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
         </item>
         <item turbo="true">
             <link>https://yaleksandr89.github.io/php-category.html</link>
             <turbo:source>https://yaleksandr89.github.io/php-category.html</turbo:source>
             <turbo:topic>Репозитории Github – категория PHP</turbo:topic>
-            <turbo:content>
-                <![CDATA[
-                    <header>
+            <turbo:content><![CDATA[<header>
                         <h1>Репозитории Github – категория PHP</h1>
                         <figure>
                             <img class="img-header" src="https://yaleksandr89.github.io/img/php-bg.jpg"
@@ -1064,38 +1116,73 @@
                         </tr>
                     </table>
                     <p class="header-footer">Поделиться в социальных сетях</p>
-                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
-                ]]>
-            </turbo:content>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
         </item>
         <item turbo="true">
             <link>https://yaleksandr89.github.io/javascript-category.html</link>
             <turbo:source>https://yaleksandr89.github.io/javascript-category.html</turbo:source>
             <turbo:topic>Репозитории Github – категория JavaScript</turbo:topic>
-            <turbo:content>
-                <![CDATA[
-                    <header>
+            <turbo:content><![CDATA[<header>
                         <h1>Репозитории Github – категория JavaScript</h1>
                         <figure>
                             <img class="img-header" src="https://yaleksandr89.github.io/img/javascript-bg.jpg"
                             alt="Репозитории Github – категория JavaScript" />
                         </figure>
                     </header>
-                    <blockquote>
-                    Пока ничего нет :(
-                    </blockquote>
+                    <table data-invisible="true">
+                        <tr>
+                            <th><a href="/articles/js-game.html">Игра на JavaScript «Click me»</a></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><small>07.06.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-game/game-is-in-javascript.jpg"
+                                    alt="Игра на JavaScript «Click me»" />
+                                </figure>
+                                <p>
+								Начал изучать нативный javascript. Достаточно интересный язык, хоть иногда у меня случался когнитивный диссонанс, так как все же упор я делаю на php, но если откинуть эти мелочи – языки достаточно похожи.
+                                </p>
+                                <p>
+								Эта небольшая мини-игра фактически это мое первое приложение написанное на js в рамках его изучения.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Тэги: <a href="/javascript-category.html">JavaScript</a></td>
+                            <td></td>
+                        </tr>
+							<tr>
+                            <th><a href="/articles/js-plugin.html">Выпадающий список на нативном JavaScript</a></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><small>08.06.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-plugin/plugin-in-javascript_1.jpg"
+                                    alt="Выпадающий список на нативном JavaScript" />
+                                </figure>
+                                <p>
+								Второй по счету проект, который я реализую на ванильном JavaScript. В нем также, как и в игре «Click me» реализована работа с DOM элементами, только на более детальном уровне.
+                                </p>
+                                <p>
+								данный список можно адаптировать под разные задачи. и главный плюс того, что он практически полностью реализован на js (с минимальным html и css) – широкая возможность кастомизации.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Тэги: <a href="/javascript-category.html">JavaScript</a></td>
+                            <td></td>
+                        </tr>
+                    </table>
                     <p class="header-footer">Поделиться в социальных сетях</p>
-                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
-                ]]>
-            </turbo:content>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
         </item>
         <item turbo="true">
             <link>https://yaleksandr89.github.io/wordpress-category.html</link>
             <turbo:source>https://yaleksandr89.github.io/wordpress-category.html</turbo:source>
             <turbo:topic>Репозитории Github – категория WordPress</turbo:topic>
-            <turbo:content>
-                <![CDATA[
-                    <header>
+            <turbo:content><![CDATA[<header>
                         <h1>Репозитории Github – категория WordPress</h1>
                         <figure>
                             <img class="img-header" src="https://yaleksandr89.github.io/img/cms-wordpress-bg.jpg"
@@ -1106,9 +1193,7 @@
                     Пока ничего нет :(
                     </blockquote>
                     <p class="header-footer">Поделиться в социальных сетях</p>
-                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
-                ]]>
-            </turbo:content>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
         </item>
         <item turbo="true">
             <link>https://yaleksandr89.github.io/articles/grokaem-algoritmy.html</link>
@@ -1116,9 +1201,7 @@
             <turbo:topic>Грокаем алгоритмы • реализация на PHP</turbo:topic>
             <pubDate>Thu, 16 May 19 14:30:12 +0300</pubDate>
             <author>Александр Юрченко</author>
-            <turbo:content>
-                <![CDATA[
-                    <header>
+            <turbo:content><![CDATA[<header>
                         <h1>Грокаем алгоритмы</h1>
                         <figure>
                             <img class="img-header" src="https://yaleksandr89.github.io/articles/grokaem-algoritmy/grokaem-algoritmy-img.jpg"
@@ -1207,17 +1290,13 @@
                             Здесь изложена «база», которая я уверен, в дальнейшем обязательно пригодиться.
                         </p>
                         <p class="header-footer">Поделиться в социальных сетях</p>
-                        <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
-                ]]>
-            </turbo:content>
+                        <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
         </item>
         <item turbo="true">
             <link>https://yaleksandr89.github.io/privacy-policy.html</link>
             <turbo:source>https://yaleksandr89.github.io/privacy-policy.html</turbo:source>
             <turbo:topic>Политика конфиденциальности</turbo:topic>
-            <turbo:content>
-                <![CDATA[
-                    <header>
+            <turbo:content><![CDATA[<header>
                         <h1>Политика конфиденциальности</h1>
                         <figure>
                         <img class="img-header" src="https://yaleksandr89.github.io/img/privacy-policy-bg.jpg" alt="Политика конфиденциальности" />
@@ -1426,63 +1505,114 @@
                         <p>9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте, если иное не
                             предусмотрено новой редакцией Политики конфиденциальности.</p>
                     </div>
-                </div>
-                ]]>
-            </turbo:content>
+                </div>]]></turbo:content>
         </item>
         <item turbo="true">
-            <link>https://yaleksandr89.github.io/sitemap.html</link>
-            <turbo:source>https://yaleksandr89.github.io/sitemap.html</turbo:source>
-            <turbo:topic>Карта сайта</turbo:topic>
-            <turbo:content>
-                <![CDATA[
-                    <header>
-                        <h1>Карта сайта</h1>
+            <link>https://yaleksandr89.github.io/catalogue.html</link>
+            <turbo:source>https://yaleksandr89.github.io/catalogue.html</turbo:source>
+            <turbo:topic>Каталог репозиториев GitHub</turbo:topic>
+            <turbo:content><![CDATA[<header>
+                        <h1>Каталог репозиториев GitHub</h1>
                         <figure>
-                        <img class="img-header" src="https://yaleksandr89.github.io/img/sitemap-html-bg.jpg" alt="Карта сайта в формате html" />
+                            <img class="img-header" src="https://yaleksandr89.github.io/img/letsgrow-bg.jpg"
+                            alt="Каталог репозиториев GitHub" />
                         </figure>
                     </header>
-                    <table data-invisible="false">
+                    <table data-invisible="true">
                         <tr>
-                            <td colspan="3"><a href="/">Главная страница</a></td>
+                            <th><a href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы – реализация на PHP</a></th>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td colspan="2"><a href="/about-me.html">Обо мне</a></td>
+                            <td>
+                                <p><small>16.05.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/articles/grokaem-algoritmy/thumb-grokaem-algoritmy-img.jpg"
+                                    alt="Грокаем алгоритмы – реализация на PHP" />
+                                </figure>
+                                <p>
+                                Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком
+                                объяснит, что
+                                такое алгоритмы.
+                                После прочтения вы поймете, что алгоритмы это не нудно, а увлекательно и весело.
+                                </p>
+                                <p>
+                                    Сам материал структурировано от простого к сложному и слова автора сказанные в предисловье подтверждаются по ходу чтения.
+                                </p>
+                            </td>
                         </tr>
                         <tr>
+                            <td>Тэги: <a href="/php-category.html">PHP</a></td>
                             <td></td>
-                            <td colspan="2"><a href="/catalogue.html">Каталог репозиториев GitHub</a></td>
+                        </tr>
+                            <tr>
+                            <th><a href="/articles/js-game.html">Игра на JavaScript «Click me»</a></th>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td><a class="link-sitemap" href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы</a></td>
+                            <td>
+                                <p><small>07.06.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-game/game-is-in-javascript.jpg"
+                                    alt="Игра на JavaScript «Click me»" />
+                                </figure>
+                                <p>
+                                    Начал изучать нативный javascript. Достаточно интересный язык, хоть иногда у меня случался когнитивный диссонанс, так как все же упор я делаю на php, но если откинуть эти мелочи – языки достаточно похожи.
+                                </p>
+                                <p>
+                                    Эта небольшая мини-игра фактически это мое первое приложение написанное на js в рамках его изучения.
+                                </p>
+                            </td>
                         </tr>
                         <tr>
+                            <td>Тэги: <a href="/javascript-category.html">JavaScript</a></td>
                             <td></td>
-                            <td colspan="2"><a href="/php-category.html">Репозитории Github – категория PHP</a></td>
+                        </tr>
+                            <tr>
+                            <th><a href="/articles/js-plugin.html">Выпадающий список на нативном JavaScript</a></th>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td colspan="2"><a href="/javascript-category.html">Репозитории Github – категория JavaScript</a></td>
+                            <td>
+                                <p><small>08.06.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-plugin/plugin-in-javascript_1.jpg"
+                                    alt="Выпадающий список на нативном JavaScript" />
+                                </figure>
+                                <p>
+                                Второй по счету проект, который я реализую на ванильном JavaScript. В нем также, как и в игре «Click me» реализована работа с DOM элементами, только на более детальном уровне.
+                                </p>
+                                <p>
+                                данный список можно адаптировать под разные задачи. и главный плюс того, что он практически полностью реализован на js (с минимальным html и css) – широкая возможность кастомизации.
+                                </p>
+                            </td>
                         </tr>
                         <tr>
+                            <td>Тэги: <a href="/javascript-category.html">JavaScript</a></td>
                             <td></td>
-                            <td colspan="2"><a href="/wordpress-category.html">Репозитории Github – категория WordPress</a></td>
+                        </tr>
+                            <tr>
+                            <th><a href="/articles/html-template.html">Верстка Bootstrap шаблона</a></th>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td colspan="2"><a href="/privacy-policy.html">Политика конфиденциальности</a></td>
+                            <td>
+                                <p><small>10.06.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/front-end/bootstrap-bluerex/html-template-bootstrap-main-page.jpg"
+                                    alt="Верстка Bootstrap шаблона" />
+                                </figure>
+                                <p>
+                                Подойдя к решению вопроса с чувством, с толком, с расстановкой – решил базироваться на зарекомендовавшим для этих целей решении. Выбирал между двух css framework: Bootstrap или Foundation.
+                                </p>
+                                <p>
+                                Но остановился на Bootstrap (на момент начала обучения версия была 4.3.1). У бутстрапа мне понравилась более подробная (на мой взгляд) документация и большое комьюнити.
+                                </p>
+                            </td>
                         </tr>
                         <tr>
-                            <td colspan="3"><a href="/sitemap.html">Карта сайта</a></td>
+                            <td>Тэги: Html, Css, <a href="/javascript-category.html">JavaScript</a>, Bootstrap</td>
+                            <td></td>
                         </tr>
                     </table>
                     <p class="header-footer">Поделиться в социальных сетях</p>
-                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
-                ]]>
-            </turbo:content>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
         </item>
     </channel>
 </rss>
