@@ -6,6 +6,7 @@ Allow: /favicon-32x32.png
 Allow: /favicon-16x16.png
 Allow: /favicon.png
 Allow: /safari-pinned-tab.svg
+Disallow: /articles/front-end/
 
 User-agent: Googlebot
 Allow: /
@@ -15,6 +16,7 @@ Allow: /favicon-32x32.png
 Allow: /favicon-16x16.png
 Allow: /favicon.png
 Allow: /safari-pinned-tab.svg
+Disallow: /articles/front-end/
 
 User-agent: Yandex
 Allow: /
@@ -24,6 +26,7 @@ Allow: /favicon-32x32.png
 Allow: /favicon-16x16.png
 Allow: /favicon.png
 Allow: /safari-pinned-tab.svg
+Disallow: /articles/front-end/
 
 Sitemap: https://yaleksandr89.github.io/sitemap.xml
 Host: https://yaleksandr89.github.io/

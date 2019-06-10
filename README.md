@@ -20,7 +20,8 @@ The work was carried out in several stages:
 ```
 ***
 [AlexanderYurchenko.ru]:https://alexanderyurchenko.ru/
-[linguaCoder]:http://yaleksandr89.linguacoder.com/
+[linguaCoder]:http://linguacoder.com/
 [Vkontakte]:https://vk.com/y.aleksandr89
 [Facebook]:https://www.facebook.com/y.alexander89
 [Weblancer]:https://www.weblancer.net/users/yaleksandr89/
+

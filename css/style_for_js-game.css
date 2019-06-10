@@ -157,6 +157,13 @@ input.blockedInGameInput {
     color: #fff;
 }
 
+@media only screen and (max-width: 991px) {
+    .single-article .portfolio-ul {
+        padding-left: 0;
+        font-size: 14px;
+    }
+}
+
 @media only screen and (max-width: 444px) {
     #time-header,
     #result-header {
