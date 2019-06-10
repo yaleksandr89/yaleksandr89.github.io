@@ -161,7 +161,7 @@
                                         <em>она так же адаптирована для мобильных устройств</em>
                                         ), единственное, может грузиться чуть дольше турбо страниц. Ссылка →
                                         <a href="https://yaleksandr89.github.io/articles/js-game.html" data-turbo="false">JS game «Click me»</a>
-                                        .статье более детальное описание кейса, также можете посмотреть на работу скрипта.
+                                        .В статье более детальное описание кейса, также можете посмотреть на работу скрипта.
                                      </blockquote>
                                   </div>
                                   <div data-block="item" data-title="Создание выпадающего списка на нативном javascript">
@@ -180,7 +180,7 @@
                                         <em>она так же адаптирована для мобильных устройств</em>
                                         ), единственное, может грузиться чуть дольше турбо страниц. Ссылка →
                                         <a href="https://yaleksandr89.github.io/articles/js-plugin.html" data-turbo="false">Dropdown on js</a>
-                                        .статье более детальное описание кейса, также можете посмотреть на работу скрипта.
+                                        .В статье более детальное описание кейса, также можете посмотреть на работу скрипта.
                                      </blockquote>
                                   </div>
                                   <div data-block="item" data-title="Верстка Bootstrap шаблона">
@@ -193,7 +193,7 @@
                                         <a href="https://psdfreebies.com/psd/creative-agency-web-design-free-psd/" data-turbo="false">psd layout</a>
                                         .
                                      </blockquote>
-                                     <p>Я сделал дополнительно три страницы:</p>
+                                     <p>Я сделал дополнительно две страницы:</p>
                                      <ol>
                                         <li>
                                            <u>Страница блога</u>
@@ -202,10 +202,6 @@
                                         <li>
                                            <u>Страница статьи</u>
                                            – непосредственно шаблон для написания и публикации материала.
-                                        </li>
-                                        <li>
-                                           <u>Карта сайта в формате html</u>
-                                           – главная цель этой страницы, облегчить поиск необходимой информации.
                                         </li>
                                      </ol>
                                      <p>На мой взгляд, в 2019 году мало сделать сайт, его необходимо продвигать. И если у вас нет "чемодана денег" на контекстную и таргетированную рекламу – продвижение за счет контента идеальное решение.</p>
@@ -1038,15 +1034,14 @@
                     </header>
                     <table data-invisible="true">
                         <tr>
-                            <th colspan="2"><a href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы – реализация на PHP</a></th>
-                            <th>Категории</th>
+                            <th><a href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы – реализация на PHP</a></th>
                         </tr>
                         <tr>
-                            <td colspan="2">
+                            <td>
                                 <p><small>16.05.2019</small></p>
                                 <figure>
                                     <img class="img-header" src="https://yaleksandr89.github.io/articles/grokaem-algoritmy/thumb-grokaem-algoritmy-img.jpg"
-                                    alt="Каталог репозиториев GitHub" />
+                                    alt="Грокаем алгоритмы – реализация на PHP" />
                                 </figure>
                                 <p>
                                 Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком
@@ -1058,16 +1053,75 @@
                                     Сам материал структурировано от простого к сложному и слова автора сказанные в предисловье подтверждаются по ходу чтения.
                                 </p>
                             </td>
+                        </tr>
+                        <tr>
+                            <td>Тэги: <a href="/php-category.html">PHP</a></td>
+                            <td></td>
+                        </tr>
+                            <tr>
+                            <th><a href="/articles/js-game.html">Игра на JavaScript «Click me»</a></th>
+                        </tr>
+                        <tr>
                             <td>
-                            <ul>
-                            <li><a href="/php-category.html">PHP</a></li>
-                            <li><a href="/javascript-category.html">JavaScript</a></li>
-                            <li><a href="/wordpress-category.html">Wordpress</a></li>
-                            </ul>
+                                <p><small>07.06.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-game/game-is-in-javascript.jpg"
+                                    alt="Игра на JavaScript «Click me»" />
+                                </figure>
+                                <p>
+                                    Начал изучать нативный javascript. Достаточно интересный язык, хоть иногда у меня случался когнитивный диссонанс, так как все же упор я делаю на php, но если откинуть эти мелочи – языки достаточно похожи.
+                                </p>
+                                <p>
+                                    Эта небольшая мини-игра фактически это мое первое приложение написанное на js в рамках его изучения.
+                                </p>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2">Тэги: <a href="/php-category.html">PHP</a></td>
+                            <td>Тэги: <a href="/javascript-category.html">JavaScript</a></td>
+                            <td></td>
+                        </tr>
+                            <tr>
+                            <th><a href="/articles/js-plugin.html">Выпадающий список на нативном JavaScript</a></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><small>08.06.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-plugin/plugin-in-javascript_1.jpg"
+                                    alt="Выпадающий список на нативном JavaScript" />
+                                </figure>
+                                <p>
+                                Второй по счету проект, который я реализую на ванильном JavaScript. В нем также, как и в игре «Click me» реализована работа с DOM элементами, только на более детальном уровне.
+                                </p>
+                                <p>
+                                данный список можно адаптировать под разные задачи. и главный плюс того, что он практически полностью реализован на js (с минимальным html и css) – широкая возможность кастомизации.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Тэги: <a href="/javascript-category.html">JavaScript</a></td>
+                            <td></td>
+                        </tr>
+                            <tr>
+                            <th><a href="/articles/html-template.html">Верстка Bootstrap шаблона</a></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><small>10.06.2019</small></p>
+                                <figure>
+                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/front-end/bootstrap-bluerex/html-template-bootstrap-main-page.jpg"
+                                    alt="Верстка Bootstrap шаблона" />
+                                </figure>
+                                <p>
+                                Подойдя к решению вопроса с чувством, с толком, с расстановкой – решил базироваться на зарекомендовавшим для этих целей решении. Выбирал между двух css framework: Bootstrap или Foundation.
+                                </p>
+                                <p>
+                                Но остановился на Bootstrap (на момент начала обучения версия была 4.3.1). У бутстрапа мне понравилась более подробная (на мой взгляд) документация и большое комьюнити.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Тэги: Html, Css, <a href="/javascript-category.html">JavaScript</a>, Bootstrap</td>
                             <td></td>
                         </tr>
                     </table>
@@ -1508,111 +1562,73 @@
                 </div>]]></turbo:content>
         </item>
         <item turbo="true">
-            <link>https://yaleksandr89.github.io/catalogue.html</link>
-            <turbo:source>https://yaleksandr89.github.io/catalogue.html</turbo:source>
-            <turbo:topic>Каталог репозиториев GitHub</turbo:topic>
-            <turbo:content><![CDATA[<header>
-                        <h1>Каталог репозиториев GitHub</h1>
+            <link>https://yaleksandr89.github.io/sitemap.html</link>
+            <turbo:source>https://yaleksandr89.github.io/sitemap.html</turbo:source>
+            <turbo:topic>Карта сайта</turbo:topic>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Карта сайта</h1>
                         <figure>
-                            <img class="img-header" src="https://yaleksandr89.github.io/img/letsgrow-bg.jpg"
-                            alt="Каталог репозиториев GitHub" />
+                        <img class="img-header" src="https://yaleksandr89.github.io/img/sitemap-html-bg.jpg" alt="Карта сайта в формате html" />
                         </figure>
                     </header>
-                    <table data-invisible="true">
+                    <table data-invisible="false">
                         <tr>
-                            <th><a href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы – реализация на PHP</a></th>
+                            <td colspan="3"><a href="/">Главная страница</a></td>
                         </tr>
                         <tr>
-                            <td>
-                                <p><small>16.05.2019</small></p>
-                                <figure>
-                                    <img class="img-header" src="https://yaleksandr89.github.io/articles/grokaem-algoritmy/thumb-grokaem-algoritmy-img.jpg"
-                                    alt="Грокаем алгоритмы – реализация на PHP" />
-                                </figure>
-                                <p>
-                                Адитья Бхаргава – «Грокаем алгоритмы», отличная книга, которая понятным языком
-                                объяснит, что
-                                такое алгоритмы.
-                                После прочтения вы поймете, что алгоритмы это не нудно, а увлекательно и весело.
-                                </p>
-                                <p>
-                                    Сам материал структурировано от простого к сложному и слова автора сказанные в предисловье подтверждаются по ходу чтения.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Тэги: <a href="/php-category.html">PHP</a></td>
                             <td></td>
-                        </tr>
-                            <tr>
-                            <th><a href="/articles/js-game.html">Игра на JavaScript «Click me»</a></th>
+                            <td colspan="2"><a href="/about-me.html">Обо мне</a></td>
                         </tr>
                         <tr>
-                            <td>
-                                <p><small>07.06.2019</small></p>
-                                <figure>
-                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-game/game-is-in-javascript.jpg"
-                                    alt="Игра на JavaScript «Click me»" />
-                                </figure>
-                                <p>
-                                    Начал изучать нативный javascript. Достаточно интересный язык, хоть иногда у меня случался когнитивный диссонанс, так как все же упор я делаю на php, но если откинуть эти мелочи – языки достаточно похожи.
-                                </p>
-                                <p>
-                                    Эта небольшая мини-игра фактически это мое первое приложение написанное на js в рамках его изучения.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Тэги: <a href="/javascript-category.html">JavaScript</a></td>
                             <td></td>
-                        </tr>
-                            <tr>
-                            <th><a href="/articles/js-plugin.html">Выпадающий список на нативном JavaScript</a></th>
+                            <td colspan="2"><a href="/catalogue.html">Каталог репозиториев GitHub</a></td>
                         </tr>
                         <tr>
-                            <td>
-                                <p><small>08.06.2019</small></p>
-                                <figure>
-                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/js/js-plugin/plugin-in-javascript_1.jpg"
-                                    alt="Выпадающий список на нативном JavaScript" />
-                                </figure>
-                                <p>
-                                Второй по счету проект, который я реализую на ванильном JavaScript. В нем также, как и в игре «Click me» реализована работа с DOM элементами, только на более детальном уровне.
-                                </p>
-                                <p>
-                                данный список можно адаптировать под разные задачи. и главный плюс того, что он практически полностью реализован на js (с минимальным html и css) – широкая возможность кастомизации.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Тэги: <a href="/javascript-category.html">JavaScript</a></td>
                             <td></td>
-                        </tr>
-                            <tr>
-                            <th><a href="/articles/html-template.html">Верстка Bootstrap шаблона</a></th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><small>10.06.2019</small></p>
-                                <figure>
-                                    <img class="img-header" src="https://yaleksandr89.github.io/img/portfolio/front-end/bootstrap-bluerex/html-template-bootstrap-main-page.jpg"
-                                    alt="Верстка Bootstrap шаблона" />
-                                </figure>
-                                <p>
-                                Подойдя к решению вопроса с чувством, с толком, с расстановкой – решил базироваться на зарекомендовавшим для этих целей решении. Выбирал между двух css framework: Bootstrap или Foundation.
-                                </p>
-                                <p>
-                                Но остановился на Bootstrap (на момент начала обучения версия была 4.3.1). У бутстрапа мне понравилась более подробная (на мой взгляд) документация и большое комьюнити.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Тэги: Html, Css, <a href="/javascript-category.html">JavaScript</a>, Bootstrap</td>
                             <td></td>
+                            <td><a class="link-sitemap" href="/articles/grokaem-algoritmy.html">Грокаем алгоритмы</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><a class="link-sitemap" href="/articles/js-game.html">Игра на JS «Click me»</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><a class="link-sitemap" href="/articles/js-plugin.html">Выпадающий список на JS</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><a class="link-sitemap" href="/articles/html-template.html">Верстка Bootstrap шаблона для сайта</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><a href="/php-category.html">Репозитории Github – категория PHP</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><a href="/javascript-category.html">Репозитории Github – категория JavaScript</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><a href="/wordpress-category.html">Репозитории Github – категория WordPress</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><a href="/privacy-policy.html">Политика конфиденциальности</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><a href="/sitemap.html">Карта сайта</a></td>
                         </tr>
                     </table>
                     <p class="header-footer">Поделиться в социальных сетях</p>
-                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>]]></turbo:content>
+                    <div data-block="share" data-network="vkontakte, facebook, twitter, telegram"></div>
+                ]]>
+            </turbo:content>
         </item>
     </channel>
 </rss>

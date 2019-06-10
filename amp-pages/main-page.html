@@ -632,7 +632,17 @@
         }
 
         .portfolio-ul .cms-portfolio:before {
-            background: url("../img/ico/cms.svg") no-repeat;
+            background: url("../img/ico/java.svg") no-repeat;
+            -webkit-background-size: 50px 50px;
+            background-size: 50px 50px;
+            width: 50px;
+            height: 50px;
+            top: 18px;
+            margin-right: 15px;
+            margin-bottom: -2px;
+        }
+        .portfolio-ul .bootstrap:before {
+            background: url("../img/ico/bootstrap.svg") no-repeat;
             -webkit-background-size: 50px 50px;
             background-size: 50px 50px;
             width: 50px;
@@ -664,14 +674,16 @@
             margin-bottom: -2px;
         }
 
-        .portfolio-ul li a {
+        .portfolio-ul li a,
+        .alert-dark a {
             font-weight: 600;
             color: #171717;
             text-decoration: none;
             display: inline-block
         }
 
-        .portfolio-ul li a::after {
+        .portfolio-ul li a::after,
+        .alert-dark a::after {
             content: "";
             display: block;
             width: 100%;
@@ -689,7 +701,8 @@
             transition: all 0.6s;
         }
 
-        .portfolio-ul li a:hover::after {
+        .portfolio-ul li a:hover::after,
+        .alert-dark a:hover::after {
             -webkit-transform: scale(1);
             -moz-transform: scale(1);
             -ms-transform: scale(1);
@@ -729,6 +742,10 @@
 
         .portfolio .customize-accordion-inner {
             margin-bottom: 5px;
+        }
+
+        .custom-accordion-dev-web {
+            margin-bottom: 20px;
         }
 
         .hard-skill > section:last-child > .customize-accordion,
@@ -919,6 +936,176 @@
     </p>
     <amp-accordion class="sample portfolio"
                    disable-session-states animate>
+        <section>
+            <h4 class="customize-accordion-outer">Веб разработка</h4>
+            <amp-accordion class="nested-accordion custom-accordion-dev-web" animate>
+                <section>
+                    <h4 class="customize-accordion-inner">Создание мини-игры на нативном javascript</h4>
+                    <div class="styleGithub cover-img-txt w90_m0-auto portfolio-style-bg">
+                        <amp-img src="../img/portfolio/js/js-game/game-is-in-javascript.jpg"
+                                 alt="Александр Юрченко – создание мини-игры на нативном javascript" height="650" width="1024" layout=responsive>
+                        </amp-img>
+                        <p>
+                            Этот проект я выполнил в рамках изучения js. В нем реализовал: методы работы с DOM деревом, обработкой событий, а также наиболее часто используемые методы и свойства объектов.
+                        </p>
+                        <ul class="portfolio-ul">
+                            <li class="cms-portfolio">
+                                Нативный JavaScript
+                            </li>
+                            <li class="work-portfolio">
+                                Реализация мини-игры на js с возможностью самостоятельно установить время.
+                            </li>
+                        </ul>
+                        <h5>Исходные данные</h5>
+                        <ul class="portfolio-ul check">
+                            <li class="portfolio-item-li">
+                                Возможно задавать время (по умолчанию выставленно 5 секунд).
+                            </li>
+                            <li class="portfolio-item-li">
+                                За указанный промежуток времени необходимо кликнуть по максимальному количеству генерируемых квадратов.
+                            </li>
+                            <li class="portfolio-item-li">
+                                В процессе игры необходимо заблокировать <code>input</code>, для того что не было возможность сбить запущенный таймер.
+                            </li>
+                            <li class="portfolio-item-li">
+                                Генерируемые <code>div</code> должны быть разного размера, цвета и появляться в заданной области.
+                            </li>
+                            <li class="portfolio-item-li">
+                                публикация или создание графика публикаций контента
+                                (<em><mark>при наличии такого функционала</mark></em>).
+                            </li>
+                        </ul>
+                        <blockquote class="alert alert-dark">
+                            В статье более детальное описание кейса, также можно посмотреть на работу скрипта. Ссылка →
+                            <a href="/articles/js-game.html" target="_blank" rel="noopener">JS game «Click me»</a>.
+                        </blockquote>
+                    </div>
+                </section>
+                <!--1 кейс-->
+                <section>
+                    <h4 class="customize-accordion-inner">Создание выпадающего списка на нативном javascript</h4>
+                    <div class="styleGithub cover-img-txt w90_m0-auto portfolio-style-bg">
+                        <amp-img src="../img/portfolio/js/js-plugin/plugin-in-javascript_1.jpg"
+                                 alt="Александр Юрченко – создание выпадающего списка на нативном javascript" height="776" width="1024" layout=responsive>
+                        </amp-img>
+                        <p>
+                            В данном проекте я реализовал выпадающий список на <code>js</code>, который похож на разметку
+                            <code>html</code>: <code>section</code> > <code>option</code>. Плюсом данного  подхода является полная кастомизация
+                            и возможость адаптации под различные задачи.
+                        </p>
+                        <ul class="portfolio-ul">
+                            <li class="cms-portfolio">
+                                Нативный JavaScript
+                            </li>
+                            <li class="work-portfolio">
+                                Реализация выпадающего списка на js, с возможностью гибкой кастомизации.
+                            </li>
+                        </ul>
+                        <h5>Исходные данные</h5>
+                        <ul class="portfolio-ul check">
+                            <li class="portfolio-item-li">
+                                Работа с данными. Список городов, в данном случае, храниться в массиве (для примера взял города миллионики), но возможно подгружать данные динамически.
+                            </li>
+                            <li class="portfolio-item-li">
+                                Данные из массивов, при формировании элементов списка (<code>&lt;li&gt;...&lt;/li&gt;</code>) забираются по <code>data-id="..."</code>. Это оказалось очень удобно,
+                                при дальнейшем выводе блока со ссылкой на выбранный город.
+                            </li>
+                            <li class="portfolio-item-li">
+                                Скрытие всплывающего списка реализовал различными способами: по нажатию клавиши "Escape", клику вне области списка и повторному
+                                клику по тегу с классом dropdown__label (в него передается выбранный город).
+                            </li>
+                        </ul>
+                        <blockquote class="alert alert-dark">
+                            В статье более детальное описание кейса, также можно посмотреть на работу скрипта. Ссылка →
+                            <a href="/articles/js-plugin.html" target="_blank" rel="noopener">Dropdown on JS</a>.
+                        </blockquote>
+                    </div>
+                </section>
+                <!--2 кейс-->
+                <section>
+                    <h4 class="customize-accordion-inner">Верстка Bootstrap шаблона для сайта</h4>
+                    <div class="styleGithub cover-img-txt w90_m0-auto portfolio-style-bg">
+                        <amp-img src="../img/portfolio/front-end/bootstrap-bluerex/html-template-bootstrap-main-page.jpg"
+                                 alt="Александр Юрченко – верстка шаблона Bootstrap 4" height="460" width="1024" layout=responsive>
+                        </amp-img>
+                        <p>
+                            В этом кейсе я сверстал <code>html</code> шаблон для сайта с помощью фреймворка бутстрап 4 версии. Хотя изначально
+                            psd макет не предполагал наличие страницы для ведения блога, в большей степени он был заточен под одностраничный сайт.
+                        </p>
+                        <blockquote class="alert alert-dark">
+                            Сам макет вы можете скачать → <a href="https://psdfreebies.com/psd/creative-agency-web-design-free-psd/" target="_blank" rel="noopener">psd layout</a>.
+                        </blockquote>
+                        <p>Я сделал дополнительно две страницы:</p>
+                        <ol>
+                            <li><u>Страница блога</u> – является каталогом с ссылками на статьи.</li>
+                            <li><u>Страница статьи</u> – непосредственно шаблон для написания и публикации материала.</li>
+                        </ol>
+                        <p>На мой взгляд, в 2019 году мало сделать сайт, его необходимо продвигать. И если у вас нет
+                            "чемодана денег" на контекстную и таргетированную рекламу – продвижение за счет контента
+                            идеальное решение.</p>
+                        <ul class="portfolio-ul">
+                            <li class="cms-portfolio bootstrap">
+                                html, css, js
+                            </li>
+                            <li class="work-portfolio">
+                                Верстка html шаблона из psd макетас помощью framework Bootstrap 4.3.1.
+                            </li>
+                        </ul>
+                        <h5>Исходные данные</h5>
+                        <ul class="portfolio-ul check">
+                            <li class="portfolio-item-li">
+                                Верстка html template из psd макета с использованием css framework Bootstrap 4.3.1.
+                            </li>
+                            <li class="portfolio-item-li">
+                                Создание двух дополнительных страниц для ведения блога в данном шаблоне.
+                            </li>
+                            <li class="portfolio-item-li">
+                                Реализация адаптивного дизайна для оптимизации просмотра с мобильных устройств.
+                            </li>
+                        </ul>
+                        <blockquote class="alert alert-dark">
+                            Более подробную информацию можно прочитать в статье. Ссылка →
+                            <a href="/articles/html-template.html" target="_blank" rel="noopener">Верстка шаблона</a>.
+                            Там же находятся ссылки на сверстанные страницы.
+                        </blockquote>
+                    </div>
+                </section>
+                <!--3 кейс-->
+            </amp-accordion>
+        </section>
+        <!--Секция веб разработка-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section>
             <h4 class="customize-accordion-outer">Работа с контентом</h4>
             <amp-accordion class="nested-accordion" animate>
@@ -1638,19 +1825,6 @@
                 </amp-accordion>
         </section>
         <!--Секция работа с контентом-->
-        <section>
-            <h4 class="customize-accordion-outer">Веб разработка</h4>
-            <amp-accordion class="nested-accordion" animate>
-            <section>
-                <h4 class="customize-accordion-inner">Формируется в данный момент :)</h4>
-                <div class="styleGithub cover-img-txt w90_m0-auto portfolio-style-bg">
-                    <br>
-                    В процессе наполнения...
-                </div>
-            </section>
-            </amp-accordion>
-        </section>
-        <!--Секция веб разработка-->
     </amp-accordion>
 <footer>
     <div class="footer">
