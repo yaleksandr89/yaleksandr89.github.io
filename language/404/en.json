@@ -1,0 +1,18 @@
+{
+  "title_404": "Page not found!",
+  "footer_title": "404<span class=\" blink\">_</span>",
+  "text_block": {
+    "p1": "the Requested page does not exist or has been deleted.",
+    "p2": "If you are sure otherwise, please contact me<span class=\" blink\">_</span>"
+  },
+  "social_block": {
+    "email": {
+      "anchor": "Email<span class=\"blink\">_</span>",
+      "link": "mailto:yaleksandr89@yandex.ru?subject=Email%20s%20site%20(AlexanderYurchenko.ru)&body=Hello!"
+    },
+    "back": {
+      "anchor": "Go back<span class=\" blink\">_</span>",
+      "link": "/"
+    }
+  }
+}

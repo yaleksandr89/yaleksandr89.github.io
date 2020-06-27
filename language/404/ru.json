@@ -1,0 +1,18 @@
+{
+  "title_404": "Страница не найдена!",
+  "footer_title": "404<span class=\"blink\">_</span>",
+  "text_block": {
+    "p1": "Запрашиваемая страница не существует или была удалена.",
+    "p2": "Если вы уверны в обратном, пожалуйста свяжитесь со мной<span class=\"blink\">_</span>"
+  },
+  "social_block": {
+    "email": {
+      "anchor": "Email<span class=\"blink\">_</span>",
+      "link": "mailto:yaleksandr89@yandex.ru?subject=Письмо%20с%20сайта%20(AlexanderYurchenko.ru)&body=Здравствуйте!"
+    },
+    "back": {
+      "anchor": "Вернуться на главную<span class=\"blink\">_</span>",
+      "link": "/"
+    }
+  }
+}
