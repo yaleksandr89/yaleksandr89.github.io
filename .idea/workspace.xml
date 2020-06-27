@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="525adb3f-ebe4-49fd-9745-b8b822939b0a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9020" />
+  <component name="PhpServers">
+    <servers>
+      <server host="yaleksandr89-github.loc" id="bdc5a9a2-c53c-40b4-8ab2-23d978c5b26d" name="yaleksandr89-github.loc" />
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://yaleksandr89-github.loc:80" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
+  <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="yaleksandr89-github.loc" port="9021" />
+  <component name="ProjectId" id="1OVSJYDAqZ31Fi3zG4Uo8Zw18pK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.php.debug.xdebug.proxy" />
+  </component>
+  <component name="RunManager">
+    <configuration name="yaleksandr89-github.loc" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="yaleksandr89-github.loc">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="525adb3f-ebe4-49fd-9745-b8b822939b0a" name="Default Changelist" comment="" />
+      <created>1564061199514</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564061199514</updated>
+      <workItem from="1564061202149" duration="477000" />
+      <workItem from="1564066767246" duration="48000" />
+      <workItem from="1564427972426" duration="81000" />
+      <workItem from="1565798637943" duration="345000" />
+      <workItem from="1566455519842" duration="207000" />
+      <workItem from="1571435368161" duration="2786000" />
+      <workItem from="1571943273689" duration="1554000" />
+      <workItem from="1576056252149" duration="21000" />
+      <workItem from="1578678601708" duration="6000" />
+      <workItem from="1579436707107" duration="29000" />
+      <workItem from="1583013563080" duration="10000" />
+      <workItem from="1587934506184" duration="52000" />
+      <workItem from="1592724077540" duration="242000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1459" y="203" key="SettingsEditor" timestamp="1579436724358">
+      <screen x="-1920" y="40" width="1920" height="1040" />
+    </state>
+    <state x="-1459" y="203" key="SettingsEditor/-1920.40.1920.1040/0.40.1920.1040@-1920.40.1920.1040" timestamp="1579436724358" />
+  </component>
+</project>

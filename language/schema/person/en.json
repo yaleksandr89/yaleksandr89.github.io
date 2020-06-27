@@ -1,0 +1,18 @@
+{
+  "@context": "http://www.schema.org",
+  "@type": "Person",
+  "name": "Aleksandr Yurchenko",
+  "jobTitle": "Backend developer",
+  "url": "https://yaleksandr89.github.io/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": " ",
+    "addressLocality": "Saint-Petersburg",
+    "addressRegion": "Leningrad region",
+    "postalCode": " ",
+    "addressCountry": "Russia"
+  },
+  "email": "y.aleksandr89@gmail.com",
+  "telephone": " ",
+  "birthDate": "1989-11-28"
+}
