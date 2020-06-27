@@ -1,0 +1,41 @@
+{
+  "h1_title": "Cool site? Don't you ;)",
+  "footer_title": "Have a nice day<span class=\"blink\">!</span>",
+  "text_block": {
+    "p1": "I have 3 years of experience as a service center Manager in the office, as well as five years of remote work experience as a content Manager. During his time working on outsourcing, he increased his expertise in related areas: <u>seo</u>, <u>smm</u>.",
+    "p2": "From web development I chose – <strong><u>backend</u></strong>. The technology stack I'm using at the moment: <u>PHP7</u>, <u>MySQL</u>, <u>JavaScript</u> (<u>jQuery</u>), <u>aJax</u>.",
+    "p3": "Also have good knowledge of CMS WordPress. Now I study the information in order to determine, which framework to work with, I tend to Laravel.",
+    "p4": "From auxiliary technologies I use <u>git</u>, for Assembly of projects I began to use <u>gulp&webpack</u>. Also, had experience with <u>docker</u>.",
+    "p5": "<span class='en'>P.S.</span> If you have any questions, and perhaps there are questions ;), happy to answer them. In messengers, I answer a little faster than on facebook or by mail."
+  },
+  "social_block": {
+    "telegram": {
+      "anchor": "Telegram<span class=\"blink\">_</span>",
+      "link": "https://t.me/yaleksandr89"
+    },
+    "skype": {
+      "anchor": "Skype<span class=\"blink\">_</span>",
+      "link": "skype:y.aleksandr89?chat"
+    },
+    "facebook": {
+      "anchor": "Facebook<span class=\"blink\">_</span>",
+      "link": "https://www.facebook.com/y.alexander89"
+    },
+    "vkontakte": {
+      "anchor": "Vkontakte<span class=\"blink\">_</span>",
+      "link": "https://vk.me/y.aleksandr89"
+    },
+    "email": {
+      "anchor": "Email<span class=\"blink\">_</span>",
+      "link": "mailto:yaleksandr89@gmail.com?subject=A%20letter%20from%20the%20site%20(AlexanderYurchenko.ru)&body=Hello!"
+    },
+    "cv": {
+      "anchor": "Linkedin<span class=\"blink\">_</span>",
+      "link": "https://linkedin.com/in/yaleksandr89/"
+    },
+    "github": {
+      "anchor": "Github<span class=\"blink\">_</span>",
+      "link": "https://github.com/yaleksandr89"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "@context": "http://www.schema.org",
+  "@type": "Person",
+  "name": "Александр Юрченко",
+  "jobTitle": "Бэкэнд разработчик",
+  "url": "https://yaleksandr89.github.io/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": " ",
+    "addressLocality": "Санкт-Петербург",
+    "addressRegion": "Ленинградская область",
+    "postalCode": " ",
+    "addressCountry": "Россия"
+  },
+  "email": "y.aleksandr89@yandex.ru",
+  "telephone": " ",
+  "birthDate": "1989-11-28"
+}
