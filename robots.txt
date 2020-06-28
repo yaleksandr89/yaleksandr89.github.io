@@ -1,10 +1,19 @@
 User-agent: *
 Allow: /
+Disallow: *?s=
+Disallow: /language/
+Disallow: /fonts/
 
 User-agent: Googlebot
 Allow: /
+Disallow: *?s=
+Disallow: /language/
+Disallow: /fonts/
 
 User-agent: Yandex
 Allow: /
+Disallow: *?s=
+Disallow: /language/
+Disallow: /fonts/
 
 Sitemap: https://yaleksandr89.github.io/sitemap.xml
