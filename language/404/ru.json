@@ -1,6 +1,6 @@
 {
-  "title_404": "Страница не найдена!",
-  "footer_title": "404<span class=\"blink\">_</span>",
+  "title_404": "<span class='ru'>Страница не найдена!</span>",
+  "footer_title": "<span class='ru'>404<span class=\"blink\">_</span></span>",
   "text_block": {
     "p1": "Запрашиваемая страница не существует или была удалена.",
     "p2": "Если вы уверны в обратном, пожалуйста свяжитесь со мной<span class=\"blink\">_</span>"

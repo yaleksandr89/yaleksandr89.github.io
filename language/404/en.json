@@ -1,6 +1,6 @@
 {
-  "title_404": "Page not found!",
-  "footer_title": "404<span class=\" blink\">_</span>",
+  "title_404": "<span class='en'>Page not found!</span>",
+  "footer_title": "<span class='en'>404<span class=\" blink\">_</span></span>",
   "text_block": {
     "p1": "the Requested page does not exist or has been deleted.",
     "p2": "If you are sure otherwise, please contact me<span class=\" blink\">_</span>"

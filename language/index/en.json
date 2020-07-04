@@ -1,6 +1,6 @@
 {
-  "h1_title": "Cool site? Don't you ;)",
-  "footer_title": "Have a nice day<span class=\"blink\">!</span>",
+  "h1_title": "<span class='en'>Cool site? Don't you ;)</span>",
+  "footer_title": "<span class='en'>Have a nice day<span class=\"blink\">!</span></span>",
   "text_block": {
     "p1": "I have 3 years of experience as a service center Manager in the office, as well as five years of remote work experience as a content Manager. During his time working on outsourcing, he increased his expertise in related areas: <u>seo</u>, <u>smm</u>.",
     "p2": "From web development I chose – <strong><u>backend</u></strong>. The technology stack I'm using at the moment: <u>PHP7</u>, <u>MySQL</u>, <u>JavaScript</u> (<u>jQuery</u>), <u>aJax</u>.",
