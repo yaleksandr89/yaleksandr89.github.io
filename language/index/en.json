@@ -4,11 +4,11 @@
   "footer_title": "<span class=\"en\">Have a nice day<span class=\"blink\">!</span></span>",
   "text_block": {
     "p1": "My name is Alexander, and I am a PHP programmer with three years of experience. I have participated in the development of large-scale IT projects at the federal and regional levels.",
-    "p2": "I am ready to join your team and contribute to the achievement of set goals."
-  },
-  "download_cv": {
-    "anchor": "Download CV<span class=\"blink\">_</span>",
-    "link": "https://drive.google.com/file/d/1mzv6eGphS_gvrcTyFltroyrw93NJ8sDA/view?usp=sharing"
+    "p2": "I am ready to join your team and contribute to the achievement of set goals.",
+    "download_cv": {
+      "anchor": "Download CV<span class=\"blink\">_</span>",
+      "link": "https://drive.google.com/file/d/1mzv6eGphS_gvrcTyFltroyrw93NJ8sDA/view?usp=sharing"
+    }
   },
   "social_block": {
     "telegram": {
