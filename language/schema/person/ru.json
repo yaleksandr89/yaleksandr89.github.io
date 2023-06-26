@@ -2,7 +2,7 @@
   "@context": "http://www.schema.org",
   "@type": "Person",
   "name": "Александр Юрченко",
-  "jobTitle": "Бэкэнд разработчик",
+  "jobTitle": "Бэкенд разработчик",
   "url": "https://yaleksandr89.github.io/",
   "address": {
     "@type": "PostalAddress",

@@ -9,16 +9,13 @@
   "publisher": "Александр Юрченко",
   "publisher_email": "y.aleksandr89@yandex.ru",
   "og:locale": "ru_RU",
-  "og:title": "Александр Юрченко (y.aleksandr89) – бэкэнд разработчик",
+  "og:title": "Александр Юрченко (y.aleksandr89) – бэкенд разработчик",
   "og:description": "Занимаюсь серверной разработкой. Основной стек технологий: PHP, MariaDB , JS. Вспомогательные стек: Gulp, Babel. Используемая IDE при разроботке – phpStorm.",
   "og:site_name": "Александр Юрченко (y.aleksandr89)",
   "og:image": "https://yaleksandr89.github.io/image/alexanderyurchenko-ru.jpg",
   "og:image:secure_url": "https://yaleksandr89.github.io/image/alexanderyurchenko-ru.jpg",
   "og:image:alt": "Александр Юрченко (y.aleksandr89)",
-  "twitter:title": "Александр Юрченко (y.aleksandr89)",
-  "twitter:description": "Занимаюсь серверной разработкой. Основной стек технологий: PHP, MariaDB , JS. Вспомогательные стек: Gulp, Babel. Используемая IDE при разроботке – phpStorm.",
-  "twitter:image:src": "https://yaleksandr89.github.io/image/alexanderyurchenko-ru.jpg",
-  "title": "Александр Юрченко – бэкэнд разработчик",
+  "title": "Александр Юрченко – бэкенд разработчик",
   "description": "Занимаюсь серверной разработкой. Основной стек технологий: PHP, MariaDB , JS. Вспомогательные стек: Gulp, Babel. Используемая IDE при разроботке – phpStorm.",
   "keywords": "backend,yaleksandr89,y.aleksandr89"
 }

@@ -1,12 +1,14 @@
 {
-  "h1_title": "<span class='en'>Cool site? Don't you ;)</span>",
-  "footer_title": "<span class='en'>Have a nice day<span class=\"blink\">!</span></span>",
+  "h1_title": "<span class=\"en\">Hello!</span>",
+  "social_block_title": "<span class=\"en\">Contacts</span>",
+  "footer_title": "<span class=\"en\">Have a nice day<span class=\"blink\">!</span></span>",
   "text_block": {
-    "p1": "I have 3 years of experience as a service center Manager in the office, as well as five years of remote work experience as a content Manager. During his time working on outsourcing, he increased his expertise in related areas: <u>seo</u>, <u>smm</u>.",
-    "p2": "From web development I chose – <strong><u>backend</u></strong>. The technology stack I'm using at the moment: <u>PHP7</u>, <u>MySQL</u>, <u>JavaScript</u> (<u>jQuery</u>), <u>aJax</u>.",
-    "p3": "Also have good knowledge of CMS WordPress. Now I study the information in order to determine, which framework to work with, I tend to Laravel.",
-    "p4": "From auxiliary technologies I use <u>git</u>, for Assembly of projects I began to use <u>gulp&webpack</u>. Also, had experience with <u>docker</u>.",
-    "p5": "<span class='en'>P.S.</span> If you have any questions, and perhaps there are questions ;), happy to answer them. In messengers, I answer a little faster than on facebook or by mail."
+    "p1": "My name is Alexander, and I am a PHP programmer with three years of experience. I have participated in the development of large-scale IT projects at the federal and regional levels.",
+    "p2": "I am ready to join your team and contribute to the achievement of set goals."
+  },
+  "download_cv": {
+    "anchor": "Download CV<span class=\"blink\">_</span>",
+    "link": "https://drive.google.com/file/d/1mzv6eGphS_gvrcTyFltroyrw93NJ8sDA/view?usp=sharing"
   },
   "social_block": {
     "telegram": {
@@ -16,10 +18,6 @@
     "skype": {
       "anchor": "Skype<span class=\"blink\">_</span>",
       "link": "skype:y.aleksandr89?chat"
-    },
-    "facebook": {
-      "anchor": "Facebook<span class=\"blink\">_</span>",
-      "link": "https://www.facebook.com/y.alexander89"
     },
     "vkontakte": {
       "anchor": "Vkontakte<span class=\"blink\">_</span>",

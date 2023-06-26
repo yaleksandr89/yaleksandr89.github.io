@@ -1,12 +1,14 @@
 {
-  "h1_title": "<span class='ru'>Классный сайт? Не так ли ;)</span>",
-  "footer_title": "<span class='ru'>Успехов<span class=\"blink\">!</span>",
+  "h1_title": "<span class=\"ru\">Привет!</span>",
+  "social_block_title": "<span class=\"ru\">Контакты для связи</span>",
+  "footer_title": "<span class=\"ru\">Успехов<span class=\"blink\">!</span>",
   "text_block": {
-    "p1": "Имею 3 года работы на должности менеджер сервисного центра в офисе, также пятилетний опыт удалённой работы в должности контент-менеджер. За время работы на аутсорсе повысил экспертность в смежных областях: <u>seo</u>, <u>smm</u>.",
-    "p2": "Из веб разработки выбрал – <strong><u>backend</u></strong>. Стек технологий, который я использую на данный момент: <u>PHP7</u>, <u>MySQL</u>, <u>JavaScript</u> (<u>jQuery</u>), <u>aJax</u>.",
-    "p3": "Также хорошо знаю CMS WordPress. Сейчас изучаю информацию с целью определиться с каким фреймворком работать, склоняюсь к <u>Laravel</u>.",
-    "p4": "Из вспомогательных технологий использую <u>git</u>, для сборки проектов начал использовать <u>Gulp & Webpack</u>. Также был опыт работы с docker.",
-    "p5": "<span class='ru'>P.S.</span> Если у вас остались вопросы, а возможно вопросы появились ;), с удовольствием отвечу на них. В мессенджерах отвечаю чуть быстрее, чем во вконтакте или по почте."
+    "p1": "Меня зовут Александр и я PHP программист с трехлетним опытом работы. Участвовал в разработке масштабных ИТ-проектов федерального и регионального уровня.",
+    "p2": "Готов присоединиться к вашей команде и принести свой вклад в достижение поставленных целей."
+  },
+  "download_cv": {
+    "anchor": "Скачать резюме<span class=\"blink\">_</span>",
+    "link": "https://disk.yandex.ru/i/rq1VCa4MhEID7g"
   },
   "social_block": {
     "telegram": {
@@ -16,10 +18,6 @@
     "skype": {
       "anchor": "Skype<span class=\"blink\">_</span>",
       "link": "skype:y.aleksandr89?chat"
-    },
-    "facebook": {
-      "anchor": "Facebook<span class=\"blink\">_</span>",
-      "link": "https://www.facebook.com/y.alexander89"
     },
     "vkontakte": {
       "anchor": "Vkontakte<span class=\"blink\">_</span>",
@@ -31,7 +29,7 @@
     },
     "cv": {
       "anchor": "Headhunter<span class=\"blink\">_</span>",
-      "link": "https://hh.ru/resume/59ef7c7bff07152ef30039ed1f715665454870"
+      "link": "https://spb.hh.ru/resume/b2eaac8aff097cfcdc0039ed1f45507a725a36"
     },
     "github": {
       "anchor": "Github<span class=\"blink\">_</span>",
