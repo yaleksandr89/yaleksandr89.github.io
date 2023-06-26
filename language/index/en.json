@@ -1,10 +1,10 @@
 {
   "h1_title": "<span class=\"en\">Hello!</span>",
-
+  "social_block_title": "<span class=\"en\">Contacts</span>",
   "footer_title": "<span class=\"en\">Have a nice day<span class=\"blink\">!</span></span>",
   "text_block": {
     "p1": "My name is Alexander, and I am a PHP programmer with three years of experience. I have participated in the development of large-scale IT projects at the federal and regional levels.",
-    "p2": "I am ready to join your team and contribute to the achievement of set goals.",
+    "p2": "I am ready to join your team and contribute to the achievement of set goals."
   },
   "social_block": {
     "pdf_cv": {
