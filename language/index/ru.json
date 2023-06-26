@@ -5,12 +5,12 @@
   "text_block": {
     "p1": "Меня зовут Александр и я PHP программист с трехлетним опытом работы. Участвовал в разработке масштабных ИТ-проектов федерального и регионального уровня.",
     "p2": "Готов присоединиться к вашей команде и принести свой вклад в достижение поставленных целей.",
+  },
+  "social_block": {
     "download_cv": {
       "anchor": "Скачать резюме<span class=\"blink\">_</span>",
       "link": "https://disk.yandex.ru/i/rq1VCa4MhEID7g"
-    }
-  },
-  "social_block": {
+    },
     "telegram": {
       "anchor": "Telegram<span class=\"blink\">_</span>",
       "link": "https://t.me/yaleksandr89"

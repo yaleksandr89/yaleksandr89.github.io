@@ -5,12 +5,12 @@
   "text_block": {
     "p1": "My name is Alexander, and I am a PHP programmer with three years of experience. I have participated in the development of large-scale IT projects at the federal and regional levels.",
     "p2": "I am ready to join your team and contribute to the achievement of set goals.",
+  },
+  "social_block": {
     "download_cv": {
       "anchor": "Download CV<span class=\"blink\">_</span>",
       "link": "https://drive.google.com/file/d/1mzv6eGphS_gvrcTyFltroyrw93NJ8sDA/view?usp=sharing"
-    }
-  },
-  "social_block": {
+    },
     "telegram": {
       "anchor": "Telegram<span class=\"blink\">_</span>",
       "link": "https://t.me/yaleksandr89"
