@@ -1,6 +1,5 @@
 {
   "h1_title": "<span class=\"ru\">Привет!</span>",
-  "social_block_title": "<span class=\"ru\">Контакты для связи</span>",
   "footer_title": "<span class=\"ru\">Успехов<span class=\"blink\">!</span>",
   "text_block": {
     "p1": "Меня зовут Александр и я PHP программист с трехлетним опытом работы. Участвовал в разработке масштабных ИТ-проектов федерального и регионального уровня.",
@@ -22,10 +21,6 @@
     "vkontakte": {
       "anchor": "Vkontakte<span class=\"blink\">_</span>",
       "link": "https://vk.me/y.aleksandr89"
-    },
-    "email": {
-      "anchor": "Email<span class=\"blink\">_</span>",
-      "link": "mailto:yaleksandr89@yandex.ru?subject=Письмо%20с%20сайта%20(AlexanderYurchenko.ru)&body=Здравствуйте!"
     },
     "cv": {
       "anchor": "Headhunter<span class=\"blink\">_</span>",

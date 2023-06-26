@@ -1,6 +1,5 @@
 {
   "h1_title": "<span class=\"en\">Hello!</span>",
-  "social_block_title": "<span class=\"en\">Contacts</span>",
   "footer_title": "<span class=\"en\">Have a nice day<span class=\"blink\">!</span></span>",
   "text_block": {
     "p1": "My name is Alexander, and I am a PHP programmer with three years of experience. I have participated in the development of large-scale IT projects at the federal and regional levels.",
@@ -22,10 +21,6 @@
     "vkontakte": {
       "anchor": "Vkontakte<span class=\"blink\">_</span>",
       "link": "https://vk.me/y.aleksandr89"
-    },
-    "email": {
-      "anchor": "Email<span class=\"blink\">_</span>",
-      "link": "mailto:yaleksandr89@gmail.com?subject=A%20letter%20from%20the%20site%20(AlexanderYurchenko.ru)&body=Hello!"
     },
     "cv": {
       "anchor": "Linkedin<span class=\"blink\">_</span>",
