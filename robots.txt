@@ -3,17 +3,20 @@ Allow: /
 Disallow: *?s=
 Disallow: /language/
 Disallow: /fonts/
+Disallow: /404.html
 
 User-agent: Googlebot
 Allow: /
 Disallow: *?s=
 Disallow: /language/
 Disallow: /fonts/
+Disallow: /404.html
 
 User-agent: Yandex
 Allow: /
 Disallow: *?s=
 Disallow: /language/
 Disallow: /fonts/
+Disallow: /404.html
 
 Sitemap: https://yaleksandr89.github.io/sitemap.xml
