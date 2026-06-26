@@ -7,6 +7,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Портфолио"
   description="Персональный сайт."
 >
-  <h1>Портфолио</h1>
-  <p>Сайт находится в разработке.</p>
+  <span slot="profile-label">Профиль</span>
+  <span slot="profile-summary">Временный контент</span>
+
+  <section class="content-section">
+    <h1>Основная область</h1>
+    <section class="content-section__body">
+      <h2>Временный контент</h2>
+      <p>Этот раздел используется для настройки базовой структуры страницы.</p>
+    </section>
+  </section>
 </BaseLayout>

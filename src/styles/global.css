@@ -1,8 +1,37 @@
 :root {
-  --color-background: #ffffff;
-  --color-foreground: #1a1a1a;
-  --font-sans: system-ui, sans-serif;
-  --content-width: 70rem;
+  --color-graphite: #242628;
+  --color-graphite-soft: #34383b;
+  --color-background: #f7f5ef;
+  --color-surface: #ffffff;
+  --color-accent: #d6a51e;
+  --color-text: #202124;
+  --color-text-muted: #5b6065;
+  --color-text-inverse: #f8f4e7;
+  --color-link: #6d4a00;
+  --color-focus: #b88400;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-size-step-0: 1rem;
+  --font-size-step-1: 1.125rem;
+  --font-size-step-2: 1.5rem;
+  --font-size-step-3: 2rem;
+  --font-size-step-4: 2.5rem;
+  --line-height-body: 1.6;
+  --line-height-heading: 1.15;
+
+  --content-width: 48rem;
+  --panel-width: 24rem;
 }
 
 * {
@@ -11,27 +40,164 @@
 
 html {
   font-family: var(--font-sans);
-  line-height: 1.5;
+  line-height: var(--line-height-body);
+  background: var(--color-background);
 }
 
 body {
   min-width: 20rem;
   margin: 0;
-  color: var(--color-foreground);
+  color: var(--color-text);
   background: var(--color-background);
 }
 
-main {
-  width: min(100% - 2rem, var(--content-width));
-  margin-inline: auto;
-  padding-block: 2rem;
+a {
+  color: var(--color-link);
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+:focus-visible {
+  outline: 0.1875rem solid var(--color-focus);
+  outline-offset: 0.1875rem;
 }
 
 h1,
+h2,
 p {
   margin-block: 0;
 }
 
-p + p {
-  margin-top: 1rem;
+h1,
+h2 {
+  line-height: var(--line-height-heading);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: var(--font-size-step-4);
+}
+
+h2 {
+  font-size: var(--font-size-step-2);
+}
+
+p {
+  max-width: 62ch;
+  font-size: var(--font-size-step-1);
+  color: var(--color-text-muted);
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  inset-block-start: var(--space-4);
+  inset-inline-start: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text);
+  background: var(--color-surface);
+  transform: translateY(calc(-100% - var(--space-5)));
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-shell {
+  display: grid;
+  grid-template-columns: minmax(18rem, var(--panel-width)) minmax(0, 1fr);
+  min-height: 100svh;
+}
+
+.identity-panel {
+  color: var(--color-text-inverse);
+  background: var(--color-graphite);
+}
+
+.identity-panel__inner {
+  display: grid;
+  align-content: center;
+  min-height: 100svh;
+  padding: var(--space-7);
+}
+
+.identity-panel__eyebrow {
+  font-size: var(--font-size-step-0);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-inverse);
+}
+
+.identity-panel__rule {
+  width: 4rem;
+  height: 0.25rem;
+  margin-block: var(--space-5);
+  background: var(--color-accent);
+}
+
+.identity-panel__text {
+  color: #d9d7cf;
+}
+
+.content-area {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  min-height: 100svh;
+  padding: var(--space-8) var(--space-7);
+  background: var(--color-background);
+}
+
+.content-section {
+  width: min(100%, var(--content-width));
+}
+
+.content-section__body {
+  margin-block-start: var(--space-6);
+  padding-block-start: var(--space-6);
+  border-block-start: 0.0625rem solid #ded9cc;
+}
+
+.content-section__body > * + * {
+  margin-block-start: var(--space-4);
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --font-size-step-3: 1.75rem;
+    --font-size-step-4: 2rem;
+  }
+
+  .site-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .identity-panel__inner {
+    min-height: auto;
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .content-area {
+    min-height: auto;
+    padding: var(--space-7) var(--space-5);
+  }
+}
+
+@media (max-width: 24rem) {
+  body {
+    min-width: 0;
+  }
+
+  .identity-panel__inner,
+  .content-area {
+    padding-inline: var(--space-4);
+  }
 }

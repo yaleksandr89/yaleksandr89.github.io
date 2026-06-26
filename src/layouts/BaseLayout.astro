@@ -8,6 +8,8 @@ interface Props {
 }
 
 const { lang, title, description } = Astro.props;
+const skipLinkText =
+  lang === 'ru' ? 'Перейти к основному содержимому' : 'Skip to main content';
 ---
 
 <!doctype html>
@@ -19,8 +21,18 @@ const { lang, title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main>
-      <slot />
-    </main>
+    <a class="skip-link" href="#main-content">{skipLinkText}</a>
+    <div class="site-shell">
+      <aside class="identity-panel">
+        <header class="identity-panel__inner">
+          <p class="identity-panel__eyebrow"><slot name="profile-label" /></p>
+          <div class="identity-panel__rule"></div>
+          <p class="identity-panel__text"><slot name="profile-summary" /></p>
+        </header>
+      </aside>
+      <main id="main-content" class="content-area" tabindex="-1">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>
