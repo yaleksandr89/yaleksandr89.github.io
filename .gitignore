@@ -1,2 +1,5 @@
 .idea
 opencode.json
+node_modules/
+dist/
+.astro/
