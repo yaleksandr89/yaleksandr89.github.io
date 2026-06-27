@@ -23,10 +23,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2>Контакты</h2>
       <div class="sidebar-section__body">
         <address>
-          <ul class="link-list">
-            <li><a href="https://t.me/yaleksandr89">Telegram</a></li>
-            <li><a href="https://github.com/yaleksandr89">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/yaleksandr89">LinkedIn</a></li>
+          <ul class="contact-list">
+            <li><span>Адрес:</span> <span>Россия, Санкт-Петербург</span></li>
+            <li><span>Телеграм:</span> <a href="https://t.me/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://t.me/yaleksandr89</a></li>
+            <li><span>Эл. почта:</span> <a href="mailto:y.aleksandr89@yandex.ru">y.aleksandr89@yandex.ru</a></li>
+            <li><span>HH.ru:</span> <a href="https://spb.hh.ru/resume/b2eaac8aff097cfcdc0039ed1f45507a725a36" target="_blank" rel="noopener noreferrer nofollow">Резюме на hh.ru</a></li>
+            <li><span>ВКонтакте:</span> <a href="https://vk.me/y.aleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://vk.me/y.aleksandr89</a></li>
+            <li><span>GitHub:</span> <a href="https://github.com/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://github.com/yaleksandr89</a></li>
           </ul>
         </address>
       </div>
@@ -50,14 +53,124 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="content-section">
     <h2>Общие сведения</h2>
     <div class="content-section__body">
-      <p>PHP Backend-разработчик с более чем 5 годами коммерческого опыта в разработке и сопровождении веб-приложений. Специализация — PHP, Laravel и Symfony, интеграции с внешними сервисами, работа с API и развитие legacy-проектов.</p>
+      <p>PHP Backend-разработчик с более чем 5 годами коммерческого опыта в разработке и сопровождении веб-приложений.</p>
+      <p>Работал над B2B-системой бронирования туристических услуг, корпоративными порталами, внутренними системами учёта и проектами для госсектора. Специализация — backend-разработка на PHP, Laravel и Symfony, интеграции с внешними сервисами, работа с API и развитие legacy-проектов.</p>
+      <p>Ориентирован на продуктовую разработку, стабильность сервисов и улучшение архитектуры backend-решений.</p>
     </div>
   </section>
 
   <section class="content-section">
     <h2>Опыт работы</h2>
     <div class="content-section__body">
-      <p>Содержимое раздела будет добавлено следующим шагом.</p>
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>PHP-разработчик</h3>
+          <p class="experience-entry__meta">
+            <span>Русский Экспресс — туроператор</span>
+            <a href="https://r-express.ru" target="_blank" rel="noopener noreferrer nofollow">r-express.ru</a>
+          </p>
+          <p class="experience-entry__period">Ноябрь 2024 — март 2026</p>
+        </header>
+        <p>Участвовал в развитии и сопровождении B2B-системы бронирования туристических услуг для агентств и партнёров. Работал в составе кросс-функциональной продуктовой команды: backend-разработчики, аналитик, менеджер проекта.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Технологии:</p>
+          <ul class="technology-list">
+            <li>PHP 8</li>
+            <li>Laravel</li>
+            <li>MariaDB</li>
+            <li>Redis</li>
+            <li>Docker</li>
+            <li>Elasticsearch</li>
+            <li>GitLab</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <p><strong>Задачи и результаты:</strong></p>
+        <ul class="experience-entry__list">
+          <li>Участвовал в расширении функциональности системы бронирования для новых рынков сбыта и B2B-партнёров.</li>
+          <li>Дорабатывал интеграции с ERP (1С) и внутренними сервисами.</li>
+          <li>Переработал часть API-взаимодействий с polling-модели на push-модель для снижения количества запросов к серверу 1С.</li>
+          <li>Расширял механизм возвратов и переносов денежных средств между заказами.</li>
+          <li>Оптимизировал работу Elasticsearch: дорабатывал поисковую логику, участвовал в разделении общего индекса с 15+ млн документов на отдельные индексы по разделам.</li>
+          <li>Участвовал в постепенном разделении монолитного legacy-приложения на внутренние и внешние пакеты.</li>
+        </ul>
+      </article>
+
+      <hr class="experience-divider" />
+
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>Программист-разработчик</h3>
+          <p class="experience-entry__meta">
+            <span>WONE IT — разработка и сопровождение корпоративных решений</span>
+            <a href="https://wone-it.ru" target="_blank" rel="noopener noreferrer nofollow">wone-it.ru</a>
+          </p>
+          <p class="experience-entry__period">Июль 2023 — август 2024</p>
+        </header>
+        <p>Участвовал в сопровождении и развитии внутренних систем учёта и внешних платформ. Внедрял изменения по требованиям заказчиков, занимался багфиксами, доработками и поддержкой существующих проектов.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Технологии:</p>
+          <ul class="technology-list">
+            <li>PHP 8</li>
+            <li>MariaDB</li>
+            <li>PostgreSQL</li>
+            <li>Git</li>
+            <li>GitLab</li>
+            <li>Gitea</li>
+            <li>JavaScript</li>
+            <li>Zabbix</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <p><strong>Задачи и результаты:</strong></p>
+        <ul class="experience-entry__list">
+          <li>Разрабатывал новые функции для системы учёта отсутствий сотрудников.</li>
+          <li>Поддерживал и дорабатывал проект «Тотальный диктант».</li>
+          <li>Настроил Zabbix и интеграции мониторинга с веб-приложениями.</li>
+          <li>Взаимодействовал с заказчиками для уточнения требований, согласования изменений и проверки результата.</li>
+          <li>Дорабатывал бизнес-логику и поддерживал legacy-проекты.</li>
+        </ul>
+      </article>
+
+      <hr class="experience-divider" />
+
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>Инженер-программист</h3>
+          <p class="experience-entry__meta">
+            <span>Программный Продукт — разработка IT-решений</span>
+            <a href="https://ppr.ru" target="_blank" rel="noopener noreferrer nofollow">ppr.ru</a>
+          </p>
+          <p class="experience-entry__period">Июль 2020 — июнь 2023</p>
+        </header>
+        <p>Разрабатывал и сопровождал веб-приложения в рамках крупных IT-проектов Москвы: порталы КОС, «Гранты Мэра», «Бессмертный полк», «Общественная палата» и другие. Работал в команде из 15 специалистов: backend- и frontend-разработчики, аналитики, менеджеры.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Технологии:</p>
+          <ul class="technology-list">
+            <li>PHP 7/8</li>
+            <li>Symfony</li>
+            <li>WordPress</li>
+            <li>MariaDB</li>
+            <li>PostgreSQL</li>
+            <li>JavaScript</li>
+            <li>Sphinx</li>
+            <li>GitLab</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <p><strong>Задачи и результаты:</strong></p>
+        <ul class="experience-entry__list">
+          <li>Интегрировал Symfony и WordPress проекты с внешними API, включая Dadata.</li>
+          <li>Разработал Symfony бандл для генерации карты сайта с гибкой конфигурацией.</li>
+          <li>Создал промежуточный слой между Sphinx и приложением для расширенного поиска.</li>
+          <li>Разрабатывал и рефакторил бизнес-логику под требования заказчиков.</li>
+          <li>Поддерживал и развивал legacy-проекты.</li>
+          <li>Расширял функциональность WordPress без использования сторонних плагинов.</li>
+        </ul>
+      </article>
     </div>
   </section>
 

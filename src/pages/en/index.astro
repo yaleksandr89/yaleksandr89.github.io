@@ -23,10 +23,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <h2>Contacts</h2>
       <div class="sidebar-section__body">
         <address>
-          <ul class="link-list">
-            <li><a href="https://t.me/yaleksandr89">Telegram</a></li>
-            <li><a href="https://github.com/yaleksandr89">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/yaleksandr89">LinkedIn</a></li>
+          <ul class="contact-list">
+            <li><span>Location:</span> <span>Saint Petersburg, Russia</span></li>
+            <li><span>Telegram:</span> <a href="https://t.me/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://t.me/yaleksandr89</a></li>
+            <li><span>Email:</span> <a href="mailto:y.aleksandr89@gmail.com">y.aleksandr89@gmail.com</a></li>
+            <li><span>LinkedIn:</span> <a href="https://linkedin.com/in/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://linkedin.com/in/yaleksandr89</a></li>
+            <li><span>GitHub:</span> <a href="https://github.com/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://github.com/yaleksandr89</a></li>
           </ul>
         </address>
       </div>
@@ -50,14 +52,124 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="content-section">
     <h2>Professional Summary</h2>
     <div class="content-section__body">
-      <p>PHP Backend Developer with over 5 years of commercial experience in web application development and maintenance. Main focus areas include PHP, Laravel and Symfony, third-party integrations, API development, and legacy project improvement.</p>
+      <p>PHP Backend Developer with over 5 years of commercial experience in web application development and maintenance.</p>
+      <p>Worked on a B2B travel booking system, corporate portals, internal accounting systems, and public sector projects. Main focus areas include backend development with PHP, Laravel and Symfony, third-party integrations, API development, and legacy project improvement.</p>
+      <p>Focused on product-oriented development, service stability, and improving backend architecture.</p>
     </div>
   </section>
 
   <section class="content-section">
     <h2>Work Experience</h2>
     <div class="content-section__body">
-      <p>Section content will be added in the next step.</p>
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>PHP Developer</h3>
+          <p class="experience-entry__meta">
+            <span>Russian Express — tour operator</span>
+            <a href="https://r-express.ru" target="_blank" rel="noopener noreferrer nofollow">r-express.ru</a>
+          </p>
+          <p class="experience-entry__period">November 2024 — March 2026</p>
+        </header>
+        <p>Contributed to the development and maintenance of a B2B travel booking system for agencies and partners. Worked as part of a cross-functional product team including backend developers, an analyst, and a project manager.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Technologies:</p>
+          <ul class="technology-list">
+            <li>PHP 8</li>
+            <li>Laravel</li>
+            <li>MariaDB</li>
+            <li>Redis</li>
+            <li>Docker</li>
+            <li>Elasticsearch</li>
+            <li>GitLab</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <p><strong>Responsibilities and achievements:</strong></p>
+        <ul class="experience-entry__list">
+          <li>Contributed to expanding the booking system functionality for new sales markets and B2B partners.</li>
+          <li>Improved integrations with ERP/1C and internal services.</li>
+          <li>Refactored part of the API interactions from a polling model to a push model to reduce the number of requests to the 1C server.</li>
+          <li>Extended the refund and payment transfer mechanism between orders.</li>
+          <li>Optimized Elasticsearch usage: improved search logic and contributed to splitting a shared index with 15+ million documents into separate indexes by section.</li>
+          <li>Participated in the gradual separation of a monolithic legacy application into internal and external packages.</li>
+        </ul>
+      </article>
+
+      <hr class="experience-divider" />
+
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>Software Developer</h3>
+          <p class="experience-entry__meta">
+            <span>WONE IT — development and maintenance of corporate solutions</span>
+            <a href="https://wone-it.ru" target="_blank" rel="noopener noreferrer nofollow">wone-it.ru</a>
+          </p>
+          <p class="experience-entry__period">July 2023 — August 2024</p>
+        </header>
+        <p>Contributed to the maintenance and development of internal accounting systems and external platforms. Implemented customer-requested changes, fixed bugs, and supported existing projects.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Technologies:</p>
+          <ul class="technology-list">
+            <li>PHP 8</li>
+            <li>MariaDB</li>
+            <li>PostgreSQL</li>
+            <li>Git</li>
+            <li>GitLab</li>
+            <li>Gitea</li>
+            <li>JavaScript</li>
+            <li>Zabbix</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <p><strong>Responsibilities and achievements:</strong></p>
+        <ul class="experience-entry__list">
+          <li>Developed new features for an employee absence tracking system.</li>
+          <li>Maintained and improved the «Total Dictation» project.</li>
+          <li>Configured Zabbix and monitoring integrations with web applications.</li>
+          <li>Communicated with customers to clarify requirements, approve changes, and verify results.</li>
+          <li>Improved business logic and supported legacy projects.</li>
+        </ul>
+      </article>
+
+      <hr class="experience-divider" />
+
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>Software Engineer</h3>
+          <p class="experience-entry__meta">
+            <span>Programmny Produkt — IT solutions development</span>
+            <a href="https://ppr.ru" target="_blank" rel="noopener noreferrer nofollow">ppr.ru</a>
+          </p>
+          <p class="experience-entry__period">July 2020 — June 2023</p>
+        </header>
+        <p>Developed and maintained web applications for major Moscow IT projects, including KOS portals, Mayor’s Grants, Immortal Regiment, Public Chamber, and others. Worked in a team of 15 specialists, including backend and frontend developers, analysts, and managers.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Technologies:</p>
+          <ul class="technology-list">
+            <li>PHP 7/8</li>
+            <li>Symfony</li>
+            <li>WordPress</li>
+            <li>MariaDB</li>
+            <li>PostgreSQL</li>
+            <li>JavaScript</li>
+            <li>Sphinx</li>
+            <li>GitLab</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <p><strong>Responsibilities and achievements:</strong></p>
+        <ul class="experience-entry__list">
+          <li>Integrated Symfony and WordPress projects with external APIs, including Dadata.</li>
+          <li>Developed a Symfony bundle for sitemap generation with flexible configuration.</li>
+          <li>Created an intermediate layer between Sphinx and the application for advanced search.</li>
+          <li>Developed and refactored business logic according to customer requirements.</li>
+          <li>Maintained and improved legacy projects.</li>
+          <li>Extended WordPress functionality without using third-party plugins.</li>
+        </ul>
+      </article>
     </div>
   </section>
 
