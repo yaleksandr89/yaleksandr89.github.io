@@ -7,14 +7,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Портфолио"
   description="Персональный сайт."
 >
-  <span slot="profile-label">Профиль</span>
-  <span slot="profile-summary">Временный контент</span>
+  <img
+    slot="profile-photo"
+    src="/image/yaleksandr89.jpg"
+    alt="Портрет Александра Юрченко"
+  />
+  <span slot="profile-name">Александр Юрченко</span>
+  <span slot="profile-role">PHP Backend-разработчик</span>
+  <div slot="language-switcher">
+    <span>RU</span> / <a href="/en/">EN</a>
+  </div>
+
+  <div slot="sidebar-content">
+    <section class="sidebar-section">
+      <h2>Контакты</h2>
+      <div class="sidebar-section__body">
+        <address>
+          <ul class="link-list">
+            <li><a href="https://t.me/yaleksandr89">Telegram</a></li>
+            <li><a href="https://github.com/yaleksandr89">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/yaleksandr89">LinkedIn</a></li>
+          </ul>
+        </address>
+      </div>
+    </section>
+
+    <section class="sidebar-section">
+      <h2>Образование</h2>
+      <div class="sidebar-section__body">
+        <p>Содержимое раздела будет добавлено следующим шагом.</p>
+      </div>
+    </section>
+
+    <section class="sidebar-section">
+      <h2>Курсы</h2>
+      <div class="sidebar-section__body">
+        <p>Содержимое раздела будет добавлено следующим шагом.</p>
+      </div>
+    </section>
+  </div>
 
   <section class="content-section">
-    <h1>Основная область</h1>
-    <section class="content-section__body">
-      <h2>Временный контент</h2>
-      <p>Этот раздел используется для настройки базовой структуры страницы.</p>
-    </section>
+    <h2>Общие сведения</h2>
+    <div class="content-section__body">
+      <p>PHP Backend-разработчик с более чем 5 годами коммерческого опыта в разработке и сопровождении веб-приложений. Специализация — PHP, Laravel и Symfony, интеграции с внешними сервисами, работа с API и развитие legacy-проектов.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Опыт работы</h2>
+    <div class="content-section__body">
+      <p>Содержимое раздела будет добавлено следующим шагом.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Навыки</h2>
+    <div class="content-section__body">
+      <p>Содержимое раздела будет добавлено следующим шагом.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Проекты</h2>
+    <div class="content-section__body">
+      <p>Содержимое раздела будет добавлено следующим шагом.</p>
+    </div>
   </section>
 </BaseLayout>

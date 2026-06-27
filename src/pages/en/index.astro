@@ -7,14 +7,71 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   title="Portfolio"
   description="Personal website."
 >
-  <span slot="profile-label">Profile</span>
-  <span slot="profile-summary">Temporary content</span>
+  <img
+    slot="profile-photo"
+    src="/image/yaleksandr89.jpg"
+    alt="Portrait of Alexander Yurchenko"
+  />
+  <span slot="profile-name">Alexander Yurchenko</span>
+  <span slot="profile-role">PHP Backend Developer</span>
+  <div slot="language-switcher">
+    <a href="/">RU</a> / <span>EN</span>
+  </div>
+
+  <div slot="sidebar-content">
+    <section class="sidebar-section">
+      <h2>Contacts</h2>
+      <div class="sidebar-section__body">
+        <address>
+          <ul class="link-list">
+            <li><a href="https://t.me/yaleksandr89">Telegram</a></li>
+            <li><a href="https://github.com/yaleksandr89">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/yaleksandr89">LinkedIn</a></li>
+          </ul>
+        </address>
+      </div>
+    </section>
+
+    <section class="sidebar-section">
+      <h2>Education</h2>
+      <div class="sidebar-section__body">
+        <p>Section content will be added in the next step.</p>
+      </div>
+    </section>
+
+    <section class="sidebar-section">
+      <h2>Courses</h2>
+      <div class="sidebar-section__body">
+        <p>Section content will be added in the next step.</p>
+      </div>
+    </section>
+  </div>
 
   <section class="content-section">
-    <h1>Main content</h1>
-    <section class="content-section__body">
-      <h2>Temporary content</h2>
-      <p>This section is used to establish the base page structure.</p>
-    </section>
+    <h2>Professional Summary</h2>
+    <div class="content-section__body">
+      <p>PHP Backend Developer with over 5 years of commercial experience in web application development and maintenance. Main focus areas include PHP, Laravel and Symfony, third-party integrations, API development, and legacy project improvement.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Work Experience</h2>
+    <div class="content-section__body">
+      <p>Section content will be added in the next step.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Technical Skills</h2>
+    <div class="content-section__body">
+      <p>Section content will be added in the next step.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Projects</h2>
+    <div class="content-section__body">
+      <p>Section content will be added in the next step.</p>
+    </div>
   </section>
 </BaseLayout>

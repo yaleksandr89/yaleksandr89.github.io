@@ -10,6 +10,11 @@ interface Props {
 const { lang, title, description } = Astro.props;
 const skipLinkText =
   lang === 'ru' ? 'Перейти к основному содержимому' : 'Skip to main content';
+const hasSidebar =
+  Astro.slots.has('profile-photo') || Astro.slots.has('sidebar-content');
+const hasLanguageSwitcher = Astro.slots.has('language-switcher');
+const hasProfileHeader =
+  Astro.slots.has('profile-name') || Astro.slots.has('profile-role');
 ---
 
 <!doctype html>
@@ -22,15 +27,54 @@ const skipLinkText =
   </head>
   <body>
     <a class="skip-link" href="#main-content">{skipLinkText}</a>
-    <div class="site-shell">
-      <aside class="identity-panel">
-        <header class="identity-panel__inner">
-          <p class="identity-panel__eyebrow"><slot name="profile-label" /></p>
-          <div class="identity-panel__rule"></div>
-          <p class="identity-panel__text"><slot name="profile-summary" /></p>
-        </header>
-      </aside>
+    <div
+      class:list={[
+        'site-shell',
+        hasSidebar && 'site-shell--with-sidebar',
+        !hasSidebar && 'site-shell--single',
+        hasLanguageSwitcher && 'site-shell--has-language',
+      ]}
+    >
+      {
+        hasLanguageSwitcher && (
+          <div class="language-switcher">
+            <slot name="language-switcher" />
+          </div>
+        )
+      }
+      {
+        hasSidebar && (
+          <aside class="identity-panel">
+            {Astro.slots.has('profile-photo') && (
+              <div class="identity-panel__photo">
+                <slot name="profile-photo" />
+              </div>
+            )}
+            {Astro.slots.has('sidebar-content') && (
+              <div class="identity-panel__content">
+                <slot name="sidebar-content" />
+              </div>
+            )}
+          </aside>
+        )
+      }
       <main id="main-content" class="content-area" tabindex="-1">
+        {
+          hasProfileHeader && (
+            <header class="profile-header">
+              {Astro.slots.has('profile-name') && (
+                <h1 class="profile-header__name">
+                  <slot name="profile-name" />
+                </h1>
+              )}
+              {Astro.slots.has('profile-role') && (
+                <p class="profile-header__role">
+                  <slot name="profile-role" />
+                </p>
+              )}
+            </header>
+          )
+        }
         <slot />
       </main>
     </div>
