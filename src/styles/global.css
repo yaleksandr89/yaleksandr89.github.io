@@ -62,6 +62,39 @@ a:hover {
   text-decoration-thickness: 0.14em;
 }
 
+.text-link {
+  text-decoration: none;
+}
+
+.text-link__label {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background:
+    linear-gradient(var(--color-accent), var(--color-accent)) 0 100% / 100% 0.1em no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) 0 100% / 0 100% no-repeat;
+  transition:
+    background-size 240ms ease,
+    color 240ms ease;
+}
+
+.text-link:focus-visible .text-link__label {
+  background-size: 100% 0.1em, 100% 100%;
+  color: var(--color-text);
+}
+
+@media (hover: hover) {
+  .text-link:hover .text-link__label {
+    background-size: 100% 0.1em, 100% 100%;
+    color: var(--color-text);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-link__label {
+    transition-duration: 1ms;
+  }
+}
+
 :focus-visible {
   outline: 0.1875rem solid var(--color-focus);
   outline-offset: 0.1875rem;
@@ -187,22 +220,63 @@ p {
 }
 
 .language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   justify-self: end;
   font-size: var(--font-size-step-0);
   font-weight: 700;
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
 .site-shell--with-sidebar > .language-switcher {
   grid-area: language;
   justify-self: stretch;
+  justify-content: flex-end;
   width: auto;
   margin: var(--space-8) var(--space-7) 0;
   text-align: end;
 }
 
-.language-switcher span {
+.sidebar-icon {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-accent);
+}
+
+.language-switcher__icon {
+  color: var(--color-focus);
+}
+
+.language-switcher__control {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(2.4rem, 1fr));
+  border: 1px solid #d8d4ca;
+  background: #edeae2;
+}
+
+.language-switcher__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.75rem;
+  padding: 0 var(--space-2);
+  color: var(--color-text-muted);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.language-switcher__item[aria-current="page"] {
   color: var(--color-text);
+  background: var(--color-accent);
+}
+
+.language-switcher__item[href]:hover,
+.language-switcher__item[href]:focus-visible {
+  color: var(--color-text);
+  background: #fff2c2;
+  text-decoration: none;
 }
 
 .profile-header__name {
@@ -310,30 +384,64 @@ address {
 }
 
 .contact-list {
-  gap: var(--space-5);
+  gap: var(--space-3);
 }
 
-.contact-list li {
+.contact-list__item {
   display: grid;
-  gap: var(--space-1);
+  grid-template-columns: 1rem minmax(0, 1fr);
+  gap: var(--space-2);
+  align-items: center;
 }
 
-.contact-list li > :first-child {
-  font-weight: 700;
-  color: var(--color-text-inverse);
+.contact-list__value {
+  min-width: 0;
 }
 
-.contact-list a {
+.contact-list a,
+.contact-list__value {
   overflow-wrap: anywhere;
+}
+
+.contact-list__icon {
+  margin-block-start: 0;
+}
+
+.contact-list__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 0;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 0.5625rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sidebar-divider {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: var(--space-2);
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background:
+    linear-gradient(to right, var(--color-accent), var(--color-accent)) 0 0 / 2.5rem 1px no-repeat,
+    linear-gradient(to right, var(--color-graphite-soft), var(--color-graphite-soft)) 0 0 / 100% 1px no-repeat;
 }
 
 .cv-download {
   display: grid;
   gap: var(--space-3);
-  margin-top: var(--space-5);
+  padding-block: var(--space-1);
 }
 
 .cv-download__title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   margin: 0;
   color: var(--color-text-inverse);
   font-size: 1rem;
@@ -341,52 +449,87 @@ address {
 }
 
 .cv-download__option {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--color-text-inverse-muted);
+  color: #d9d7cf;
   cursor: pointer;
   line-height: 1.45;
 }
 
-.cv-download__option input {
-  flex: 0 0 auto;
-  width: 1rem;
-  height: 1rem;
+.cv-download__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
   margin: 0;
-  accent-color: var(--color-accent);
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.cv-download__checkbox-control {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  border: 1px solid #b9b7af;
+  background: var(--color-graphite);
+  color: var(--color-text);
+}
+
+.cv-download__checkbox:checked + .cv-download__checkbox-control {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
+.cv-download__checkbox:focus-visible + .cv-download__checkbox-control {
+  outline: 0.1875rem solid var(--color-focus);
+  outline-offset: 0.1875rem;
+}
+
+.cv-download__checkbox-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  opacity: 0;
+}
+
+.cv-download__checkbox:checked + .cv-download__checkbox-control .cv-download__checkbox-icon {
+  opacity: 1;
+}
+
+.cv-download__option,
+.cv-download__checkbox-control {
   cursor: pointer;
 }
 
 .cv-download__link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: var(--space-2);
-  width: fit-content;
-  padding: 0.45rem var(--space-3);
-  border: 1px solid var(--color-accent);
-  background: transparent;
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  border-inline-start: 0.1875rem solid var(--color-accent);
+  background: var(--color-graphite-soft);
   color: var(--color-text-inverse);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.35;
   text-decoration: none;
 }
 
-.identity-panel .cv-download__link {
+.cv-download__link:hover,
+.cv-download__link:focus-visible {
+  background: #3f4448;
   color: var(--color-text-inverse);
-  text-decoration-color: var(--color-accent);
+  text-decoration: none;
 }
 
 .cv-download__icon {
-  flex: 0 0 auto;
-  width: 1rem;
-  height: 1rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2;
+  color: var(--color-accent);
 }
 
 .identity-panel a {

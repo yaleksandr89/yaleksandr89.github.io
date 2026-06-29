@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
   lang: string;
@@ -10,6 +11,8 @@ interface Props {
 const { lang, title, description } = Astro.props;
 const skipLinkText =
   lang === 'ru' ? 'Перейти к основному содержимому' : 'Skip to main content';
+const languageSwitcherLabel =
+  lang === 'ru' ? 'Выбор языка' : 'Language selection';
 const hasSidebar =
   Astro.slots.has('profile-photo') || Astro.slots.has('sidebar-content');
 const hasLanguageSwitcher = Astro.slots.has('language-switcher');
@@ -37,9 +40,14 @@ const hasProfileHeader =
     >
       {
         hasLanguageSwitcher && (
-          <div class="language-switcher">
+          <nav class="language-switcher" aria-label={languageSwitcherLabel}>
+            <Icon
+              class="sidebar-icon language-switcher__icon"
+              name="mdi:translate"
+              aria-hidden="true"
+            />
             <slot name="language-switcher" />
-          </div>
+          </nav>
         )
       }
       {

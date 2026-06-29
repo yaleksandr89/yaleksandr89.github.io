@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <BaseLayout
@@ -14,48 +15,84 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   />
   <span slot="profile-name">Александр Юрченко</span>
   <span slot="profile-role">PHP Backend-разработчик</span>
-  <div slot="language-switcher">
-    <span>RU</span> / <a href="/en/">EN</a>
+  <div class="language-switcher__control" slot="language-switcher">
+    <span class="language-switcher__item" aria-current="page">RU</span>
+    <a class="language-switcher__item" href="/en/">EN</a>
   </div>
 
   <div slot="sidebar-content">
+    <section class="cv-download" aria-labelledby="cv-title-ru">
+      <hr class="sidebar-divider" />
+      <h3 class="cv-download__title" id="cv-title-ru">
+        <Icon class="sidebar-icon cv-download__title-icon" name="mdi:file-document-outline" aria-hidden="true" />
+        <span>Резюме (PDF)</span>
+      </h3>
+      <label class="cv-download__option" for="cv-phone-ru">
+        <input class="cv-download__checkbox" id="cv-phone-ru" type="checkbox" data-cv-toggle />
+        <span class="cv-download__checkbox-control" aria-hidden="true">
+          <Icon class="cv-download__checkbox-icon" name="mdi:check" aria-hidden="true" />
+        </span>
+        <span>Добавить телефон в контакты</span>
+      </label>
+      <a
+        class="cv-download__link"
+        href="/cv/cv_yurchenko_a_a_rus_2026_without_phone.pdf"
+        download="cv_yurchenko_a_a_rus_2026_without_phone.pdf"
+        data-cv-link
+        data-cv-with-phone-href="/cv/cv_yurchenko_a_a_rus_2026.pdf"
+        data-cv-with-phone-download="cv_yurchenko_a_a_rus_2026.pdf"
+        data-cv-with-phone-text="Скачать резюме с телефоном (PDF)"
+        data-cv-without-phone-href="/cv/cv_yurchenko_a_a_rus_2026_without_phone.pdf"
+        data-cv-without-phone-download="cv_yurchenko_a_a_rus_2026_without_phone.pdf"
+        data-cv-without-phone-text="Скачать резюме без телефона (PDF)"
+      >
+        <Icon class="sidebar-icon cv-download__icon" name="mdi:download" aria-hidden="true" />
+        <span data-cv-link-text>Скачать резюме без телефона (PDF)</span>
+      </a>
+      <hr class="sidebar-divider" />
+    </section>
+
     <section class="sidebar-section">
       <h2>Контакты</h2>
       <div class="sidebar-section__body">
         <address>
           <ul class="contact-list">
-            <li><span>Адрес:</span> <span>Россия, Санкт-Петербург</span></li>
-            <li><span>Телеграм:</span> <a href="https://t.me/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://t.me/yaleksandr89</a></li>
-            <li><span>Эл. почта:</span> <a href="mailto:y.aleksandr89@yandex.ru">y.aleksandr89@yandex.ru</a></li>
-            <li><span>HH.ru:</span> <a href="https://spb.hh.ru/resume/b2eaac8aff097cfcdc0039ed1f45507a725a36" target="_blank" rel="noopener noreferrer nofollow">Резюме на hh.ru</a></li>
-            <li><span>ВКонтакте:</span> <a href="https://vk.me/y.aleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://vk.me/y.aleksandr89</a></li>
-            <li><span>GitHub:</span> <a href="https://github.com/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://github.com/yaleksandr89</a></li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="mdi:map-marker" aria-hidden="true" />
+              <span class="contact-list__value">Россия, Санкт-Петербург</span>
+            </li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="fa6-brands:telegram" aria-hidden="true" />
+              <span class="contact-list__value">
+                <a class="text-link" href="https://t.me/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://t.me/yaleksandr89</span></a>
+              </span>
+            </li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="mdi:email-outline" aria-hidden="true" />
+              <span class="contact-list__value">
+                <a class="text-link" href="mailto:y.aleksandr89@yandex.ru"><span class="text-link__label">y.aleksandr89@yandex.ru</span></a>
+              </span>
+            </li>
+            <li class="contact-list__item">
+              <span class="sidebar-icon contact-list__badge" aria-hidden="true">HH</span>
+              <span class="contact-list__value">
+                <a class="text-link" href="https://spb.hh.ru/resume/b2eaac8aff097cfcdc0039ed1f45507a725a36" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">Резюме на hh.ru</span></a>
+              </span>
+            </li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="fa6-brands:vk" aria-hidden="true" />
+              <span class="contact-list__value">
+                <a class="text-link" href="https://vk.me/y.aleksandr89" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://vk.me/y.aleksandr89</span></a>
+              </span>
+            </li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="fa6-brands:github" aria-hidden="true" />
+              <span class="contact-list__value">
+                <a class="text-link" href="https://github.com/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://github.com/yaleksandr89</span></a>
+              </span>
+            </li>
           </ul>
         </address>
-        <div class="cv-download">
-          <h3 class="cv-download__title">Резюме (PDF)</h3>
-          <label class="cv-download__option" for="cv-phone-ru">
-            <input id="cv-phone-ru" type="checkbox" data-cv-toggle />
-            <span>Добавить телефон в контакты</span>
-          </label>
-          <a
-            class="cv-download__link"
-            href="/cv/cv_yurchenko_a_a_rus_2026_without_phone.pdf"
-            download="cv_yurchenko_a_a_rus_2026_without_phone.pdf"
-            data-cv-link
-            data-cv-with-phone-href="/cv/cv_yurchenko_a_a_rus_2026.pdf"
-            data-cv-with-phone-download="cv_yurchenko_a_a_rus_2026.pdf"
-            data-cv-with-phone-text="Скачать резюме с телефоном (PDF)"
-            data-cv-without-phone-href="/cv/cv_yurchenko_a_a_rus_2026_without_phone.pdf"
-            data-cv-without-phone-download="cv_yurchenko_a_a_rus_2026_without_phone.pdf"
-            data-cv-without-phone-text="Скачать резюме без телефона (PDF)"
-          >
-            <svg class="cv-download__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" />
-            </svg>
-            <span data-cv-link-text>Скачать резюме без телефона (PDF)</span>
-          </a>
-        </div>
       </div>
     </section>
 
@@ -64,7 +101,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="sidebar-section__body">
         <article class="sidebar-entry">
           <h3>Северный (Арктический) федеральный университет имени М.В. Ломоносова</h3>
-          <a href="https://narfu.ru" target="_blank" rel="noopener noreferrer nofollow">https://narfu.ru</a>
+          <a class="text-link" href="https://narfu.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://narfu.ru</span></a>
           <p class="sidebar-entry__period">С 2011 по 2016</p>
           <p class="sidebar-entry__line">Бакалавр</p>
           <p class="sidebar-entry__line">Информационные системы и технологии</p>
@@ -80,7 +117,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <article class="sidebar-entry">
               <p class="sidebar-entry__period">Июнь 2025 – апрель 2026</p>
               <h3>Хекслет</h3>
-              <a href="https://ru.hexlet.io" target="_blank" rel="noopener noreferrer nofollow">https://ru.hexlet.io</a>
+              <a class="text-link" href="https://ru.hexlet.io" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://ru.hexlet.io</span></a>
               <p class="sidebar-entry__line">Профессия: PHP-разработчик</p>
             </article>
           </li>
@@ -88,7 +125,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <article class="sidebar-entry">
               <p class="sidebar-entry__period">Май 2025 – июнь 2025</p>
               <h3>Stepik</h3>
-              <a href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow">https://stepik.org</a>
+              <a class="text-link" href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://stepik.org</span></a>
               <p class="sidebar-entry__line">Интерактивный тренажёр по SQL</p>
             </article>
           </li>
@@ -96,7 +133,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <article class="sidebar-entry">
               <p class="sidebar-entry__period">Июнь 2025</p>
               <h3>Stepik</h3>
-              <a href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow">https://stepik.org</a>
+              <a class="text-link" href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://stepik.org</span></a>
               <p class="sidebar-entry__line">Postman для тестирования</p>
             </article>
           </li>
@@ -104,7 +141,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <article class="sidebar-entry">
               <p class="sidebar-entry__period">Февраль 2022</p>
               <h3>Udemy</h3>
-              <a href="https://udemy.com" target="_blank" rel="noopener noreferrer nofollow">https://udemy.com</a>
+              <a class="text-link" href="https://udemy.com" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://udemy.com</span></a>
               <p class="sidebar-entry__line">Symfony &amp; Vue.js</p>
             </article>
           </li>
@@ -130,7 +167,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3>PHP-разработчик</h3>
           <p class="experience-entry__meta">
             <span>Русский Экспресс — туроператор</span>
-            <a href="https://r-express.ru" target="_blank" rel="noopener noreferrer nofollow">r-express.ru</a>
+            <a class="text-link" href="https://r-express.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">r-express.ru</span></a>
           </p>
           <p class="experience-entry__period">Ноябрь 2024 — март 2026</p>
         </header>
@@ -169,7 +206,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3>Программист-разработчик</h3>
           <p class="experience-entry__meta">
             <span>WONE IT — разработка и сопровождение корпоративных решений</span>
-            <a href="https://wone-it.ru" target="_blank" rel="noopener noreferrer nofollow">wone-it.ru</a>
+            <a class="text-link" href="https://wone-it.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">wone-it.ru</span></a>
           </p>
           <p class="experience-entry__period">Июль 2023 — август 2024</p>
         </header>
@@ -208,7 +245,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3>Инженер-программист</h3>
           <p class="experience-entry__meta">
             <span>Программный Продукт — разработка IT-решений</span>
-            <a href="https://ppr.ru" target="_blank" rel="noopener noreferrer nofollow">ppr.ru</a>
+            <a class="text-link" href="https://ppr.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">ppr.ru</span></a>
           </p>
           <p class="experience-entry__period">Июль 2020 — июнь 2023</p>
         </header>
@@ -318,31 +355,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p>Участвовал в разработке и сопровождении веб-проектов для B2B, госсектора, общественных организаций и корпоративных заказчиков.</p>
       <ul class="project-list">
         <li>
-          <a href="https://renovation.opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow">https://renovation.opmoscow.ru</a>
+          <a class="text-link" href="https://renovation.opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://renovation.opmoscow.ru</span></a>
           <span>Информационный портал программы реновации</span>
         </li>
         <li>
-          <a href="https://opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow">https://opmoscow.ru</a>
+          <a class="text-link" href="https://opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://opmoscow.ru</span></a>
           <span>Портал общественной палаты города Москвы</span>
         </li>
         <li>
-          <a href="https://mosvolonter.ru" target="_blank" rel="noopener noreferrer nofollow">https://mosvolonter.ru</a>
+          <a class="text-link" href="https://mosvolonter.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://mosvolonter.ru</span></a>
           <span>Платформа городских волонтёрских проектов</span>
         </li>
         <li>
-          <a href="https://business-ombudsman.mos.ru" target="_blank" rel="noopener noreferrer nofollow">https://business-ombudsman.mos.ru</a>
+          <a class="text-link" href="https://business-ombudsman.mos.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://business-ombudsman.mos.ru</span></a>
           <span>Портал защиты прав предпринимателей</span>
         </li>
         <li>
-          <a href="https://atlasreal.at" target="_blank" rel="noopener noreferrer nofollow">https://atlasreal.at</a>
+          <a class="text-link" href="https://atlasreal.at" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://atlasreal.at</span></a>
           <span>Веб-решения в сфере недвижимости</span>
         </li>
         <li>
-          <a href="https://totaldict.ru" target="_blank" rel="noopener noreferrer nofollow">https://totaldict.ru</a>
+          <a class="text-link" href="https://totaldict.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://totaldict.ru</span></a>
           <span>Образовательный проект «Тотальный диктант»</span>
         </li>
         <li>
-          <a href="https://online-express.ru" target="_blank" rel="noopener noreferrer nofollow">https://online-express.ru</a>
+          <a class="text-link" href="https://online-express.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://online-express.ru</span></a>
           <span>Платформа бронирования туристических услуг</span>
         </li>
       </ul>
