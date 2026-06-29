@@ -155,6 +155,11 @@ p {
   padding: var(--space-6) var(--space-5) var(--space-7);
 }
 
+.identity-panel__content > div {
+  display: grid;
+  gap: var(--space-6);
+}
+
 .content-area {
   display: grid;
   align-content: start;
@@ -261,6 +266,36 @@ p {
   color: #d9d7cf;
 }
 
+.sidebar-entry {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.sidebar-entry h3 {
+  font-size: var(--font-size-step-0);
+  color: var(--color-text-inverse);
+}
+
+.sidebar-entry a {
+  overflow-wrap: anywhere;
+}
+
+.sidebar-entry__period {
+  color: var(--color-text-inverse);
+}
+
+.sidebar-entry__line {
+  color: #d9d7cf;
+}
+
+.sidebar-entry-list {
+  display: grid;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 address {
   font-style: normal;
 }
@@ -272,6 +307,10 @@ address {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.contact-list {
+  gap: var(--space-5);
 }
 
 .contact-list li {
@@ -321,9 +360,14 @@ address {
   color: var(--color-text);
 }
 
-.experience-entry__technologies {
+.experience-entry__technologies,
+.experience-entry__responsibilities {
   display: grid;
   gap: var(--space-2);
+}
+
+.experience-entry__technologies + .experience-entry__responsibilities {
+  margin-block-start: var(--space-2);
 }
 
 .experience-entry__label {
@@ -359,6 +403,48 @@ address {
 
 .experience-entry__list li::marker {
   color: var(--color-accent);
+}
+
+.skills-list {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 68ch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list > li {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.project-list {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 68ch;
+  margin: 0;
+  padding-inline-start: var(--space-5);
+  color: var(--color-text-muted);
+}
+
+.project-list li::marker {
+  color: var(--color-accent);
+}
+
+.project-list {
+  max-width: 62rem;
+  margin-block-start: var(--space-5);
+}
+
+.project-list li {
+  display: grid;
+  grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+  gap: var(--space-2) var(--space-4);
+}
+
+.project-list a {
+  overflow-wrap: anywhere;
 }
 
 .experience-divider {
@@ -442,6 +528,10 @@ address {
 
   .site-shell--with-sidebar.site-shell--has-language .content-area {
     padding-block-start: var(--space-7);
+  }
+
+  .project-list li {
+    grid-template-columns: 1fr;
   }
 }
 

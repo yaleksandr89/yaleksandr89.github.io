@@ -38,14 +38,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section class="sidebar-section">
       <h2>Образование</h2>
       <div class="sidebar-section__body">
-        <p>Содержимое раздела будет добавлено следующим шагом.</p>
+        <article class="sidebar-entry">
+          <h3>Северный (Арктический) федеральный университет имени М.В. Ломоносова</h3>
+          <a href="https://narfu.ru" target="_blank" rel="noopener noreferrer nofollow">https://narfu.ru</a>
+          <p class="sidebar-entry__period">С 2011 по 2016</p>
+          <p class="sidebar-entry__line">Бакалавр</p>
+          <p class="sidebar-entry__line">Информационные системы и технологии</p>
+        </article>
       </div>
     </section>
 
     <section class="sidebar-section">
       <h2>Курсы</h2>
       <div class="sidebar-section__body">
-        <p>Содержимое раздела будет добавлено следующим шагом.</p>
+        <ul class="sidebar-entry-list">
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">Июнь 2025 – апрель 2026</p>
+              <h3>Хекслет</h3>
+              <a href="https://ru.hexlet.io" target="_blank" rel="noopener noreferrer nofollow">https://ru.hexlet.io</a>
+              <p class="sidebar-entry__line">Профессия: PHP-разработчик</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">Май 2025 – июнь 2025</p>
+              <h3>Stepik</h3>
+              <a href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow">https://stepik.org</a>
+              <p class="sidebar-entry__line">Интерактивный тренажёр по SQL</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">Июнь 2025</p>
+              <h3>Stepik</h3>
+              <a href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow">https://stepik.org</a>
+              <p class="sidebar-entry__line">Postman для тестирования</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">Февраль 2022</p>
+              <h3>Udemy</h3>
+              <a href="https://udemy.com" target="_blank" rel="noopener noreferrer nofollow">https://udemy.com</a>
+              <p class="sidebar-entry__line">Symfony &amp; Vue.js</p>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
   </div>
@@ -86,15 +125,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <p><strong>Задачи и результаты:</strong></p>
-        <ul class="experience-entry__list">
-          <li>Участвовал в расширении функциональности системы бронирования для новых рынков сбыта и B2B-партнёров.</li>
-          <li>Дорабатывал интеграции с ERP (1С) и внутренними сервисами.</li>
-          <li>Переработал часть API-взаимодействий с polling-модели на push-модель для снижения количества запросов к серверу 1С.</li>
-          <li>Расширял механизм возвратов и переносов денежных средств между заказами.</li>
-          <li>Оптимизировал работу Elasticsearch: дорабатывал поисковую логику, участвовал в разделении общего индекса с 15+ млн документов на отдельные индексы по разделам.</li>
-          <li>Участвовал в постепенном разделении монолитного legacy-приложения на внутренние и внешние пакеты.</li>
-        </ul>
+        <div class="experience-entry__responsibilities">
+          <p class="experience-entry__label">Задачи и результаты:</p>
+          <ul class="experience-entry__list">
+            <li>Участвовал в расширении функциональности системы бронирования для новых рынков сбыта и B2B-партнёров.</li>
+            <li>Дорабатывал интеграции с ERP (1С) и внутренними сервисами.</li>
+            <li>Переработал часть API-взаимодействий с polling-модели на push-модель для снижения количества запросов к серверу 1С.</li>
+            <li>Расширял механизм возвратов и переносов денежных средств между заказами.</li>
+            <li>Оптимизировал работу Elasticsearch: дорабатывал поисковую логику, участвовал в разделении общего индекса с 15+ млн документов на отдельные индексы по разделам.</li>
+            <li>Участвовал в постепенном разделении монолитного legacy-приложения на внутренние и внешние пакеты.</li>
+          </ul>
+        </div>
       </article>
 
       <hr class="experience-divider" />
@@ -124,14 +165,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <p><strong>Задачи и результаты:</strong></p>
-        <ul class="experience-entry__list">
-          <li>Разрабатывал новые функции для системы учёта отсутствий сотрудников.</li>
-          <li>Поддерживал и дорабатывал проект «Тотальный диктант».</li>
-          <li>Настроил Zabbix и интеграции мониторинга с веб-приложениями.</li>
-          <li>Взаимодействовал с заказчиками для уточнения требований, согласования изменений и проверки результата.</li>
-          <li>Дорабатывал бизнес-логику и поддерживал legacy-проекты.</li>
-        </ul>
+        <div class="experience-entry__responsibilities">
+          <p class="experience-entry__label">Задачи и результаты:</p>
+          <ul class="experience-entry__list">
+            <li>Разрабатывал новые функции для системы учёта отсутствий сотрудников.</li>
+            <li>Поддерживал и дорабатывал проект «Тотальный диктант».</li>
+            <li>Настроил Zabbix и интеграции мониторинга с веб-приложениями.</li>
+            <li>Взаимодействовал с заказчиками для уточнения требований, согласования изменений и проверки результата.</li>
+            <li>Дорабатывал бизнес-логику и поддерживал legacy-проекты.</li>
+          </ul>
+        </div>
       </article>
 
       <hr class="experience-divider" />
@@ -161,15 +204,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <p><strong>Задачи и результаты:</strong></p>
-        <ul class="experience-entry__list">
-          <li>Интегрировал Symfony и WordPress проекты с внешними API, включая Dadata.</li>
-          <li>Разработал Symfony бандл для генерации карты сайта с гибкой конфигурацией.</li>
-          <li>Создал промежуточный слой между Sphinx и приложением для расширенного поиска.</li>
-          <li>Разрабатывал и рефакторил бизнес-логику под требования заказчиков.</li>
-          <li>Поддерживал и развивал legacy-проекты.</li>
-          <li>Расширял функциональность WordPress без использования сторонних плагинов.</li>
-        </ul>
+        <div class="experience-entry__responsibilities">
+          <p class="experience-entry__label">Задачи и результаты:</p>
+          <ul class="experience-entry__list">
+            <li>Интегрировал Symfony и WordPress проекты с внешними API, включая Dadata.</li>
+            <li>Разработал Symfony бандл для генерации карты сайта с гибкой конфигурацией.</li>
+            <li>Создал промежуточный слой между Sphinx и приложением для расширенного поиска.</li>
+            <li>Разрабатывал и рефакторил бизнес-логику под требования заказчиков.</li>
+            <li>Поддерживал и развивал legacy-проекты.</li>
+            <li>Расширял функциональность WordPress без использования сторонних плагинов.</li>
+          </ul>
+        </div>
       </article>
     </div>
   </section>
@@ -177,14 +222,106 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="content-section">
     <h2>Навыки</h2>
     <div class="content-section__body">
-      <p>Содержимое раздела будет добавлено следующим шагом.</p>
+      <ul class="skills-list">
+        <li>
+          <p class="experience-entry__label">Языки:</p>
+          <ul class="technology-list">
+            <li>PHP 7/8</li>
+            <li>JavaScript</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Фреймворки и CMS:</p>
+          <ul class="technology-list">
+            <li>Laravel</li>
+            <li>Symfony</li>
+            <li>WordPress</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Базы данных:</p>
+          <ul class="technology-list">
+            <li>PostgreSQL</li>
+            <li>MariaDB</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Поиск и кеширование:</p>
+          <ul class="technology-list">
+            <li>Elasticsearch</li>
+            <li>Sphinx</li>
+            <li>Redis</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Инфраструктура:</p>
+          <ul class="technology-list">
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>Ubuntu</li>
+            <li>Zabbix</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Инструменты:</p>
+          <ul class="technology-list">
+            <li>PhpStorm</li>
+            <li>Git</li>
+            <li>GitLab</li>
+            <li>Gitea</li>
+            <li>Postman</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Практики:</p>
+          <ul class="technology-list">
+            <li>REST API</li>
+            <li>внешние интеграции</li>
+            <li>миграции БД</li>
+            <li>Sentry/bug reports</li>
+            <li>рефакторинг legacy-кода</li>
+            <li>разработка бизнес-логики</li>
+            <li>разбор и исправление ошибок.</li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </section>
 
   <section class="content-section">
     <h2>Проекты</h2>
     <div class="content-section__body">
-      <p>Содержимое раздела будет добавлено следующим шагом.</p>
+      <p>Участвовал в разработке и сопровождении веб-проектов для B2B, госсектора, общественных организаций и корпоративных заказчиков.</p>
+      <ul class="project-list">
+        <li>
+          <a href="https://renovation.opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow">https://renovation.opmoscow.ru</a>
+          <span>Информационный портал программы реновации</span>
+        </li>
+        <li>
+          <a href="https://opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow">https://opmoscow.ru</a>
+          <span>Портал общественной палаты города Москвы</span>
+        </li>
+        <li>
+          <a href="https://mosvolonter.ru" target="_blank" rel="noopener noreferrer nofollow">https://mosvolonter.ru</a>
+          <span>Платформа городских волонтёрских проектов</span>
+        </li>
+        <li>
+          <a href="https://business-ombudsman.mos.ru" target="_blank" rel="noopener noreferrer nofollow">https://business-ombudsman.mos.ru</a>
+          <span>Портал защиты прав предпринимателей</span>
+        </li>
+        <li>
+          <a href="https://atlasreal.at" target="_blank" rel="noopener noreferrer nofollow">https://atlasreal.at</a>
+          <span>Веб-решения в сфере недвижимости</span>
+        </li>
+        <li>
+          <a href="https://totaldict.ru" target="_blank" rel="noopener noreferrer nofollow">https://totaldict.ru</a>
+          <span>Образовательный проект «Тотальный диктант»</span>
+        </li>
+        <li>
+          <a href="https://online-express.ru" target="_blank" rel="noopener noreferrer nofollow">https://online-express.ru</a>
+          <span>Платформа бронирования туристических услуг</span>
+        </li>
+      </ul>
     </div>
   </section>
 </BaseLayout>

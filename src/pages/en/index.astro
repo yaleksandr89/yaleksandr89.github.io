@@ -37,14 +37,53 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section class="sidebar-section">
       <h2>Education</h2>
       <div class="sidebar-section__body">
-        <p>Section content will be added in the next step.</p>
+        <article class="sidebar-entry">
+          <h3>Northern Arctic Federal University named after M. V. Lomonosov</h3>
+          <a href="https://narfu.ru" target="_blank" rel="noopener noreferrer nofollow">https://narfu.ru</a>
+          <p class="sidebar-entry__period">2011 - 2016</p>
+          <p class="sidebar-entry__line">Bachelor’s degree</p>
+          <p class="sidebar-entry__line">Information Systems and Technologies</p>
+        </article>
       </div>
     </section>
 
     <section class="sidebar-section">
       <h2>Courses</h2>
       <div class="sidebar-section__body">
-        <p>Section content will be added in the next step.</p>
+        <ul class="sidebar-entry-list">
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">June 2025 - April 2026</p>
+              <h3>Hexlet</h3>
+              <a href="https://ru.hexlet.io" target="_blank" rel="noopener noreferrer nofollow">https://ru.hexlet.io</a>
+              <p class="sidebar-entry__line">PHP Developer Profession</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">May 2025 - June 2025</p>
+              <h3>Stepik</h3>
+              <a href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow">https://stepik.org</a>
+              <p class="sidebar-entry__line">Interactive SQL Trainer</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">June 2025</p>
+              <h3>Stepik</h3>
+              <a href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow">https://stepik.org</a>
+              <p class="sidebar-entry__line">Postman for Testing</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">February 2022</p>
+              <h3>Udemy</h3>
+              <a href="https://udemy.com" target="_blank" rel="noopener noreferrer nofollow">https://udemy.com</a>
+              <p class="sidebar-entry__line">Symfony &amp; Vue.js</p>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
   </div>
@@ -85,15 +124,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <p><strong>Responsibilities and achievements:</strong></p>
-        <ul class="experience-entry__list">
-          <li>Contributed to expanding the booking system functionality for new sales markets and B2B partners.</li>
-          <li>Improved integrations with ERP/1C and internal services.</li>
-          <li>Refactored part of the API interactions from a polling model to a push model to reduce the number of requests to the 1C server.</li>
-          <li>Extended the refund and payment transfer mechanism between orders.</li>
-          <li>Optimized Elasticsearch usage: improved search logic and contributed to splitting a shared index with 15+ million documents into separate indexes by section.</li>
-          <li>Participated in the gradual separation of a monolithic legacy application into internal and external packages.</li>
-        </ul>
+        <div class="experience-entry__responsibilities">
+          <p class="experience-entry__label">Responsibilities and achievements:</p>
+          <ul class="experience-entry__list">
+            <li>Contributed to expanding the booking system functionality for new sales markets and B2B partners.</li>
+            <li>Improved integrations with ERP/1C and internal services.</li>
+            <li>Refactored part of the API interactions from a polling model to a push model to reduce the number of requests to the 1C server.</li>
+            <li>Extended the refund and payment transfer mechanism between orders.</li>
+            <li>Optimized Elasticsearch usage: improved search logic and contributed to splitting a shared index with 15+ million documents into separate indexes by section.</li>
+            <li>Participated in the gradual separation of a monolithic legacy application into internal and external packages.</li>
+          </ul>
+        </div>
       </article>
 
       <hr class="experience-divider" />
@@ -123,14 +164,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <p><strong>Responsibilities and achievements:</strong></p>
-        <ul class="experience-entry__list">
-          <li>Developed new features for an employee absence tracking system.</li>
-          <li>Maintained and improved the «Total Dictation» project.</li>
-          <li>Configured Zabbix and monitoring integrations with web applications.</li>
-          <li>Communicated with customers to clarify requirements, approve changes, and verify results.</li>
-          <li>Improved business logic and supported legacy projects.</li>
-        </ul>
+        <div class="experience-entry__responsibilities">
+          <p class="experience-entry__label">Responsibilities and achievements:</p>
+          <ul class="experience-entry__list">
+            <li>Developed new features for an employee absence tracking system.</li>
+            <li>Maintained and improved the «Total Dictation» project.</li>
+            <li>Configured Zabbix and monitoring integrations with web applications.</li>
+            <li>Communicated with customers to clarify requirements, approve changes, and verify results.</li>
+            <li>Improved business logic and supported legacy projects.</li>
+          </ul>
+        </div>
       </article>
 
       <hr class="experience-divider" />
@@ -160,15 +203,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <p><strong>Responsibilities and achievements:</strong></p>
-        <ul class="experience-entry__list">
-          <li>Integrated Symfony and WordPress projects with external APIs, including Dadata.</li>
-          <li>Developed a Symfony bundle for sitemap generation with flexible configuration.</li>
-          <li>Created an intermediate layer between Sphinx and the application for advanced search.</li>
-          <li>Developed and refactored business logic according to customer requirements.</li>
-          <li>Maintained and improved legacy projects.</li>
-          <li>Extended WordPress functionality without using third-party plugins.</li>
-        </ul>
+        <div class="experience-entry__responsibilities">
+          <p class="experience-entry__label">Responsibilities and achievements:</p>
+          <ul class="experience-entry__list">
+            <li>Integrated Symfony and WordPress projects with external APIs, including Dadata.</li>
+            <li>Developed a Symfony bundle for sitemap generation with flexible configuration.</li>
+            <li>Created an intermediate layer between Sphinx and the application for advanced search.</li>
+            <li>Developed and refactored business logic according to customer requirements.</li>
+            <li>Maintained and improved legacy projects.</li>
+            <li>Extended WordPress functionality without using third-party plugins.</li>
+          </ul>
+        </div>
       </article>
     </div>
   </section>
@@ -176,14 +221,106 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="content-section">
     <h2>Technical Skills</h2>
     <div class="content-section__body">
-      <p>Section content will be added in the next step.</p>
+      <ul class="skills-list">
+        <li>
+          <p class="experience-entry__label">Languages:</p>
+          <ul class="technology-list">
+            <li>PHP 7/8</li>
+            <li>JavaScript</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Frameworks and CMS:</p>
+          <ul class="technology-list">
+            <li>Laravel</li>
+            <li>Symfony</li>
+            <li>WordPress</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Databases:</p>
+          <ul class="technology-list">
+            <li>PostgreSQL</li>
+            <li>MariaDB</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Search and caching:</p>
+          <ul class="technology-list">
+            <li>Elasticsearch</li>
+            <li>Sphinx</li>
+            <li>Redis</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Infrastructure:</p>
+          <ul class="technology-list">
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>Ubuntu</li>
+            <li>Zabbix</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Tools:</p>
+          <ul class="technology-list">
+            <li>PhpStorm</li>
+            <li>Git</li>
+            <li>GitLab</li>
+            <li>Gitea</li>
+            <li>Postman</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Practices:</p>
+          <ul class="technology-list">
+            <li>REST API</li>
+            <li>third-party integrations</li>
+            <li>database migrations</li>
+            <li>Sentry/bug reports</li>
+            <li>legacy code refactoring</li>
+            <li>business logic development</li>
+            <li>troubleshooting and bug fixing.</li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </section>
 
   <section class="content-section">
     <h2>Projects</h2>
     <div class="content-section__body">
-      <p>Section content will be added in the next step.</p>
+      <p>Contributed to the development and maintenance of web projects for B2B, public sector, non-profit organizations, and corporate clients.</p>
+      <ul class="project-list">
+        <li>
+          <a href="https://renovation.opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow">https://renovation.opmoscow.ru</a>
+          <span>Public program information portal</span>
+        </li>
+        <li>
+          <a href="https://opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow">https://opmoscow.ru</a>
+          <span>Public Chamber of Moscow portal</span>
+        </li>
+        <li>
+          <a href="https://mosvolonter.ru" target="_blank" rel="noopener noreferrer nofollow">https://mosvolonter.ru</a>
+          <span>City volunteer projects platform</span>
+        </li>
+        <li>
+          <a href="https://business-ombudsman.mos.ru" target="_blank" rel="noopener noreferrer nofollow">https://business-ombudsman.mos.ru</a>
+          <span>Entrepreneurs’ rights protection portal</span>
+        </li>
+        <li>
+          <a href="https://atlasreal.at" target="_blank" rel="noopener noreferrer nofollow">https://atlasreal.at</a>
+          <span>Real estate web solutions</span>
+        </li>
+        <li>
+          <a href="https://totaldict.ru" target="_blank" rel="noopener noreferrer nofollow">https://totaldict.ru</a>
+          <span>Educational project «Total Dictation»</span>
+        </li>
+        <li>
+          <a href="https://online-express.ru" target="_blank" rel="noopener noreferrer nofollow">https://online-express.ru</a>
+          <span>Travel booking platform</span>
+        </li>
+      </ul>
     </div>
   </section>
 </BaseLayout>
