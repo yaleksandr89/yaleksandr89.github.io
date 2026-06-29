@@ -31,6 +31,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <li><span>GitHub:</span> <a href="https://github.com/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow">https://github.com/yaleksandr89</a></li>
           </ul>
         </address>
+        <div class="cv-download">
+          <h3 class="cv-download__title">CV (PDF)</h3>
+          <label class="cv-download__option" for="cv-phone-en">
+            <input id="cv-phone-en" type="checkbox" data-cv-toggle />
+            <span>Include phone number in contacts</span>
+          </label>
+          <a
+            class="cv-download__link"
+            href="/cv/cv_yurchenko_a_a_en_2026_without_phone.pdf"
+            download="cv_yurchenko_a_a_en_2026_without_phone.pdf"
+            data-cv-link
+            data-cv-with-phone-href="/cv/cv_yurchenko_a_a_en_2026.pdf"
+            data-cv-with-phone-download="cv_yurchenko_a_a_en_2026.pdf"
+            data-cv-with-phone-text="Download CV with phone number (PDF)"
+            data-cv-without-phone-href="/cv/cv_yurchenko_a_a_en_2026_without_phone.pdf"
+            data-cv-without-phone-download="cv_yurchenko_a_a_en_2026_without_phone.pdf"
+            data-cv-without-phone-text="Download CV without phone (PDF)"
+          >
+            <svg class="cv-download__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" />
+            </svg>
+            <span data-cv-link-text>Download CV without phone (PDF)</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -323,4 +347,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </ul>
     </div>
   </section>
+
+  <script>
+    const cvToggle = document.querySelector('[data-cv-toggle]');
+    const cvLink = document.querySelector('[data-cv-link]');
+    const cvLinkText = document.querySelector('[data-cv-link-text]');
+
+    if (
+      cvToggle instanceof HTMLInputElement
+      && cvLink instanceof HTMLAnchorElement
+      && cvLinkText instanceof HTMLSpanElement
+    ) {
+      cvToggle.addEventListener('change', () => {
+        const href = cvToggle.checked
+          ? cvLink.dataset.cvWithPhoneHref
+          : cvLink.dataset.cvWithoutPhoneHref;
+        const filename = cvToggle.checked
+          ? cvLink.dataset.cvWithPhoneDownload
+          : cvLink.dataset.cvWithoutPhoneDownload;
+        const text = cvToggle.checked
+          ? cvLink.dataset.cvWithPhoneText
+          : cvLink.dataset.cvWithoutPhoneText;
+
+        if (!href || !filename || !text) {
+          return;
+        }
+
+        cvLink.href = href;
+        cvLink.download = filename;
+        cvLinkText.textContent = text;
+      });
+    }
+  </script>
 </BaseLayout>

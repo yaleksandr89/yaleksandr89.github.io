@@ -327,6 +327,68 @@ address {
   overflow-wrap: anywhere;
 }
 
+.cv-download {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.cv-download__title {
+  margin: 0;
+  color: var(--color-text-inverse);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.cv-download__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-inverse-muted);
+  cursor: pointer;
+  line-height: 1.45;
+}
+
+.cv-download__option input {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.cv-download__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: fit-content;
+  padding: 0.45rem var(--space-3);
+  border: 1px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-text-inverse);
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.identity-panel .cv-download__link {
+  color: var(--color-text-inverse);
+  text-decoration-color: var(--color-accent);
+}
+
+.cv-download__icon {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
 .identity-panel a {
   color: #fff2c2;
   text-decoration-color: var(--color-accent);
