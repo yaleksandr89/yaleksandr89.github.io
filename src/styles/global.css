@@ -296,6 +296,75 @@ p {
   color: var(--color-text-muted);
 }
 
+.not-found-page {
+  display: grid;
+  justify-self: center;
+  gap: var(--space-5);
+  width: 100%;
+  max-width: 68rem;
+}
+
+.not-found-page__language {
+  justify-self: end;
+}
+
+.not-found {
+  display: grid;
+  grid-template-areas: "rail content";
+  grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  width: 100%;
+  min-height: 28rem;
+}
+
+.not-found__rail {
+  display: grid;
+  grid-area: rail;
+  place-items: center;
+  min-width: 0;
+  padding: var(--space-6);
+  background: var(--color-graphite);
+}
+
+.not-found__code {
+  max-width: none;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  color: var(--color-accent);
+}
+
+.not-found__title {
+  max-width: 18ch;
+  font-size: var(--font-size-step-3);
+}
+
+.not-found__content {
+  display: grid;
+  grid-area: content;
+  align-content: center;
+  justify-items: start;
+  gap: var(--space-4);
+  min-width: 0;
+  padding: var(--space-7);
+  background: var(--color-surface);
+}
+
+.not-found__copy {
+  max-width: 40ch;
+}
+
+.not-found__actions {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+}
+
+.not-found__action {
+  font-weight: 700;
+}
+
 .content-section {
   width: 100%;
 }
@@ -848,6 +917,43 @@ address {
 
   .site-shell--with-sidebar.site-shell--has-language .content-area {
     padding-block-start: var(--space-7);
+  }
+
+  .not-found-page {
+    gap: var(--space-5);
+    max-width: none;
+  }
+
+  .not-found-page__language {
+    justify-self: center;
+  }
+
+  .not-found {
+    grid-template-areas:
+      "rail"
+      "content";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: 0;
+  }
+
+  .not-found__rail {
+    min-height: 7rem;
+    padding: var(--space-5);
+  }
+
+  .not-found__code {
+    font-size: 3.5rem;
+  }
+
+  .not-found__content {
+    align-content: start;
+    padding: var(--space-5) 0 0;
+    background: transparent;
+  }
+
+  .not-found__title {
+    max-width: 16ch;
   }
 
   .experience-entry__responsibilities {
