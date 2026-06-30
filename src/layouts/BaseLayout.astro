@@ -7,9 +7,17 @@ interface Props {
   lang: string;
   title: string;
   description: string;
+  canonicalUrl?: string;
+  languageAlternates?: Array<{ hreflang: 'ru' | 'en' | 'x-default'; href: string }>;
 }
 
-const { lang, title, description } = Astro.props;
+const {
+  lang,
+  title,
+  description,
+  canonicalUrl,
+  languageAlternates = [],
+} = Astro.props;
 const skipLinkText =
   lang === 'ru' ? 'Перейти к основному содержимому' : 'Skip to main content';
 const languageSwitcherLabel =
@@ -28,6 +36,12 @@ const hasProfileHeader =
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    {
+      languageAlternates.map(({ hreflang, href }) => (
+        <link rel="alternate" hreflang={hreflang} href={href} />
+      ))
+    }
     <title>{title}</title>
     <ClientRouter />
   </head>
