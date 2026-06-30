@@ -7,6 +7,7 @@ interface Props {
   lang: string;
   title: string;
   description: string;
+  robotsContent?: string;
   canonicalUrl?: string;
   languageAlternates?: Array<{ hreflang: 'ru' | 'en' | 'x-default'; href: string }>;
 }
@@ -15,6 +16,7 @@ const {
   lang,
   title,
   description,
+  robotsContent,
   canonicalUrl,
   languageAlternates = [],
 } = Astro.props;
@@ -36,6 +38,7 @@ const hasProfileHeader =
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {robotsContent && <meta name="robots" content={robotsContent} />}
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     {
       languageAlternates.map(({ hreflang, href }) => (
