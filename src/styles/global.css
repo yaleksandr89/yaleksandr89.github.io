@@ -152,11 +152,13 @@ p {
 .site-shell {
   display: grid;
   grid-template-columns: minmax(18rem, var(--panel-width)) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
   min-height: 100svh;
 }
 
 .site-shell--with-sidebar {
-  grid-template-areas: "sidebar main";
+  grid-template-areas:
+    "sidebar main";
 }
 
 .site-shell--with-sidebar.site-shell--has-language {
@@ -168,10 +170,12 @@ p {
 
 .site-shell--single {
   grid-template-columns: 1fr;
+  grid-template-areas:
+    "language"
+    "main";
 }
 
 .identity-panel {
-  grid-area: sidebar;
   color: var(--color-text-inverse);
   background: var(--color-graphite);
 }
@@ -180,6 +184,10 @@ p {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.identity-panel {
+  grid-area: sidebar;
 }
 
 .identity-panel__content {
@@ -194,6 +202,7 @@ p {
 }
 
 .content-area {
+  grid-area: main;
   display: grid;
   align-content: start;
   gap: var(--space-6);
@@ -201,10 +210,6 @@ p {
   min-height: 100svh;
   padding: var(--space-8) var(--space-7);
   background: var(--color-background);
-}
-
-.site-shell--with-sidebar .content-area {
-  grid-area: main;
 }
 
 .site-shell--with-sidebar.site-shell--has-language .content-area {
@@ -216,7 +221,7 @@ p {
   display: grid;
   row-gap: var(--space-5);
   width: 100%;
-  padding-block: var(--space-5);
+  min-width: 0;
 }
 
 .language-switcher {
@@ -767,6 +772,7 @@ address {
   .site-shell--with-sidebar,
   .site-shell--with-sidebar.site-shell--has-language {
     max-width: none;
+    background: var(--color-background);
     grid-template-areas:
       "sidebar"
       "main";
@@ -781,11 +787,12 @@ address {
   }
 
   .site-shell--with-sidebar > .language-switcher {
-    justify-self: stretch;
+    justify-self: center;
+    justify-content: center;
     width: auto;
     margin: 0;
     padding: var(--space-4) var(--space-5);
-    text-align: end;
+    text-align: center;
     background: var(--color-background);
   }
 
@@ -815,7 +822,21 @@ address {
 
   .profile-header {
     row-gap: var(--space-4);
-    padding-block: var(--space-4);
+    justify-items: center;
+    padding: var(--space-4) var(--space-5);
+    text-align: center;
+  }
+
+  .site-shell[data-profile-header-placement="sidebar"] .profile-header {
+    background: var(--color-background);
+  }
+
+  .profile-header__name {
+    font-size: clamp(var(--font-size-step-3), 10vw, var(--font-size-step-4));
+  }
+
+  .profile-header__role {
+    font-size: clamp(var(--font-size-step-1), 5vw, var(--font-size-step-2));
   }
 
   .content-area {
@@ -842,6 +863,7 @@ address {
   }
 
   .identity-panel__content,
+  .profile-header,
   .content-area {
     padding-inline: var(--space-4);
   }

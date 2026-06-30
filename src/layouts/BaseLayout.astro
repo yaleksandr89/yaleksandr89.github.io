@@ -13,8 +13,9 @@ const skipLinkText =
   lang === 'ru' ? 'Перейти к основному содержимому' : 'Skip to main content';
 const languageSwitcherLabel =
   lang === 'ru' ? 'Выбор языка' : 'Language selection';
+const hasProfilePhoto = Astro.slots.has('profile-photo');
 const hasSidebar =
-  Astro.slots.has('profile-photo') || Astro.slots.has('sidebar-content');
+  hasProfilePhoto || Astro.slots.has('sidebar-content');
 const hasLanguageSwitcher = Astro.slots.has('language-switcher');
 const hasProfileHeader =
   Astro.slots.has('profile-name') || Astro.slots.has('profile-role');
@@ -52,9 +53,9 @@ const hasProfileHeader =
       }
       {
         hasSidebar && (
-          <aside class="identity-panel">
-            {Astro.slots.has('profile-photo') && (
-              <div class="identity-panel__photo">
+          <aside class="identity-panel" data-identity-panel>
+            {hasProfilePhoto && (
+              <div class="identity-panel__photo" data-profile-photo>
                 <slot name="profile-photo" />
               </div>
             )}
@@ -69,7 +70,7 @@ const hasProfileHeader =
       <main id="main-content" class="content-area" tabindex="-1">
         {
           hasProfileHeader && (
-            <header class="profile-header">
+            <header class="profile-header" data-profile-header>
               {Astro.slots.has('profile-name') && (
                 <h1 class="profile-header__name">
                   <slot name="profile-name" />
@@ -86,5 +87,47 @@ const hasProfileHeader =
         <slot />
       </main>
     </div>
+    <script is:inline>
+      (() => {
+        const shell = document.querySelector('.site-shell');
+        if (!shell || shell.dataset.profileHeaderMoverInitialized === 'true') {
+          return;
+        }
+
+        const profileHeader = shell.querySelector('[data-profile-header]');
+        const photo = shell.querySelector('[data-profile-photo]');
+        const contentArea = shell.querySelector('.content-area');
+        const identityPanel = shell.querySelector('[data-identity-panel]');
+
+        if (!profileHeader || !photo || !contentArea || !identityPanel) {
+          return;
+        }
+
+        shell.dataset.profileHeaderMoverInitialized = 'true';
+
+        const anchor = document.createComment('profile-header-anchor');
+        contentArea.insertBefore(anchor, profileHeader);
+
+        const mediaQuery = window.matchMedia('(max-width: 48rem)');
+        const syncProfileHeaderPlacement = () => {
+          if (mediaQuery.matches) {
+            photo.after(profileHeader);
+            shell.dataset.profileHeaderPlacement = 'sidebar';
+            return;
+          }
+
+          contentArea.insertBefore(profileHeader, anchor.nextSibling);
+          shell.dataset.profileHeaderPlacement = 'main';
+        };
+
+        syncProfileHeaderPlacement();
+
+        if (typeof mediaQuery.addEventListener === 'function') {
+          mediaQuery.addEventListener('change', syncProfileHeaderPlacement);
+        } else if (typeof mediaQuery.addListener === 'function') {
+          mediaQuery.addListener(syncProfileHeaderPlacement);
+        }
+      })();
+    </script>
   </body>
 </html>
