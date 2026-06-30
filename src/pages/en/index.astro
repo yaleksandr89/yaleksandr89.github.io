@@ -52,8 +52,13 @@ import { Icon } from 'astro-icon/components';
       <hr class="sidebar-divider" />
     </section>
 
-    <section class="sidebar-section">
-      <h2>Contacts</h2>
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Contacts</span>
+      </summary>
       <div class="sidebar-section__body">
         <address>
           <ul class="contact-list">
@@ -88,10 +93,15 @@ import { Icon } from 'astro-icon/components';
           </ul>
         </address>
       </div>
-    </section>
+    </details>
 
-    <section class="sidebar-section">
-      <h2>Education</h2>
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure data-mobile-collapse>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Education</span>
+      </summary>
       <div class="sidebar-section__body">
         <article class="sidebar-entry">
           <h3>Northern Arctic Federal University named after M. V. Lomonosov</h3>
@@ -101,10 +111,15 @@ import { Icon } from 'astro-icon/components';
           <p class="sidebar-entry__line">Information Systems and Technologies</p>
         </article>
       </div>
-    </section>
+    </details>
 
-    <section class="sidebar-section">
-      <h2>Courses</h2>
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure data-mobile-collapse>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Courses</span>
+      </summary>
       <div class="sidebar-section__body">
         <ul class="sidebar-entry-list">
           <li>
@@ -141,20 +156,30 @@ import { Icon } from 'astro-icon/components';
           </li>
         </ul>
       </div>
-    </section>
+    </details>
   </div>
 
-  <section class="content-section">
-    <h2>Professional Summary</h2>
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Professional Summary</span>
+    </summary>
     <div class="content-section__body">
       <p>PHP Backend Developer with over 5 years of commercial experience in web application development and maintenance.</p>
       <p>Worked on a B2B travel booking system, corporate portals, internal accounting systems, and public sector projects. Main focus areas include backend development with PHP, Laravel and Symfony, third-party integrations, API development, and legacy project improvement.</p>
       <p>Focused on product-oriented development, service stability, and improving backend architecture.</p>
     </div>
-  </section>
+  </details>
 
-  <section class="content-section">
-    <h2>Work Experience</h2>
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Work Experience</span>
+    </summary>
     <div class="content-section__body">
       <article class="experience-entry">
         <header class="experience-entry__header">
@@ -180,8 +205,13 @@ import { Icon } from 'astro-icon/components';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <div class="experience-entry__responsibilities">
-          <p class="experience-entry__label">Responsibilities and achievements:</p>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Responsibilities and achievements:</span>
+          </summary>
           <ul class="experience-entry__list">
             <li>Contributed to expanding the booking system functionality for new sales markets and B2B partners.</li>
             <li>Improved integrations with ERP/1C and internal services.</li>
@@ -190,7 +220,7 @@ import { Icon } from 'astro-icon/components';
             <li>Optimized Elasticsearch usage: improved search logic and contributed to splitting a shared index with 15+ million documents into separate indexes by section.</li>
             <li>Participated in the gradual separation of a monolithic legacy application into internal and external packages.</li>
           </ul>
-        </div>
+        </details>
       </article>
 
       <hr class="experience-divider" />
@@ -220,8 +250,13 @@ import { Icon } from 'astro-icon/components';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <div class="experience-entry__responsibilities">
-          <p class="experience-entry__label">Responsibilities and achievements:</p>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Responsibilities and achievements:</span>
+          </summary>
           <ul class="experience-entry__list">
             <li>Developed new features for an employee absence tracking system.</li>
             <li>Maintained and improved the «Total Dictation» project.</li>
@@ -229,7 +264,7 @@ import { Icon } from 'astro-icon/components';
             <li>Communicated with customers to clarify requirements, approve changes, and verify results.</li>
             <li>Improved business logic and supported legacy projects.</li>
           </ul>
-        </div>
+        </details>
       </article>
 
       <hr class="experience-divider" />
@@ -259,8 +294,13 @@ import { Icon } from 'astro-icon/components';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <div class="experience-entry__responsibilities">
-          <p class="experience-entry__label">Responsibilities and achievements:</p>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Responsibilities and achievements:</span>
+          </summary>
           <ul class="experience-entry__list">
             <li>Integrated Symfony and WordPress projects with external APIs, including Dadata.</li>
             <li>Developed a Symfony bundle for sitemap generation with flexible configuration.</li>
@@ -269,13 +309,18 @@ import { Icon } from 'astro-icon/components';
             <li>Maintained and improved legacy projects.</li>
             <li>Extended WordPress functionality without using third-party plugins.</li>
           </ul>
-        </div>
+        </details>
       </article>
     </div>
-  </section>
+  </details>
 
-  <section class="content-section">
-    <h2>Technical Skills</h2>
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Technical Skills</span>
+    </summary>
     <div class="content-section__body">
       <ul class="skills-list">
         <li>
@@ -341,10 +386,15 @@ import { Icon } from 'astro-icon/components';
         </li>
       </ul>
     </div>
-  </section>
+  </details>
 
-  <section class="content-section">
-    <h2>Projects</h2>
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Projects</span>
+    </summary>
     <div class="content-section__body">
       <p>Contributed to the development and maintenance of web projects for B2B, public sector, non-profit organizations, and corporate clients.</p>
       <ul class="project-list">
@@ -378,7 +428,90 @@ import { Icon } from 'astro-icon/components';
         </li>
       </ul>
     </div>
-  </section>
+  </details>
+
+  <script>
+    const disclosureMobileCollapseQuery = window.matchMedia('(max-width: 48rem)');
+    const disclosureReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (disclosureMobileCollapseQuery.matches) {
+      const disclosureMobileCollapseDetails = document.querySelectorAll('details[data-mobile-collapse]');
+
+      disclosureMobileCollapseDetails.forEach((disclosureMobileCollapseDetail) => {
+        if (!(disclosureMobileCollapseDetail instanceof HTMLDetailsElement)) {
+          return;
+        }
+
+        if (disclosureMobileCollapseDetail.dataset.mobileCollapseInitialized === 'true') {
+          return;
+        }
+
+        disclosureMobileCollapseDetail.open = false;
+        disclosureMobileCollapseDetail.dataset.mobileCollapseInitialized = 'true';
+      });
+    }
+
+    const disclosureDetails = document.querySelectorAll('details[data-disclosure]');
+
+    disclosureDetails.forEach((disclosureDetail) => {
+      if (!(disclosureDetail instanceof HTMLDetailsElement)) {
+        return;
+      }
+
+      const disclosureSummary = disclosureDetail.querySelector('summary');
+
+      if (!(disclosureSummary instanceof HTMLElement)) {
+        return;
+      }
+
+      disclosureSummary.addEventListener('click', (event) => {
+        if (disclosureDetail.dataset.disclosureAnimating === 'true') {
+          event.preventDefault();
+          return;
+        }
+
+        if (disclosureReducedMotionQuery.matches) {
+          return;
+        }
+
+        event.preventDefault();
+        disclosureDetail.dataset.disclosureAnimating = 'true';
+
+        const isOpen = disclosureDetail.open;
+        const startHeight = `${disclosureDetail.offsetHeight}px`;
+        let endHeight = `${disclosureSummary.offsetHeight}px`;
+
+        if (!isOpen) {
+          disclosureDetail.open = true;
+          endHeight = `${disclosureDetail.scrollHeight}px`;
+        }
+
+        disclosureDetail.style.height = startHeight;
+        disclosureDetail.style.overflow = 'hidden';
+
+        const disclosureAnimation = disclosureDetail.animate(
+          { height: [startHeight, endHeight] },
+          {
+            duration: 220,
+            easing: 'cubic-bezier(0.2, 0, 0.2, 1)',
+          },
+        );
+
+        disclosureAnimation.finished
+          .then(() => {
+            if (isOpen) {
+              disclosureDetail.open = false;
+            }
+          })
+          .catch(() => {})
+          .finally(() => {
+            disclosureDetail.style.height = '';
+            disclosureDetail.style.overflow = '';
+            delete disclosureDetail.dataset.disclosureAnimating;
+          });
+      });
+    });
+  </script>
 
   <script>
     const cvToggle = document.querySelector('[data-cv-toggle]');

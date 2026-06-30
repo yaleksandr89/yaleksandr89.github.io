@@ -52,8 +52,13 @@ import { Icon } from 'astro-icon/components';
       <hr class="sidebar-divider" />
     </section>
 
-    <section class="sidebar-section">
-      <h2>Контакты</h2>
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Контакты</span>
+      </summary>
       <div class="sidebar-section__body">
         <address>
           <ul class="contact-list">
@@ -94,10 +99,15 @@ import { Icon } from 'astro-icon/components';
           </ul>
         </address>
       </div>
-    </section>
+    </details>
 
-    <section class="sidebar-section">
-      <h2>Образование</h2>
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure data-mobile-collapse>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Образование</span>
+      </summary>
       <div class="sidebar-section__body">
         <article class="sidebar-entry">
           <h3>Северный (Арктический) федеральный университет имени М.В. Ломоносова</h3>
@@ -107,10 +117,15 @@ import { Icon } from 'astro-icon/components';
           <p class="sidebar-entry__line">Информационные системы и технологии</p>
         </article>
       </div>
-    </section>
+    </details>
 
-    <section class="sidebar-section">
-      <h2>Курсы</h2>
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure data-mobile-collapse>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Курсы</span>
+      </summary>
       <div class="sidebar-section__body">
         <ul class="sidebar-entry-list">
           <li>
@@ -147,20 +162,30 @@ import { Icon } from 'astro-icon/components';
           </li>
         </ul>
       </div>
-    </section>
+    </details>
   </div>
 
-  <section class="content-section">
-    <h2>Общие сведения</h2>
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Общие сведения</span>
+    </summary>
     <div class="content-section__body">
       <p>PHP Backend-разработчик с более чем 5 годами коммерческого опыта в разработке и сопровождении веб-приложений.</p>
       <p>Работал над B2B-системой бронирования туристических услуг, корпоративными порталами, внутренними системами учёта и проектами для госсектора. Специализация — backend-разработка на PHP, Laravel и Symfony, интеграции с внешними сервисами, работа с API и развитие legacy-проектов.</p>
       <p>Ориентирован на продуктовую разработку, стабильность сервисов и улучшение архитектуры backend-решений.</p>
     </div>
-  </section>
+  </details>
 
-  <section class="content-section">
-    <h2>Опыт работы</h2>
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Опыт работы</span>
+    </summary>
     <div class="content-section__body">
       <article class="experience-entry">
         <header class="experience-entry__header">
@@ -186,8 +211,13 @@ import { Icon } from 'astro-icon/components';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <div class="experience-entry__responsibilities">
-          <p class="experience-entry__label">Задачи и результаты:</p>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Задачи и результаты:</span>
+          </summary>
           <ul class="experience-entry__list">
             <li>Участвовал в расширении функциональности системы бронирования для новых рынков сбыта и B2B-партнёров.</li>
             <li>Дорабатывал интеграции с ERP (1С) и внутренними сервисами.</li>
@@ -196,7 +226,7 @@ import { Icon } from 'astro-icon/components';
             <li>Оптимизировал работу Elasticsearch: дорабатывал поисковую логику, участвовал в разделении общего индекса с 15+ млн документов на отдельные индексы по разделам.</li>
             <li>Участвовал в постепенном разделении монолитного legacy-приложения на внутренние и внешние пакеты.</li>
           </ul>
-        </div>
+        </details>
       </article>
 
       <hr class="experience-divider" />
@@ -226,8 +256,13 @@ import { Icon } from 'astro-icon/components';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <div class="experience-entry__responsibilities">
-          <p class="experience-entry__label">Задачи и результаты:</p>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Задачи и результаты:</span>
+          </summary>
           <ul class="experience-entry__list">
             <li>Разрабатывал новые функции для системы учёта отсутствий сотрудников.</li>
             <li>Поддерживал и дорабатывал проект «Тотальный диктант».</li>
@@ -235,7 +270,7 @@ import { Icon } from 'astro-icon/components';
             <li>Взаимодействовал с заказчиками для уточнения требований, согласования изменений и проверки результата.</li>
             <li>Дорабатывал бизнес-логику и поддерживал legacy-проекты.</li>
           </ul>
-        </div>
+        </details>
       </article>
 
       <hr class="experience-divider" />
@@ -265,8 +300,13 @@ import { Icon } from 'astro-icon/components';
             <li>PhpStorm</li>
           </ul>
         </div>
-        <div class="experience-entry__responsibilities">
-          <p class="experience-entry__label">Задачи и результаты:</p>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Задачи и результаты:</span>
+          </summary>
           <ul class="experience-entry__list">
             <li>Интегрировал Symfony и WordPress проекты с внешними API, включая Dadata.</li>
             <li>Разработал Symfony бандл для генерации карты сайта с гибкой конфигурацией.</li>
@@ -275,13 +315,18 @@ import { Icon } from 'astro-icon/components';
             <li>Поддерживал и развивал legacy-проекты.</li>
             <li>Расширял функциональность WordPress без использования сторонних плагинов.</li>
           </ul>
-        </div>
+        </details>
       </article>
     </div>
-  </section>
+  </details>
 
-  <section class="content-section">
-    <h2>Навыки</h2>
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Навыки</span>
+    </summary>
     <div class="content-section__body">
       <ul class="skills-list">
         <li>
@@ -347,10 +392,15 @@ import { Icon } from 'astro-icon/components';
         </li>
       </ul>
     </div>
-  </section>
+  </details>
 
-  <section class="content-section">
-    <h2>Проекты</h2>
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Проекты</span>
+    </summary>
     <div class="content-section__body">
       <p>Участвовал в разработке и сопровождении веб-проектов для B2B, госсектора, общественных организаций и корпоративных заказчиков.</p>
       <ul class="project-list">
@@ -384,7 +434,90 @@ import { Icon } from 'astro-icon/components';
         </li>
       </ul>
     </div>
-  </section>
+  </details>
+
+  <script>
+    const disclosureMobileCollapseQuery = window.matchMedia('(max-width: 48rem)');
+    const disclosureReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (disclosureMobileCollapseQuery.matches) {
+      const disclosureMobileCollapseDetails = document.querySelectorAll('details[data-mobile-collapse]');
+
+      disclosureMobileCollapseDetails.forEach((disclosureMobileCollapseDetail) => {
+        if (!(disclosureMobileCollapseDetail instanceof HTMLDetailsElement)) {
+          return;
+        }
+
+        if (disclosureMobileCollapseDetail.dataset.mobileCollapseInitialized === 'true') {
+          return;
+        }
+
+        disclosureMobileCollapseDetail.open = false;
+        disclosureMobileCollapseDetail.dataset.mobileCollapseInitialized = 'true';
+      });
+    }
+
+    const disclosureDetails = document.querySelectorAll('details[data-disclosure]');
+
+    disclosureDetails.forEach((disclosureDetail) => {
+      if (!(disclosureDetail instanceof HTMLDetailsElement)) {
+        return;
+      }
+
+      const disclosureSummary = disclosureDetail.querySelector('summary');
+
+      if (!(disclosureSummary instanceof HTMLElement)) {
+        return;
+      }
+
+      disclosureSummary.addEventListener('click', (event) => {
+        if (disclosureDetail.dataset.disclosureAnimating === 'true') {
+          event.preventDefault();
+          return;
+        }
+
+        if (disclosureReducedMotionQuery.matches) {
+          return;
+        }
+
+        event.preventDefault();
+        disclosureDetail.dataset.disclosureAnimating = 'true';
+
+        const isOpen = disclosureDetail.open;
+        const startHeight = `${disclosureDetail.offsetHeight}px`;
+        let endHeight = `${disclosureSummary.offsetHeight}px`;
+
+        if (!isOpen) {
+          disclosureDetail.open = true;
+          endHeight = `${disclosureDetail.scrollHeight}px`;
+        }
+
+        disclosureDetail.style.height = startHeight;
+        disclosureDetail.style.overflow = 'hidden';
+
+        const disclosureAnimation = disclosureDetail.animate(
+          { height: [startHeight, endHeight] },
+          {
+            duration: 220,
+            easing: 'cubic-bezier(0.2, 0, 0.2, 1)',
+          },
+        );
+
+        disclosureAnimation.finished
+          .then(() => {
+            if (isOpen) {
+              disclosureDetail.open = false;
+            }
+          })
+          .catch(() => {})
+          .finally(() => {
+            disclosureDetail.style.height = '';
+            disclosureDetail.style.overflow = '';
+            delete disclosureDetail.dataset.disclosureAnimating;
+          });
+      });
+    });
+  </script>
 
   <script>
     const cvToggle = document.querySelector('[data-cv-toggle]');
