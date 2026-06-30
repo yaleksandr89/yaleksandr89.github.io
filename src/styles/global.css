@@ -64,6 +64,8 @@ a:hover {
 
 .text-link {
   text-decoration: none;
+  justify-self: start;
+  align-self: start;
 }
 
 .text-link__label {
