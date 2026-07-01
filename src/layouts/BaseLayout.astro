@@ -10,6 +10,10 @@ interface Props {
   robotsContent?: string;
   canonicalUrl?: string;
   languageAlternates?: Array<{ hreflang: 'ru' | 'en' | 'x-default'; href: string }>;
+  openGraph?: {
+    imageUrl: string;
+    imageAlt: string;
+  };
 }
 
 const {
@@ -19,7 +23,10 @@ const {
   robotsContent,
   canonicalUrl,
   languageAlternates = [],
+  openGraph,
 } = Astro.props;
+const ogLocale = lang === 'ru' ? 'ru_RU' : 'en_US';
+const ogAlternateLocale = lang === 'ru' ? 'en_US' : 'ru_RU';
 const skipLinkText =
   lang === 'ru' ? 'Перейти к основному содержимому' : 'Skip to main content';
 const languageSwitcherLabel =
@@ -44,6 +51,24 @@ const hasProfileHeader =
       languageAlternates.map(({ hreflang, href }) => (
         <link rel="alternate" hreflang={hreflang} href={href} />
       ))
+    }
+    {
+      openGraph && canonicalUrl && (
+        <>
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Alexander Yurchenko" />
+          <meta property="og:locale" content={ogLocale} />
+          <meta property="og:locale:alternate" content={ogAlternateLocale} />
+          <meta property="og:image" content={openGraph.imageUrl} />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content={openGraph.imageAlt} />
+        </>
+      )
     }
     <link rel="icon" href="/image/favicon/favicon.ico" sizes="any" />
     <link
