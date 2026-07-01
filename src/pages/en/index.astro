@@ -1,0 +1,481 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  lang="en"
+  title="Alexander Yurchenko — PHP Backend / Laravel Developer"
+  description="PHP Backend / Laravel Developer with 5+ years of commercial experience in Laravel, Symfony, REST API, third-party integrations, and legacy projects."
+  canonicalUrl="https://yaleksandr89.github.io/en/"
+  languageAlternates={[
+    { hreflang: 'ru', href: 'https://yaleksandr89.github.io/' },
+    { hreflang: 'en', href: 'https://yaleksandr89.github.io/en/' },
+    { hreflang: 'x-default', href: 'https://yaleksandr89.github.io/' },
+  ]}
+  openGraph={{
+    imageUrl: 'https://yaleksandr89.github.io/image/social/og-en.png',
+    imageAlt: 'Alexander Yurchenko — PHP Backend / Laravel Developer',
+  }}
+  structuredData={{
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    inLanguage: 'en',
+    url: 'https://yaleksandr89.github.io/en/',
+    name: 'Alexander Yurchenko — PHP Backend / Laravel Developer',
+    description:
+      'PHP Backend / Laravel Developer with 5+ years of commercial experience in Laravel, Symfony, REST API, third-party integrations, and legacy projects.',
+    mainEntity: {
+      '@id': 'https://yaleksandr89.github.io/#person',
+      '@type': 'Person',
+      name: 'Alexander Yurchenko',
+      jobTitle: 'PHP Backend Developer',
+      url: 'https://yaleksandr89.github.io/',
+      image: 'https://yaleksandr89.github.io/image/yaleksandr89.jpg',
+      description:
+        'PHP Backend / Laravel Developer with 5+ years of commercial experience in Laravel, Symfony, REST API, third-party integrations, and legacy projects.',
+      knowsAbout: [
+        'PHP 7/8',
+        'Laravel',
+        'Symfony',
+        'PostgreSQL',
+        'MariaDB',
+        'REST API',
+        'Third-party integrations',
+        'Redis',
+        'Elasticsearch',
+        'Sphinx',
+        'Docker',
+        'Linux/Ubuntu',
+        'Legacy code',
+        'Refactoring',
+        'Migrations',
+        'Business logic',
+        'Bug fixing',
+      ],
+    },
+  }}
+>
+  <img
+    slot="profile-photo"
+    src="/image/yaleksandr89.jpg"
+    alt="Portrait of Alexander Yurchenko"
+  />
+  <span slot="profile-name">Alexander Yurchenko</span>
+  <span slot="profile-role">PHP Backend Developer</span>
+  <div class="language-switcher__control" slot="language-switcher">
+    <a class="language-switcher__item" href="/">RU</a>
+    <span class="language-switcher__item" aria-current="page">EN</span>
+  </div>
+
+  <div slot="sidebar-content">
+    <section class="cv-download" aria-labelledby="cv-title-en">
+      <hr class="sidebar-divider" />
+      <h3 class="cv-download__title" id="cv-title-en">
+        <Icon class="sidebar-icon cv-download__title-icon" name="mdi:file-document-outline" aria-hidden="true" />
+        <span>CV (PDF)</span>
+      </h3>
+      <label class="cv-download__option" for="cv-phone-en">
+        <input class="cv-download__checkbox" id="cv-phone-en" type="checkbox" data-cv-toggle />
+        <span class="cv-download__checkbox-control" aria-hidden="true">
+          <Icon class="cv-download__checkbox-icon" name="mdi:check" aria-hidden="true" />
+        </span>
+        <span>Include phone number in contacts</span>
+      </label>
+      <a
+        class="cv-download__link"
+        href="/cv/cv_yurchenko_a_a_en_2026_without_phone.pdf"
+        download="cv_yurchenko_a_a_en_2026_without_phone.pdf"
+        data-cv-link
+        data-cv-with-phone-href="/cv/cv_yurchenko_a_a_en_2026.pdf"
+        data-cv-with-phone-download="cv_yurchenko_a_a_en_2026.pdf"
+        data-cv-with-phone-text="Download CV with phone number (PDF)"
+        data-cv-without-phone-href="/cv/cv_yurchenko_a_a_en_2026_without_phone.pdf"
+        data-cv-without-phone-download="cv_yurchenko_a_a_en_2026_without_phone.pdf"
+        data-cv-without-phone-text="Download CV without phone (PDF)"
+      >
+        <Icon class="sidebar-icon cv-download__icon" name="mdi:download" aria-hidden="true" />
+        <span data-cv-link-text>Download CV without phone (PDF)</span>
+      </a>
+      <hr class="sidebar-divider" />
+    </section>
+
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Contacts</span>
+      </summary>
+      <div class="sidebar-section__body">
+        <address>
+          <ul class="contact-list">
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="mdi:map-marker" aria-hidden="true" />
+              <span class="contact-list__value">Saint Petersburg, Russia</span>
+            </li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="fa6-brands:telegram" aria-hidden="true" />
+              <span class="contact-list__value">
+                <a class="text-link" href="https://t.me/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://t.me/yaleksandr89</span></a>
+              </span>
+            </li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="mdi:email-outline" aria-hidden="true" />
+              <span class="contact-list__value">
+                <a class="text-link" href="mailto:y.aleksandr89@gmail.com"><span class="text-link__label">y.aleksandr89@gmail.com</span></a>
+              </span>
+            </li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="fa6-brands:linkedin" aria-hidden="true" />
+              <span class="contact-list__value">
+                <a class="text-link" href="https://linkedin.com/in/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://linkedin.com/in/yaleksandr89</span></a>
+              </span>
+            </li>
+            <li class="contact-list__item">
+              <Icon class="sidebar-icon contact-list__icon" name="fa6-brands:github" aria-hidden="true" />
+              <span class="contact-list__value">
+                <a class="text-link" href="https://github.com/yaleksandr89" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://github.com/yaleksandr89</span></a>
+              </span>
+            </li>
+          </ul>
+        </address>
+      </div>
+    </details>
+
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure data-mobile-collapse>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Education</span>
+      </summary>
+      <div class="sidebar-section__body">
+        <article class="sidebar-entry">
+          <h3>Northern Arctic Federal University named after M. V. Lomonosov</h3>
+          <a class="text-link" href="https://narfu.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://narfu.ru</span></a>
+          <p class="sidebar-entry__period">2011 - 2016</p>
+          <p class="sidebar-entry__line">Bachelor’s degree</p>
+          <p class="sidebar-entry__line">Information Systems and Technologies</p>
+        </article>
+      </div>
+    </details>
+
+    <details class="sidebar-section sidebar-disclosure" open data-disclosure data-mobile-collapse>
+      <summary class="sidebar-section__summary">
+        <span class="disclosure-toggle__accent" aria-hidden="true">
+          <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+        </span>
+        <span class="disclosure-toggle__title">Courses</span>
+      </summary>
+      <div class="sidebar-section__body">
+        <ul class="sidebar-entry-list">
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">June 2025 - April 2026</p>
+              <h3>Hexlet</h3>
+              <a class="text-link" href="https://ru.hexlet.io" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://ru.hexlet.io</span></a>
+              <p class="sidebar-entry__line">PHP Developer Profession</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">May 2025 - June 2025</p>
+              <h3>Stepik</h3>
+              <a class="text-link" href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://stepik.org</span></a>
+              <p class="sidebar-entry__line">Interactive SQL Trainer</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">June 2025</p>
+              <h3>Stepik</h3>
+              <a class="text-link" href="https://stepik.org" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://stepik.org</span></a>
+              <p class="sidebar-entry__line">Postman for Testing</p>
+            </article>
+          </li>
+          <li>
+            <article class="sidebar-entry">
+              <p class="sidebar-entry__period">February 2022</p>
+              <h3>Udemy</h3>
+              <a class="text-link" href="https://udemy.com" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://udemy.com</span></a>
+              <p class="sidebar-entry__line">Symfony &amp; Vue.js</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Professional Summary</span>
+    </summary>
+    <div class="content-section__body">
+      <p>PHP Backend Developer with over 5 years of commercial experience in web application development and maintenance.</p>
+      <p>Worked on a B2B travel booking system, corporate portals, internal accounting systems, and public sector projects. Main focus areas include backend development with PHP, Laravel and Symfony, third-party integrations, API development, and legacy project improvement.</p>
+      <p>Focused on product-oriented development, service stability, and improving backend architecture.</p>
+    </div>
+  </details>
+
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Work Experience</span>
+    </summary>
+    <div class="content-section__body">
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>PHP Developer</h3>
+          <p class="experience-entry__meta">
+            <span>Russian Express — tour operator</span>
+            <a class="text-link" href="https://r-express.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">r-express.ru</span></a>
+          </p>
+          <p class="experience-entry__period">November 2024 — March 2026</p>
+        </header>
+        <p>Contributed to the development and maintenance of a B2B travel booking system for agencies and partners. Worked as part of a cross-functional product team including backend developers, an analyst, and a project manager.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Technologies:</p>
+          <ul class="technology-list">
+            <li>PHP 8</li>
+            <li>Laravel</li>
+            <li>MariaDB</li>
+            <li>Redis</li>
+            <li>Docker</li>
+            <li>Elasticsearch</li>
+            <li>GitLab</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Responsibilities and achievements:</span>
+          </summary>
+          <ul class="experience-entry__list">
+            <li>Contributed to expanding the booking system functionality for new sales markets and B2B partners.</li>
+            <li>Improved integrations with ERP/1C and internal services.</li>
+            <li>Refactored part of the API interactions from a polling model to a push model to reduce the number of requests to the 1C server.</li>
+            <li>Extended the refund and payment transfer mechanism between orders.</li>
+            <li>Optimized Elasticsearch usage: improved search logic and contributed to splitting a shared index with 15+ million documents into separate indexes by section.</li>
+            <li>Participated in the gradual separation of a monolithic legacy application into internal and external packages.</li>
+          </ul>
+        </details>
+      </article>
+
+      <hr class="experience-divider" />
+
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>Software Developer</h3>
+          <p class="experience-entry__meta">
+            <span>WONE IT — development and maintenance of corporate solutions</span>
+            <a class="text-link" href="https://wone-it.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">wone-it.ru</span></a>
+          </p>
+          <p class="experience-entry__period">July 2023 — August 2024</p>
+        </header>
+        <p>Contributed to the maintenance and development of internal accounting systems and external platforms. Implemented customer-requested changes, fixed bugs, and supported existing projects.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Technologies:</p>
+          <ul class="technology-list">
+            <li>PHP 8</li>
+            <li>MariaDB</li>
+            <li>PostgreSQL</li>
+            <li>Git</li>
+            <li>GitLab</li>
+            <li>Gitea</li>
+            <li>JavaScript</li>
+            <li>Zabbix</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Responsibilities and achievements:</span>
+          </summary>
+          <ul class="experience-entry__list">
+            <li>Developed new features for an employee absence tracking system.</li>
+            <li>Maintained and improved the «Total Dictation» project.</li>
+            <li>Configured Zabbix and monitoring integrations with web applications.</li>
+            <li>Communicated with customers to clarify requirements, approve changes, and verify results.</li>
+            <li>Improved business logic and supported legacy projects.</li>
+          </ul>
+        </details>
+      </article>
+
+      <hr class="experience-divider" />
+
+      <article class="experience-entry">
+        <header class="experience-entry__header">
+          <h3>Software Engineer</h3>
+          <p class="experience-entry__meta">
+            <span>Programmny Produkt — IT solutions development</span>
+            <a class="text-link" href="https://ppr.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">ppr.ru</span></a>
+          </p>
+          <p class="experience-entry__period">July 2020 — June 2023</p>
+        </header>
+        <p>Developed and maintained web applications for major Moscow IT projects, including KOS portals, Mayor’s Grants, Immortal Regiment, Public Chamber, and others. Worked in a team of 15 specialists, including backend and frontend developers, analysts, and managers.</p>
+        <div class="experience-entry__technologies">
+          <p class="experience-entry__label">Technologies:</p>
+          <ul class="technology-list">
+            <li>PHP 7/8</li>
+            <li>Symfony</li>
+            <li>WordPress</li>
+            <li>MariaDB</li>
+            <li>PostgreSQL</li>
+            <li>JavaScript</li>
+            <li>Sphinx</li>
+            <li>GitLab</li>
+            <li>Ubuntu</li>
+            <li>PhpStorm</li>
+          </ul>
+        </div>
+        <details class="experience-entry__responsibilities" open data-disclosure data-mobile-collapse>
+          <summary class="experience-entry__label">
+            <span class="disclosure-toggle__compact" aria-hidden="true">
+              <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+            </span>
+            <span>Responsibilities and achievements:</span>
+          </summary>
+          <ul class="experience-entry__list">
+            <li>Integrated Symfony and WordPress projects with external APIs, including Dadata.</li>
+            <li>Developed a Symfony bundle for sitemap generation with flexible configuration.</li>
+            <li>Created an intermediate layer between Sphinx and the application for advanced search.</li>
+            <li>Developed and refactored business logic according to customer requirements.</li>
+            <li>Maintained and improved legacy projects.</li>
+            <li>Extended WordPress functionality without using third-party plugins.</li>
+          </ul>
+        </details>
+      </article>
+    </div>
+  </details>
+
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Technical Skills</span>
+    </summary>
+    <div class="content-section__body">
+      <ul class="skills-list">
+        <li>
+          <p class="experience-entry__label">Languages:</p>
+          <ul class="technology-list">
+            <li>PHP 7/8</li>
+            <li>JavaScript</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Frameworks and CMS:</p>
+          <ul class="technology-list">
+            <li>Laravel</li>
+            <li>Symfony</li>
+            <li>WordPress</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Databases:</p>
+          <ul class="technology-list">
+            <li>PostgreSQL</li>
+            <li>MariaDB</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Search and caching:</p>
+          <ul class="technology-list">
+            <li>Elasticsearch</li>
+            <li>Sphinx</li>
+            <li>Redis</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Infrastructure:</p>
+          <ul class="technology-list">
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>Ubuntu</li>
+            <li>Zabbix</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Tools:</p>
+          <ul class="technology-list">
+            <li>PhpStorm</li>
+            <li>Git</li>
+            <li>GitLab</li>
+            <li>Gitea</li>
+            <li>Postman</li>
+          </ul>
+        </li>
+        <li>
+          <p class="experience-entry__label">Practices:</p>
+          <ul class="technology-list">
+            <li>REST API</li>
+            <li>third-party integrations</li>
+            <li>database migrations</li>
+            <li>Sentry/bug reports</li>
+            <li>legacy code refactoring</li>
+            <li>business logic development</li>
+            <li>troubleshooting and bug fixing.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="content-section content-disclosure" open data-disclosure>
+    <summary class="content-section__summary">
+      <span class="disclosure-toggle__accent" aria-hidden="true">
+        <Icon class="disclosure-toggle__icon" name="mdi:chevron-down" aria-hidden="true" />
+      </span>
+      <span class="disclosure-toggle__title">Projects</span>
+    </summary>
+    <div class="content-section__body">
+      <p>Contributed to the development and maintenance of web projects for B2B, public sector, non-profit organizations, and corporate clients.</p>
+      <ul class="project-list">
+        <li>
+          <a class="text-link" href="https://renovation.opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://renovation.opmoscow.ru</span></a>
+          <span>Public program information portal</span>
+        </li>
+        <li>
+          <a class="text-link" href="https://opmoscow.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://opmoscow.ru</span></a>
+          <span>Public Chamber of Moscow portal</span>
+        </li>
+        <li>
+          <a class="text-link" href="https://mosvolonter.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://mosvolonter.ru</span></a>
+          <span>City volunteer projects platform</span>
+        </li>
+        <li>
+          <a class="text-link" href="https://business-ombudsman.mos.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://business-ombudsman.mos.ru</span></a>
+          <span>Entrepreneurs’ rights protection portal</span>
+        </li>
+        <li>
+          <a class="text-link" href="https://atlasreal.at" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://atlasreal.at</span></a>
+          <span>Real estate web solutions</span>
+        </li>
+        <li>
+          <a class="text-link" href="https://totaldict.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://totaldict.ru</span></a>
+          <span>Educational project «Total Dictation»</span>
+        </li>
+        <li>
+          <a class="text-link" href="https://online-express.ru" target="_blank" rel="noopener noreferrer nofollow"><span class="text-link__label">https://online-express.ru</span></a>
+          <span>Travel booking platform</span>
+        </li>
+      </ul>
+    </div>
+  </details>
+
+</BaseLayout>

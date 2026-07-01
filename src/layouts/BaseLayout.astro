@@ -1,0 +1,369 @@
+---
+import '../styles/global.css';
+import { Icon } from 'astro-icon/components';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  lang: string;
+  title: string;
+  description: string;
+  robotsContent?: string;
+  canonicalUrl?: string;
+  languageAlternates?: Array<{ hreflang: 'ru' | 'en' | 'x-default'; href: string }>;
+  openGraph?: {
+    imageUrl: string;
+    imageAlt: string;
+  };
+  structuredData?: Record<string, unknown>;
+}
+
+const {
+  lang,
+  title,
+  description,
+  robotsContent,
+  canonicalUrl,
+  languageAlternates = [],
+  openGraph,
+  structuredData,
+} = Astro.props;
+const ogLocale = lang === 'ru' ? 'ru_RU' : 'en_US';
+const ogAlternateLocale = lang === 'ru' ? 'en_US' : 'ru_RU';
+const skipLinkText =
+  lang === 'ru' ? 'Перейти к основному содержимому' : 'Skip to main content';
+const languageSwitcherLabel =
+  lang === 'ru' ? 'Выбор языка' : 'Language selection';
+const hasProfilePhoto = Astro.slots.has('profile-photo');
+const hasSidebar =
+  hasProfilePhoto || Astro.slots.has('sidebar-content');
+const hasLanguageSwitcher = Astro.slots.has('language-switcher');
+const hasProfileHeader =
+  Astro.slots.has('profile-name') || Astro.slots.has('profile-role');
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    {robotsContent && <meta name="robots" content={robotsContent} />}
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    {
+      languageAlternates.map(({ hreflang, href }) => (
+        <link rel="alternate" hreflang={hreflang} href={href} />
+      ))
+    }
+    {
+      openGraph && canonicalUrl && (
+        <>
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Alexander Yurchenko" />
+          <meta property="og:locale" content={ogLocale} />
+          <meta property="og:locale:alternate" content={ogAlternateLocale} />
+          <meta property="og:image" content={openGraph.imageUrl} />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content={openGraph.imageAlt} />
+        </>
+      )
+    }
+    {
+      structuredData && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(structuredData)}
+        />
+      )
+    }
+    <link rel="icon" href="/image/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/image/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/image/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/image/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/image/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">{skipLinkText}</a>
+    <div
+      class:list={[
+        'site-shell',
+        hasSidebar && 'site-shell--with-sidebar',
+        !hasSidebar && 'site-shell--single',
+        hasLanguageSwitcher && 'site-shell--has-language',
+      ]}
+    >
+      {
+        hasLanguageSwitcher && (
+          <nav class="language-switcher" aria-label={languageSwitcherLabel}>
+            <Icon
+              class="sidebar-icon language-switcher__icon"
+              name="mdi:translate"
+              aria-hidden="true"
+            />
+            <slot name="language-switcher" />
+          </nav>
+        )
+      }
+      {
+        hasSidebar && (
+          <aside class="identity-panel" data-identity-panel>
+            {hasProfilePhoto && (
+              <div class="identity-panel__photo" data-profile-photo>
+                <slot name="profile-photo" />
+              </div>
+            )}
+            {Astro.slots.has('sidebar-content') && (
+              <div class="identity-panel__content">
+                <slot name="sidebar-content" />
+              </div>
+            )}
+          </aside>
+        )
+      }
+      <main id="main-content" class="content-area" tabindex="-1">
+        {
+          hasProfileHeader && (
+            <header class="profile-header" data-profile-header>
+              {Astro.slots.has('profile-name') && (
+                <h1 class="profile-header__name">
+                  <slot name="profile-name" />
+                </h1>
+              )}
+              {Astro.slots.has('profile-role') && (
+                <p class="profile-header__role">
+                  <slot name="profile-role" />
+                </p>
+              )}
+            </header>
+          )
+        }
+        <slot />
+      </main>
+    </div>
+    <script>
+      let cleanupProfileHeaderMover;
+
+      const initProfileHeaderMover = () => {
+        cleanupProfileHeaderMover?.();
+
+        const shell = document.querySelector('.site-shell');
+        const profileHeader = shell?.querySelector('[data-profile-header]');
+        const photo = shell?.querySelector('[data-profile-photo]');
+        const contentArea = shell?.querySelector('.content-area');
+        const identityPanel = shell?.querySelector('[data-identity-panel]');
+
+        if (
+          !(shell instanceof HTMLElement)
+          || !(profileHeader instanceof HTMLElement)
+          || !(photo instanceof HTMLElement)
+          || !(contentArea instanceof HTMLElement)
+          || !(identityPanel instanceof HTMLElement)
+        ) {
+          return;
+        }
+
+        const anchor = document.createComment('profile-header-anchor');
+        contentArea.insertBefore(anchor, profileHeader);
+
+        const mediaQuery = window.matchMedia('(max-width: 48rem)');
+        const syncProfileHeaderPlacement = () => {
+          if (mediaQuery.matches) {
+            photo.after(profileHeader);
+            shell.dataset.profileHeaderPlacement = 'sidebar';
+            return;
+          }
+
+          contentArea.insertBefore(profileHeader, anchor.nextSibling);
+          shell.dataset.profileHeaderPlacement = 'main';
+        };
+
+        const removeMediaQueryListener = () => {
+          if (typeof mediaQuery.removeEventListener === 'function') {
+            mediaQuery.removeEventListener('change', syncProfileHeaderPlacement);
+          } else if (typeof mediaQuery.removeListener === 'function') {
+            mediaQuery.removeListener(syncProfileHeaderPlacement);
+          }
+
+          cleanupProfileHeaderMover = undefined;
+        };
+
+        cleanupProfileHeaderMover = removeMediaQueryListener;
+
+        syncProfileHeaderPlacement();
+
+        if (typeof mediaQuery.addEventListener === 'function') {
+          mediaQuery.addEventListener('change', syncProfileHeaderPlacement);
+        } else if (typeof mediaQuery.addListener === 'function') {
+          mediaQuery.addListener(syncProfileHeaderPlacement);
+        }
+      };
+
+      const initDisclosures = () => {
+        const mobileCollapseQuery = window.matchMedia('(max-width: 48rem)');
+        const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        if (mobileCollapseQuery.matches) {
+          const mobileCollapseDetails = document.querySelectorAll('details[data-mobile-collapse]');
+
+          mobileCollapseDetails.forEach((mobileCollapseDetail) => {
+            if (!(mobileCollapseDetail instanceof HTMLDetailsElement)) {
+              return;
+            }
+
+            if (mobileCollapseDetail.dataset.mobileCollapseInitialized === 'true') {
+              return;
+            }
+
+            mobileCollapseDetail.open = false;
+            mobileCollapseDetail.dataset.mobileCollapseInitialized = 'true';
+          });
+        }
+
+        const disclosureDetails = document.querySelectorAll('details[data-disclosure]');
+
+        disclosureDetails.forEach((disclosureDetail) => {
+          if (!(disclosureDetail instanceof HTMLDetailsElement)) {
+            return;
+          }
+
+          if (disclosureDetail.dataset.disclosureInitialized === 'true') {
+            return;
+          }
+
+          const disclosureSummary = disclosureDetail.querySelector('summary');
+
+          if (!(disclosureSummary instanceof HTMLElement)) {
+            return;
+          }
+
+          disclosureDetail.dataset.disclosureInitialized = 'true';
+
+          disclosureSummary.addEventListener('click', (event) => {
+            if (disclosureDetail.dataset.disclosureAnimating === 'true') {
+              event.preventDefault();
+              return;
+            }
+
+            if (reducedMotionQuery.matches) {
+              return;
+            }
+
+            event.preventDefault();
+            disclosureDetail.dataset.disclosureAnimating = 'true';
+
+            const isOpen = disclosureDetail.open;
+            const startHeight = `${disclosureDetail.offsetHeight}px`;
+            let endHeight = `${disclosureSummary.offsetHeight}px`;
+
+            if (!isOpen) {
+              disclosureDetail.open = true;
+              endHeight = `${disclosureDetail.scrollHeight}px`;
+            }
+
+            disclosureDetail.style.height = startHeight;
+            disclosureDetail.style.overflow = 'hidden';
+
+            const disclosureAnimation = disclosureDetail.animate(
+              { height: [startHeight, endHeight] },
+              {
+                duration: 220,
+                easing: 'cubic-bezier(0.2, 0, 0.2, 1)',
+              },
+            );
+
+            disclosureAnimation.finished
+              .then(() => {
+                if (isOpen) {
+                  disclosureDetail.open = false;
+                }
+              })
+              .catch(() => {})
+              .finally(() => {
+                disclosureDetail.style.height = '';
+                disclosureDetail.style.overflow = '';
+                delete disclosureDetail.dataset.disclosureAnimating;
+              });
+          });
+        });
+      };
+
+      const initCvSelector = () => {
+        const cvToggle = document.querySelector('[data-cv-toggle]');
+        const cvLink = document.querySelector('[data-cv-link]');
+        const cvLinkText = document.querySelector('[data-cv-link-text]');
+
+        if (
+          !(cvToggle instanceof HTMLInputElement)
+          || !(cvLink instanceof HTMLAnchorElement)
+          || !(cvLinkText instanceof HTMLSpanElement)
+        ) {
+          return;
+        }
+
+        const syncCvLink = () => {
+          const href = cvToggle.checked
+            ? cvLink.dataset.cvWithPhoneHref
+            : cvLink.dataset.cvWithoutPhoneHref;
+          const filename = cvToggle.checked
+            ? cvLink.dataset.cvWithPhoneDownload
+            : cvLink.dataset.cvWithoutPhoneDownload;
+          const text = cvToggle.checked
+            ? cvLink.dataset.cvWithPhoneText
+            : cvLink.dataset.cvWithoutPhoneText;
+
+          if (!href || !filename || !text) {
+            return;
+          }
+
+          cvLink.href = href;
+          cvLink.download = filename;
+          cvLinkText.textContent = text;
+        };
+
+        syncCvLink();
+
+        if (cvToggle.dataset.cvSelectorInitialized === 'true') {
+          return;
+        }
+
+        cvToggle.dataset.cvSelectorInitialized = 'true';
+        cvToggle.addEventListener('change', syncCvLink);
+      };
+
+      initProfileHeaderMover();
+      initDisclosures();
+      initCvSelector();
+
+      document.addEventListener('astro:before-swap', () => {
+        cleanupProfileHeaderMover?.();
+      });
+
+      document.addEventListener('astro:after-swap', () => {
+        initProfileHeaderMover();
+        initDisclosures();
+        initCvSelector();
+      });
+    </script>
+  </body>
+</html>

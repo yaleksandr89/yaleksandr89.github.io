@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  lang="ru"
+  title="404 — Страница не найдена"
+  description="Запрошенная страница не найдена."
+  robotsContent="noindex, follow"
+>
+  <div class="not-found-page">
+    <nav class="language-switcher not-found-page__language" aria-label="Выбор языка">
+      <Icon
+        class="sidebar-icon language-switcher__icon"
+        name="mdi:translate"
+        aria-hidden="true"
+      />
+      <div class="language-switcher__control">
+        <span class="language-switcher__item" aria-current="page">RU</span>
+        <a class="language-switcher__item" href="/en/404/">EN</a>
+      </div>
+    </nav>
+
+    <article class="not-found">
+      <div class="not-found__rail" aria-hidden="true">
+        <p class="not-found__code">404</p>
+      </div>
+
+      <div class="not-found__content">
+        <h1 class="not-found__title">Страница не найдена</h1>
+        <p class="not-found__copy">
+          Возможно, ссылка устарела или адрес был введён с ошибкой.
+        </p>
+        <p class="not-found__copy">Выберите версию сайта, чтобы продолжить.</p>
+
+        <div class="not-found__actions">
+          <a class="text-link not-found__action" href="/">
+            <span class="text-link__label">На русскую главную</span>
+          </a>
+          <a class="text-link not-found__action" href="/en/" lang="en">
+            <span class="text-link__label">Go to English homepage</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</BaseLayout>
