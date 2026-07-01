@@ -17,6 +17,44 @@ import { Icon } from 'astro-icon/components';
     imageUrl: 'https://yaleksandr89.github.io/image/social/og-en.png',
     imageAlt: 'Alexander Yurchenko — PHP Backend / Laravel Developer',
   }}
+  structuredData={{
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    inLanguage: 'en',
+    url: 'https://yaleksandr89.github.io/en/',
+    name: 'Alexander Yurchenko — PHP Backend / Laravel Developer',
+    description:
+      'PHP Backend / Laravel Developer with 5+ years of commercial experience in Laravel, Symfony, REST API, third-party integrations, and legacy projects.',
+    mainEntity: {
+      '@id': 'https://yaleksandr89.github.io/#person',
+      '@type': 'Person',
+      name: 'Alexander Yurchenko',
+      jobTitle: 'PHP Backend Developer',
+      url: 'https://yaleksandr89.github.io/',
+      image: 'https://yaleksandr89.github.io/image/yaleksandr89.jpg',
+      description:
+        'PHP Backend / Laravel Developer with 5+ years of commercial experience in Laravel, Symfony, REST API, third-party integrations, and legacy projects.',
+      knowsAbout: [
+        'PHP 7/8',
+        'Laravel',
+        'Symfony',
+        'PostgreSQL',
+        'MariaDB',
+        'REST API',
+        'Third-party integrations',
+        'Redis',
+        'Elasticsearch',
+        'Sphinx',
+        'Docker',
+        'Linux/Ubuntu',
+        'Legacy code',
+        'Refactoring',
+        'Migrations',
+        'Business logic',
+        'Bug fixing',
+      ],
+    },
+  }}
 >
   <img
     slot="profile-photo"
