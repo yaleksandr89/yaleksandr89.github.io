@@ -47,6 +47,7 @@ const hasProfileHeader =
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="yandex-verification" content="2460cb2e96b2ca3f" />
     {robotsContent && <meta name="robots" content={robotsContent} />}
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     {
@@ -101,9 +102,50 @@ const hasProfileHeader =
     <link rel="manifest" href="/image/favicon/site.webmanifest" />
     <meta name="theme-color" content="#f7f5ef" />
     <title>{title}</title>
+    <script is:inline>
+      if (!window.__portfolioYandexMetrikaInitialized) {
+        window.__portfolioYandexMetrikaInitialized = true;
+
+        (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) {
+              return;
+            }
+          }
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=110345045', 'ym');
+
+        ym(110345045, 'init', {
+          defer: true,
+          ssr: true,
+          webvisor: true,
+          clickmap: true,
+          ecommerce: 'dataLayer',
+          accurateTrackBounce: true,
+          trackLinks: true
+        });
+
+        document.addEventListener('astro:page-load', function() {
+          ym(110345045, 'hit', location.href, {
+            referer: document.referrer
+          });
+        });
+      }
+    </script>
     <ClientRouter />
   </head>
   <body>
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/110345045"
+          style="position:absolute; left:-9999px;"
+          alt=""
+        />
+      </div>
+    </noscript>
     <a class="skip-link" href="#main-content">{skipLinkText}</a>
     <div
       class:list={[
