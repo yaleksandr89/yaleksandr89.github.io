@@ -51,6 +51,11 @@ body {
   background: var(--color-background);
 }
 
+.yandex-metrica__noscript-image {
+  position: absolute;
+  left: -9999px;
+}
+
 a {
   color: var(--color-link);
   text-decoration-color: var(--color-accent);
@@ -390,6 +395,10 @@ p {
 .content-section__summary {
   color: var(--color-text);
   background: #e7e4dc;
+}
+
+details[data-disclosure][data-disclosure-animating='true'] {
+  overflow: hidden;
 }
 
 .disclosure-toggle__accent {
