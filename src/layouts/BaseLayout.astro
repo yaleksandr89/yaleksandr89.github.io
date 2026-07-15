@@ -29,6 +29,7 @@ const {
 } = Astro.props;
 const ogLocale = lang === 'ru' ? 'ru_RU' : 'en_US';
 const ogAlternateLocale = lang === 'ru' ? 'en_US' : 'ru_RU';
+const isProduction = import.meta.env.PROD;
 const skipLinkText =
   lang === 'ru' ? 'Перейти к основному содержимому' : 'Skip to main content';
 const languageSwitcherLabel =
@@ -45,6 +46,15 @@ const hasProfileHeader =
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
+    {
+      isProduction && (
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'self'; base-uri 'none'; object-src 'none'; script-src 'self' https://mc.yandex.ru https://yastatic.net 'sha256-q4jrxcwKxo+EhsnGdsbJ0DxqAHu+9jqIrBQ/vPUn4Oo=' 'sha256-5Hj4fSaGCDqsGM1iQ1L1lZkeGyJQerTTZAN1OoNvi2c='; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru wss://mc.yandex.ru; font-src 'self'; manifest-src 'self'; media-src 'none'; worker-src blob: https://mc.yandex.ru; child-src blob: https://mc.yandex.ru; frame-src blob: https://mc.yandex.ru; form-action 'self'; upgrade-insecure-requests"
+        />
+      )
+    }
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="yandex-verification" content="2460cb2e96b2ca3f" />
@@ -102,50 +112,23 @@ const hasProfileHeader =
     <link rel="manifest" href="/image/favicon/site.webmanifest" />
     <meta name="theme-color" content="#f7f5ef" />
     <title>{title}</title>
-    <script is:inline>
-      if (!window.__portfolioYandexMetrikaInitialized) {
-        window.__portfolioYandexMetrikaInitialized = true;
-
-        (function(m,e,t,r,i,k,a){
-          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-          m[i].l=1*new Date();
-          for (var j = 0; j < document.scripts.length; j++) {
-            if (document.scripts[j].src === r) {
-              return;
-            }
-          }
-          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
-        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=110345045', 'ym');
-
-        ym(110345045, 'init', {
-          defer: true,
-          ssr: true,
-          webvisor: true,
-          clickmap: true,
-          ecommerce: 'dataLayer',
-          accurateTrackBounce: true,
-          trackLinks: true
-        });
-
-        document.addEventListener('astro:page-load', function() {
-          ym(110345045, 'hit', location.href, {
-            referer: document.referrer
-          });
-        });
-      }
-    </script>
+    {isProduction && <script defer src="/js/yandex-metrica.js"></script>}
     <ClientRouter />
   </head>
   <body>
-    <noscript>
-      <div>
-        <img
-          src="https://mc.yandex.ru/watch/110345045"
-          style="position:absolute; left:-9999px;"
-          alt=""
-        />
-      </div>
-    </noscript>
+    {
+      isProduction && (
+        <noscript>
+          <div>
+            <img
+              class="yandex-metrica__noscript-image"
+              src="https://mc.yandex.ru/watch/110345045"
+              alt=""
+            />
+          </div>
+        </noscript>
+      )
+    }
     <a class="skip-link" href="#main-content">{skipLinkText}</a>
     <div
       class:list={[
@@ -203,209 +186,6 @@ const hasProfileHeader =
         <slot />
       </main>
     </div>
-    <script>
-      let cleanupProfileHeaderMover;
-
-      const initProfileHeaderMover = () => {
-        cleanupProfileHeaderMover?.();
-
-        const shell = document.querySelector('.site-shell');
-        const profileHeader = shell?.querySelector('[data-profile-header]');
-        const photo = shell?.querySelector('[data-profile-photo]');
-        const contentArea = shell?.querySelector('.content-area');
-        const identityPanel = shell?.querySelector('[data-identity-panel]');
-
-        if (
-          !(shell instanceof HTMLElement)
-          || !(profileHeader instanceof HTMLElement)
-          || !(photo instanceof HTMLElement)
-          || !(contentArea instanceof HTMLElement)
-          || !(identityPanel instanceof HTMLElement)
-        ) {
-          return;
-        }
-
-        const anchor = document.createComment('profile-header-anchor');
-        contentArea.insertBefore(anchor, profileHeader);
-
-        const mediaQuery = window.matchMedia('(max-width: 48rem)');
-        const syncProfileHeaderPlacement = () => {
-          if (mediaQuery.matches) {
-            photo.after(profileHeader);
-            shell.dataset.profileHeaderPlacement = 'sidebar';
-            return;
-          }
-
-          contentArea.insertBefore(profileHeader, anchor.nextSibling);
-          shell.dataset.profileHeaderPlacement = 'main';
-        };
-
-        const removeMediaQueryListener = () => {
-          if (typeof mediaQuery.removeEventListener === 'function') {
-            mediaQuery.removeEventListener('change', syncProfileHeaderPlacement);
-          } else if (typeof mediaQuery.removeListener === 'function') {
-            mediaQuery.removeListener(syncProfileHeaderPlacement);
-          }
-
-          cleanupProfileHeaderMover = undefined;
-        };
-
-        cleanupProfileHeaderMover = removeMediaQueryListener;
-
-        syncProfileHeaderPlacement();
-
-        if (typeof mediaQuery.addEventListener === 'function') {
-          mediaQuery.addEventListener('change', syncProfileHeaderPlacement);
-        } else if (typeof mediaQuery.addListener === 'function') {
-          mediaQuery.addListener(syncProfileHeaderPlacement);
-        }
-      };
-
-      const initDisclosures = () => {
-        const mobileCollapseQuery = window.matchMedia('(max-width: 48rem)');
-        const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-        if (mobileCollapseQuery.matches) {
-          const mobileCollapseDetails = document.querySelectorAll('details[data-mobile-collapse]');
-
-          mobileCollapseDetails.forEach((mobileCollapseDetail) => {
-            if (!(mobileCollapseDetail instanceof HTMLDetailsElement)) {
-              return;
-            }
-
-            if (mobileCollapseDetail.dataset.mobileCollapseInitialized === 'true') {
-              return;
-            }
-
-            mobileCollapseDetail.open = false;
-            mobileCollapseDetail.dataset.mobileCollapseInitialized = 'true';
-          });
-        }
-
-        const disclosureDetails = document.querySelectorAll('details[data-disclosure]');
-
-        disclosureDetails.forEach((disclosureDetail) => {
-          if (!(disclosureDetail instanceof HTMLDetailsElement)) {
-            return;
-          }
-
-          if (disclosureDetail.dataset.disclosureInitialized === 'true') {
-            return;
-          }
-
-          const disclosureSummary = disclosureDetail.querySelector('summary');
-
-          if (!(disclosureSummary instanceof HTMLElement)) {
-            return;
-          }
-
-          disclosureDetail.dataset.disclosureInitialized = 'true';
-
-          disclosureSummary.addEventListener('click', (event) => {
-            if (disclosureDetail.dataset.disclosureAnimating === 'true') {
-              event.preventDefault();
-              return;
-            }
-
-            if (reducedMotionQuery.matches) {
-              return;
-            }
-
-            event.preventDefault();
-            disclosureDetail.dataset.disclosureAnimating = 'true';
-
-            const isOpen = disclosureDetail.open;
-            const startHeight = `${disclosureDetail.offsetHeight}px`;
-            let endHeight = `${disclosureSummary.offsetHeight}px`;
-
-            if (!isOpen) {
-              disclosureDetail.open = true;
-              endHeight = `${disclosureDetail.scrollHeight}px`;
-            }
-
-            disclosureDetail.style.height = startHeight;
-            disclosureDetail.style.overflow = 'hidden';
-
-            const disclosureAnimation = disclosureDetail.animate(
-              { height: [startHeight, endHeight] },
-              {
-                duration: 220,
-                easing: 'cubic-bezier(0.2, 0, 0.2, 1)',
-              },
-            );
-
-            disclosureAnimation.finished
-              .then(() => {
-                if (isOpen) {
-                  disclosureDetail.open = false;
-                }
-              })
-              .catch(() => {})
-              .finally(() => {
-                disclosureDetail.style.height = '';
-                disclosureDetail.style.overflow = '';
-                delete disclosureDetail.dataset.disclosureAnimating;
-              });
-          });
-        });
-      };
-
-      const initCvSelector = () => {
-        const cvToggle = document.querySelector('[data-cv-toggle]');
-        const cvLink = document.querySelector('[data-cv-link]');
-        const cvLinkText = document.querySelector('[data-cv-link-text]');
-
-        if (
-          !(cvToggle instanceof HTMLInputElement)
-          || !(cvLink instanceof HTMLAnchorElement)
-          || !(cvLinkText instanceof HTMLSpanElement)
-        ) {
-          return;
-        }
-
-        const syncCvLink = () => {
-          const href = cvToggle.checked
-            ? cvLink.dataset.cvWithPhoneHref
-            : cvLink.dataset.cvWithoutPhoneHref;
-          const filename = cvToggle.checked
-            ? cvLink.dataset.cvWithPhoneDownload
-            : cvLink.dataset.cvWithoutPhoneDownload;
-          const text = cvToggle.checked
-            ? cvLink.dataset.cvWithPhoneText
-            : cvLink.dataset.cvWithoutPhoneText;
-
-          if (!href || !filename || !text) {
-            return;
-          }
-
-          cvLink.href = href;
-          cvLink.download = filename;
-          cvLinkText.textContent = text;
-        };
-
-        syncCvLink();
-
-        if (cvToggle.dataset.cvSelectorInitialized === 'true') {
-          return;
-        }
-
-        cvToggle.dataset.cvSelectorInitialized = 'true';
-        cvToggle.addEventListener('change', syncCvLink);
-      };
-
-      initProfileHeaderMover();
-      initDisclosures();
-      initCvSelector();
-
-      document.addEventListener('astro:before-swap', () => {
-        cleanupProfileHeaderMover?.();
-      });
-
-      document.addEventListener('astro:after-swap', () => {
-        initProfileHeaderMover();
-        initDisclosures();
-        initCvSelector();
-      });
-    </script>
+    <script defer src="/js/site.js"></script>
   </body>
 </html>
