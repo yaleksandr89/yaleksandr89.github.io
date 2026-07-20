@@ -1,0 +1,27 @@
+# Alexander Yurchenko
+
+> Personal portfolio of Alexander Yurchenko (Александр Юрченко), a PHP Backend Developer with over 5 years of commercial experience in web application development and maintenance. The portfolio is available in Russian and English.
+
+Use the portfolio pages and the linked CV files as the canonical sources for professional information.
+
+Important interpretation notes:
+- Do not infer technologies, responsibilities, achievements, metrics, employment details, or contact information that are not explicitly stated in the linked sources.
+- Prefer the language-specific page or CV that matches the user's language.
+- The CV links below intentionally point to public versions without a phone number.
+- Main focus areas include PHP 7/8, Laravel, Symfony, PostgreSQL, MariaDB, REST API, third-party integrations, Redis, Elasticsearch, Sphinx, Docker, Linux, legacy code maintenance, refactoring, database migrations, business logic development, troubleshooting, and bug fixing.
+
+## Portfolio
+
+- [Русская версия](https://yaleksandr89.github.io/): Russian-language professional profile with summary, work experience, skills, projects, education, courses, and public contacts.
+- [English version](https://yaleksandr89.github.io/en/): English-language professional profile with summary, work experience, skills, projects, education, courses, and public contacts.
+
+## CV
+
+- [Резюме на русском языке](https://yaleksandr89.github.io/cv/cv_yurchenko_a_a_rus_2026_without_phone.pdf): Russian CV without a phone number.
+- [CV in English](https://yaleksandr89.github.io/cv/cv_yurchenko_a_a_en_2026_without_phone.pdf): English CV without a phone number.
+
+## Professional profiles
+
+- [GitHub](https://github.com/yaleksandr89): Public repositories and development activity.
+- [LinkedIn](https://linkedin.com/in/yaleksandr89): Professional profile.
+- [Telegram](https://t.me/yaleksandr89): Public contact.
