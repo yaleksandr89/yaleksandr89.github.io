@@ -6,6 +6,7 @@
   window.__portfolioSiteInitialized = true;
 
   let cleanupProfileHeaderMover;
+  let cleanupDocumentPreviews;
 
   const initProfileHeaderMover = () => {
     if (typeof cleanupProfileHeaderMover === 'function') {
@@ -191,13 +192,187 @@
     cvToggle.addEventListener('change', syncCvLink);
   };
 
+  const initDocumentPreviews = () => {
+    if (typeof cleanupDocumentPreviews === 'function') {
+      cleanupDocumentPreviews();
+    }
+
+    const documentLinks = Array.from(
+      document.querySelectorAll('[data-document-preview]'),
+    ).filter((documentLink) => documentLink instanceof HTMLAnchorElement);
+
+    if (documentLinks.length === 0 || !(document.body instanceof HTMLBodyElement)) {
+      return;
+    }
+
+    document.querySelector('[data-document-preview-panel]')?.remove();
+
+    const panel = document.createElement('div');
+    const image = document.createElement('img');
+    const hint = document.createElement('p');
+    const previewMediaQuery = window.matchMedia(
+      '(hover: hover) and (min-width: 48.0625rem)',
+    );
+    let activeLink;
+
+    panel.className = 'document-preview';
+    panel.dataset.documentPreviewPanel = 'true';
+    image.className = 'document-preview__image';
+    hint.className = 'document-preview__hint';
+    panel.append(image, hint);
+    document.body.append(panel);
+
+    const positionPanel = () => {
+      if (
+        !(activeLink instanceof HTMLAnchorElement)
+        || !panel.classList.contains('document-preview--visible')
+      ) {
+        return;
+      }
+
+      const margin = 12;
+      const linkBounds = activeLink.getBoundingClientRect();
+      const panelBounds = panel.getBoundingClientRect();
+      const maximumLeft = window.innerWidth - panelBounds.width - margin;
+      let left = linkBounds.right + margin;
+
+      if (left > maximumLeft) {
+        left = linkBounds.left - panelBounds.width - margin;
+      }
+
+      left = Math.max(margin, Math.min(left, maximumLeft));
+
+      const maximumTop = window.innerHeight - panelBounds.height - margin;
+      const centeredTop = linkBounds.top - (panelBounds.height - linkBounds.height) / 2;
+      const top = Math.max(margin, Math.min(centeredTop, maximumTop));
+
+      panel.style.left = `${left}px`;
+      panel.style.top = `${top}px`;
+    };
+
+    const hidePreview = () => {
+      panel.classList.remove('document-preview--visible');
+      activeLink = undefined;
+    };
+
+    const showPreview = (documentLink) => {
+      if (!previewMediaQuery.matches || !(documentLink instanceof HTMLAnchorElement)) {
+        return;
+      }
+
+      const previewAlt = documentLink.dataset.previewAlt;
+      const previewHint = documentLink.dataset.previewHint;
+
+      if (!documentLink.href || !previewAlt || !previewHint) {
+        return;
+      }
+
+      activeLink = documentLink;
+      image.alt = previewAlt;
+      hint.textContent = previewHint;
+
+      if (image.src !== documentLink.href) {
+        image.src = documentLink.href;
+      }
+
+      panel.classList.add('document-preview--visible');
+      positionPanel();
+    };
+
+    const handleImageLoad = () => {
+      positionPanel();
+    };
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        hidePreview();
+      }
+    };
+    const handleViewportChange = () => {
+      positionPanel();
+    };
+    const handlePreviewMediaChange = () => {
+      if (!previewMediaQuery.matches) {
+        hidePreview();
+      }
+    };
+    const listeners = documentLinks.map((documentLink) => {
+      const handleMouseEnter = () => showPreview(documentLink);
+      const handleMouseLeave = () => hidePreview();
+      const handleFocus = () => {
+        if (documentLink.matches(':focus-visible')) {
+          showPreview(documentLink);
+        }
+      };
+      const handleBlur = () => hidePreview();
+
+      documentLink.addEventListener('mouseenter', handleMouseEnter);
+      documentLink.addEventListener('mouseleave', handleMouseLeave);
+      documentLink.addEventListener('focus', handleFocus);
+      documentLink.addEventListener('blur', handleBlur);
+
+      return {
+        documentLink,
+        handleMouseEnter,
+        handleMouseLeave,
+        handleFocus,
+        handleBlur,
+      };
+    });
+
+    image.addEventListener('load', handleImageLoad);
+    document.addEventListener('keydown', handleEscape);
+    document.addEventListener('scroll', handleViewportChange, true);
+    window.addEventListener('resize', handleViewportChange);
+    if (typeof previewMediaQuery.addEventListener === 'function') {
+      previewMediaQuery.addEventListener('change', handlePreviewMediaChange);
+    } else if (typeof previewMediaQuery.addListener === 'function') {
+      previewMediaQuery.addListener(handlePreviewMediaChange);
+    }
+
+    const cleanup = () => {
+      listeners.forEach(({
+        documentLink,
+        handleMouseEnter,
+        handleMouseLeave,
+        handleFocus,
+        handleBlur,
+      }) => {
+        documentLink.removeEventListener('mouseenter', handleMouseEnter);
+        documentLink.removeEventListener('mouseleave', handleMouseLeave);
+        documentLink.removeEventListener('focus', handleFocus);
+        documentLink.removeEventListener('blur', handleBlur);
+      });
+      image.removeEventListener('load', handleImageLoad);
+      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('scroll', handleViewportChange, true);
+      window.removeEventListener('resize', handleViewportChange);
+      if (typeof previewMediaQuery.removeEventListener === 'function') {
+        previewMediaQuery.removeEventListener('change', handlePreviewMediaChange);
+      } else if (typeof previewMediaQuery.removeListener === 'function') {
+        previewMediaQuery.removeListener(handlePreviewMediaChange);
+      }
+      panel.remove();
+
+      if (cleanupDocumentPreviews === cleanup) {
+        cleanupDocumentPreviews = undefined;
+      }
+    };
+
+    cleanupDocumentPreviews = cleanup;
+  };
+
   initProfileHeaderMover();
   initDisclosures();
   initCvSelector();
+  initDocumentPreviews();
 
   document.addEventListener('astro:before-swap', () => {
     if (typeof cleanupProfileHeaderMover === 'function') {
       cleanupProfileHeaderMover();
+    }
+
+    if (typeof cleanupDocumentPreviews === 'function') {
+      cleanupDocumentPreviews();
     }
   });
 
@@ -205,5 +380,6 @@
     initProfileHeaderMover();
     initDisclosures();
     initCvSelector();
+    initDocumentPreviews();
   });
 })();
