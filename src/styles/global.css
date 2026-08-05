@@ -946,13 +946,13 @@ address {
   }
 
   .site-shell--with-sidebar > .language-switcher {
-    justify-self: center;
+    justify-self: stretch;
     justify-content: center;
-    width: auto;
+    width: 100%;
     margin: 0;
     padding: var(--space-4) var(--space-5);
     text-align: center;
-    background: var(--color-background);
+    background: var(--color-graphite);
   }
 
   .language-switcher {
@@ -987,15 +987,17 @@ address {
   }
 
   .site-shell[data-profile-header-placement="sidebar"] .profile-header {
-    background: var(--color-background);
+    background: var(--color-graphite);
   }
 
   .profile-header__name {
     font-size: clamp(var(--font-size-step-3), 10vw, var(--font-size-step-4));
+    color: var(--color-text-inverse);
   }
 
   .profile-header__role {
     font-size: clamp(var(--font-size-step-1), 5vw, var(--font-size-step-2));
+    color: #d9d7cf;
   }
 
   .content-area {
