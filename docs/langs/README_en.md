@@ -46,3 +46,29 @@ This process helped expand competency in working with ChatGPT Project and an AI-
 - Static site.
 - No backend, CMS, or database.
 - No React, Vue, Tailwind, or UI libraries.
+
+## Local development
+
+Use Node.js 24 and npm for local development.
+
+```bash
+git clone https://github.com/yaleksandr89/yaleksandr89.github.io.git
+cd yaleksandr89.github.io
+npm ci
+npm run dev
+```
+
+Start the development server and open the URL printed by Astro. The Russian version is available at `/` and the English version at `/en/`.
+
+## Build and deployment
+
+Stop the development server before running these commands:
+
+```bash
+npm run build
+npm run preview
+```
+
+The build generates a static site in `dist/`. `npm run preview` serves the local build without publishing it. The production build includes Yandex Metrica; a local preview may make requests to the analytics service.
+
+CI checks the build for pull requests and the `master` branch. A separate `Deploy to GitHub Pages` workflow publishes the site on pushes to `master` or when manually triggered by the owner.
