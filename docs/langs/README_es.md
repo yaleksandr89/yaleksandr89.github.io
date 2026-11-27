@@ -46,3 +46,29 @@ Este proceso ayudó a ampliar las competencias de trabajo con ChatGPT Project y 
 - Sitio estático.
 - Sin backend, CMS ni database.
 - Sin React, Vue, Tailwind ni UI libraries.
+
+## Desarrollo local
+
+Utiliza Node.js 24 y npm para el desarrollo local.
+
+```bash
+git clone https://github.com/yaleksandr89/yaleksandr89.github.io.git
+cd yaleksandr89.github.io
+npm ci
+npm run dev
+```
+
+Inicia el servidor de desarrollo y abre la URL indicada por Astro. La versión en ruso está disponible en `/` y la versión en inglés en `/en/`.
+
+## Compilación y publicación
+
+Detén el servidor de desarrollo antes de ejecutar estos comandos:
+
+```bash
+npm run build
+npm run preview
+```
+
+La compilación genera un sitio estático en `dist/`. `npm run preview` permite visualizar la compilación local sin publicarla. La compilación de producción incluye Yandex Metrica; la vista previa local puede realizar solicitudes al servicio de analítica.
+
+CI verifica la compilación de los pull requests y de la rama `master`. El workflow independiente `Deploy to GitHub Pages` publica el sitio tras un push a `master` o cuando el propietario lo ejecuta manualmente.

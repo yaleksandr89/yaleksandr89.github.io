@@ -46,3 +46,29 @@ Public website: https://yaleksandr89.github.io/
 - 静态网站。
 - 不使用后端、CMS 或数据库。
 - 不使用 React、Vue、Tailwind 或 UI 库。
+
+## 本地开发
+
+本地开发请使用 Node.js 24 和 npm。
+
+```bash
+git clone https://github.com/yaleksandr89/yaleksandr89.github.io.git
+cd yaleksandr89.github.io
+npm ci
+npm run dev
+```
+
+启动开发服务器后，打开 Astro 输出的网址。俄语版本位于 `/`，英语版本位于 `/en/`。
+
+## 构建与发布
+
+运行以下命令前，请先停止开发服务器：
+
+```bash
+npm run build
+npm run preview
+```
+
+构建将在 `dist/` 中生成静态网站。`npm run preview` 用于在本地预览构建结果，不会发布网站。生产构建包含 Yandex Metrica，本地预览可能向该分析服务发送请求。
+
+CI 检查 pull request 和 `master` 分支的构建。独立的 `Deploy to GitHub Pages` workflow 在推送到 `master` 或所有者手动运行时发布网站。

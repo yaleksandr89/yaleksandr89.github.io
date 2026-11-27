@@ -46,3 +46,29 @@
 - Статический сайт.
 - Без backend, CMS и database.
 - Без React, Vue, Tailwind и UI libraries.
+
+## Локальный запуск
+
+Для локальной работы используйте Node.js 24 и npm.
+
+```bash
+git clone https://github.com/yaleksandr89/yaleksandr89.github.io.git
+cd yaleksandr89.github.io
+npm ci
+npm run dev
+```
+
+Запустите сервер разработки и откройте адрес, указанный Astro. Русская версия доступна по `/`, английская по `/en/`.
+
+## Сборка и публикация
+
+Остановите сервер разработки перед запуском следующих команд:
+
+```bash
+npm run build
+npm run preview
+```
+
+Сборка создаёт статический сайт в `dist/`. `npm run preview` запускает локальный просмотр сборки, не публикуя её. В production-сборке подключена Яндекс Метрика; при локальном просмотре возможны обращения к сервису аналитики.
+
+CI проверяет сборку pull request и ветки `master`. Публикация выполняется отдельным workflow `Deploy to GitHub Pages` при push в `master` или ручном запуске владельцем.
